@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../../components/Navbar/index'
 import HeroBannerLandingPage from '../../components/HeroBannerLandingPage/index'
 import IconsLanding from '../../components/IconsLanding/index'
-import "../../style.css"
+import "../../style.css" 
 
 const Landingpage= () => {
    
