@@ -1,5 +1,5 @@
 .containerNavbar{
-     height: 50px;
+     height: 30px;
      width: 100%;
      background-color: #ffffff;
      padding-top: 8px;
@@ -19,6 +19,8 @@
     cursor: pointer;
     background-color: #3C64B1;
     border-color: #3C64B1;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 
 .componentsNavbarLogin{
@@ -32,6 +34,19 @@
     cursor: pointer;
     border-color: #3C64B1;
     color: #3C64B1;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.logo{
+    width: 160px;
+    height: 30px;
+}
+
+.logoContainer{
+    position:absolute;
+    z-index: 100;
+    margin-left: 43%;
 }
 
 
@@ -48,6 +63,7 @@
     background-color: #ffffff;
     border-color: #3C64B1;
     transition: 0.2s;
+    border-radius: 5px;
 }
 
 .componentsNavbarLogin:hover{
@@ -63,4 +79,48 @@
     border-color: #3C64B1;
     background-color: #3C64B1;
     transition: 0.2s;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .componentsNavbarLogin{
+    display: none;
+  }
+
+    .componentsNavbarSignup{
+    display: none;
+  }
+
+    .logoContainer{
+    margin-left: 26%;
+}
+}
+
+@media screen and (max-width: 770px) {
+  .componentsNavbarLogin{
+    display: none;
+  }
+
+    .componentsNavbarSignup{
+    display: none;
+  }
+
+    .logoContainer{
+    margin-left: 40%;
+}
+}
+
+@media screen and (max-width: 380px) {
+  .componentsNavbarLogin{
+    display: none;
+  }
+
+    .componentsNavbarSignup{
+    display: none;
+  }
+
+    .logoContainer{
+    margin-left: 26%;
+}
 }

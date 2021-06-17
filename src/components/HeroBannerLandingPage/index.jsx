@@ -14,8 +14,8 @@ const HeroBannerLandingPage = () => {
                         <p className="question__herobanner">Vous êtes une agence ? Découvrez notre offre ci-dessous :</p>
                         </p>
                         <div className="button__herobanner">
-                            <button>Inscrivez-vous</button>
-                            <button>Contactez-nous</button>
+                            <button  className="componentsNavbarSignup">Inscrivez vous</button>
+                            <button  className="componentsNavbarLogin">Contactez-nous</button>
                         </div>
                     </div>
                 </div>
