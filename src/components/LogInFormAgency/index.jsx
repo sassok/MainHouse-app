@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import './style.css';
 import { login } from '../redux';
+import { Link } from 'react-router-dom';
 
 
 function LogInFormAgency  () {
@@ -74,7 +75,7 @@ function LogInFormAgency  () {
               <button type="submit" id="loginButton" className="boutonform">Valider</button>
             <div className="endform">
               <a className="endquestforms" >Pas de compte ? </a>
-              <a className="end__link" href="#">Inscrivez-vous</a>
+              <a className="end__link" href="#"><Link to="">Inscrivez-vous</Link></a>
             </div>
           </div>
         </form>
