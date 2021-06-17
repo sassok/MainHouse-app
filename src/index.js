@@ -1,5 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './components/redux/store';
 import {
@@ -7,6 +5,7 @@ import {
     Route,
     Switch,
   } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
 import Landingpage from './pages/Landingpage/index';
 import LogInFormAgency from './components/LogInFormAgency';
 import LogInFormOwner from './components/LogInFormOwner';
@@ -28,6 +27,7 @@ const App = () => {
             </Switch>
         </Provider>
     </Router>
+
     );
   };
   ReactDOM.render(<App />, document.getElementById('root'));
