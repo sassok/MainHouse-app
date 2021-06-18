@@ -58,7 +58,7 @@ function LogInFormAgency  () {
           useEffect(() => {
             
             if (agency.id !== (undefined || null)) {
-              history.push('/');
+              history.push('/notre_dashboard');
             }
           }, [agency]);
 

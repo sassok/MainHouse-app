@@ -26,7 +26,6 @@ const Sidebar = () => {
     //check state
     const is_connected_agency = useSelector(state => state.agency.is_connected_agency);
     const is_connected_owner = useSelector(state => state.owner.is_connected_owner);
-    console.log(is_connected_agency)
     //create initial menuCollapse state using useState hook
     const [menuCollapse, setMenuCollapse] = useState(false)
 
@@ -53,10 +52,7 @@ const Sidebar = () => {
           <SidebarContent>
             <Menu>
               <MenuItem>
-                <Link to="/">Accueil</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/notre_dashboard" >Dashboard</Link>
+                <Link to="/notre_dashboard">Accueil</Link>
               </MenuItem>
               <MenuItem>
                 <Link to="/nos_messagerie" >Messagerie</Link>
@@ -155,8 +151,6 @@ const Sidebar = () => {
     else {
       return (
         <>
-        <Navbar/>
-        <Landingpage/>
         </>
       )};
 
