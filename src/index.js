@@ -12,57 +12,44 @@ import LogInFormAgency from './components/LogInFormAgency';
 import LogInFormOwner from './components/LogInFormOwner';
 import IndexBuilding from './components/IndexBuilding/index';
 import Navbar from './components/Navbar/index';
+import Landingpage from './pages/Landingpage/index';
 import IndexEvent from './components/IndexEvents/index';
 
 const App = () => {
-    return (
-    
-    <>
-        <Router>
-            <Provider store={store}>
-            <Sidebar/>
+
+    return (  
+    <>      
+    <Router>
+    <Provider store={store}>      
+        <Sidebar />
             <main>
                 <Switch>
                     <Route path="/" exact>
-                    <div id="sidebarContainer">
-                        <div className="row1Sidebar"> 
-                        </div>
-                        <div className="row2Sidebar" style={{paddingLeft: "100"+"px"}}> 
-                            <IndexBuilding />
-                        </div>
-                    </div>
-                    </Route>
-                    <Route path="/connexion/agence" exact>
-                    <div id="sidebarContainer">
-                        <div className="row1Sidebar"> 
-                        </div>
-                        <div className="row2Sidebar"> 
-                            <LogInFormAgency/>
-                        </div>
-                    </div>
+                        <Navbar />
+                        <Landingpage />
                     </Route>
                     <Route path="/connexion/proprietaire" exact>
+                        <LogInFormAgency/>
+                    </Route>
                     <div id="sidebarContainer">
                         <div className="row1Sidebar"> 
                         </div>
-                        <div className="row2Sidebar"> 
-                            <LogInFormOwner/>
+                        <div className ="row2Sidebar" > 
+                            <Route path="/connexion/agence" exact>
+                                <IndexBuilding/>
+                            </Route>
+                            <Route path="/nos_evenements" exact>
+                                <IndexEvent/>
+                            </Route>
+                            <Route path="/notre_dashboard" exact>
+                                <IndexBuilding/>
+                            </Route>
                         </div>
                     </div>
-                    </Route>
-                    <Route path="/nos_evenements" exact>
-                    <div id="sidebarContainer">
-                        <div className="row1Sidebar"> 
-                        </div>
-                        <div className="row2Sidebar"> 
-                            <IndexEvent/>
-                        </div>
-                    </div>
-                    </Route>
                 </Switch>
-            </main>
-            </Provider>
-        </Router>  
+            </main> 
+        </Provider>
+    </Router> 
     </>
 
     );
