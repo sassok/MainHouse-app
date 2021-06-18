@@ -12,6 +12,7 @@ import LogInFormAgency from './components/LogInFormAgency';
 import LogInFormOwner from './components/LogInFormOwner';
 import IndexBuilding from './components/IndexBuilding/index';
 import Navbar from './components/Navbar/index';
+import IndexEvent from './components/IndexEvents/index';
 
 const App = () => {
     return (
@@ -26,7 +27,7 @@ const App = () => {
                     <div id="sidebarContainer">
                         <div className="row1Sidebar"> 
                         </div>
-                        <div className="row2Sidebar"> 
+                        <div className="row2Sidebar" style={{paddingLeft: "100"+"px"}}> 
                             <IndexBuilding />
                         </div>
                     </div>
@@ -46,6 +47,15 @@ const App = () => {
                         </div>
                         <div className="row2Sidebar"> 
                             <LogInFormOwner/>
+                        </div>
+                    </div>
+                    </Route>
+                    <Route path="/nos_evenements" exact>
+                    <div id="sidebarContainer">
+                        <div className="row1Sidebar"> 
+                        </div>
+                        <div className="row2Sidebar"> 
+                            <IndexEvent/>
                         </div>
                     </div>
                     </Route>
