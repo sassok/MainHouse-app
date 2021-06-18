@@ -20,7 +20,6 @@ const App = () => {
         <Router>
             <Provider store={store}>
             <Sidebar/>
-            <Navbar />
             <main>
                 <Switch>
                     <Route path="/" exact>

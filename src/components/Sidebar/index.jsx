@@ -110,6 +110,8 @@ const Sidebar = () => {
     else {
       return (
         <>
+        <Navbar/>
+        <Landingpage/>
         </>
       )};
 
