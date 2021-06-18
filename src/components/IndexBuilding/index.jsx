@@ -32,15 +32,28 @@ const IndexBuilding = () => {
       }, []);
 
   return (  
-  <div>
-    {building.map(build => (
-      <div>
-      <p>{build.city}</p>
-      <p>{build.name}</p>
-      <p>{build.reference}</p>
+
+  <div className="cardscontainer">
+  <div className="containerbuilding">
+  {building.map(build => (
+    <div className="card-building">
+      <div className="card-building-header">
+        <img className="card-building-img" src="https://us.123rf.com/450wm/zhudifeng/zhudifeng1410/zhudifeng141000067/32987276-modern-business-office-building-exterior.jpg?ver=6" alt="city" />
       </div>
-    ))}
-  </div>
+      <div className="card-building-body">
+        <span className="cardbuildcity">{build.city}</span>
+        <div className="cardbuildname">
+        {build.name}
+        </div>
+        <span className="cardbuildref">Ref : {build.reference}</span>
+      </div>
+    </div>
+  
+    
+  ))}
+    </div>
+    </div>
+    
   );
 };
 

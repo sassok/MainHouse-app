@@ -11,6 +11,7 @@ import Sidebar from './components/Sidebar';
 import Landingpage from './pages/Landingpage/index';
 import LogInFormAgency from './components/LogInFormAgency';
 import LogInFormOwner from './components/LogInFormOwner';
+import IndexBuilding from './components/IndexBuilding/index';
 
 const App = () => {
     return (
@@ -20,6 +21,9 @@ const App = () => {
             <Switch>
                 <Route path="/" exact>
                     <Landingpage />
+                </Route>
+                <Route path="/dashboard" exact>
+                    <IndexBuilding/>
                 </Route>
                 <Route path="/login/agency" exact>
                     <LogInFormAgency/>
