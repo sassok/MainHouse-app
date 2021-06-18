@@ -4,6 +4,9 @@ import { useHistory } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import './style.css';
 import { login_owner } from '../redux';
+import { Link } from 'react-router-dom';
+import Footer from '../../components/Footer/index'
+import logo from  '../../assets/images/Mainhouseblack.png'
 
 
 function LogInFormOwner  () {
@@ -61,7 +64,16 @@ function LogInFormOwner  () {
           }, [owner]);
 
     return (
-
+  <>
+  <div>
+            <div className="containerNavbar">
+                <p className="logoContainer">
+                    <img className="logoLogin" alt="logo" src={logo}></img>
+                </p>
+                
+            </div>
+        </div>
+  <div className="LoginContainer">
     <div className="formcontainer">
         <form onSubmit={OnSend} className="signUp signform" >
           <div className="formbg-inner padding-horizontal--48">
@@ -75,11 +87,14 @@ function LogInFormOwner  () {
               <button type="submit" id="loginButton" className="boutonform">Valider</button>
             <div className="endform">
               <a className="endquestforms" >Pas de compte ? </a>
-              <a className="end__link" href="#">Inscrivez-vous</a>
+              <a className="end__link" href="#"><Link to="">Nous contacter</Link></a>
             </div>
           </div>
         </form>
     </div>
+</div>
+    <Footer/>
+  </>
     );
     
 }
