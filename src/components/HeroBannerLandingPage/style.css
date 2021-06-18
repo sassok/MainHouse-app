@@ -61,6 +61,71 @@
     font-weight: bold;
 }
 
+.componentsHeroeSignup{
+    all:unset;
+    border:solid;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin-right: 15px;
+    width: 110px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #3C64B1;
+    border-color: #3C64B1;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-left: 7%;
+}
+
+.componentsHeroeLogin{
+    all:unset;
+    border:solid;
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 15px;
+    width: 110px;
+    text-align: center;
+    cursor: pointer;
+    border-color: #3C64B1;
+    color: #3C64B1;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.componentsHeroeSignup:hover{
+    all:unset;
+    border:solid;
+    text-decoration: none;
+    color: #3C64B1;
+    font-size: 15px;
+    margin-right: 15px;
+    width: 110px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-color: #3C64B1;
+    transition: 0.2s;
+    border-radius: 5px;
+    margin-left: 7%;
+}
+
+.componentsHeroeLogin:hover{
+    all:unset;
+    border:solid;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    margin-right: 15px;
+    width: 110px;
+    text-align: center;
+    cursor: pointer;
+    border-color: #3C64B1;
+    background-color: #3C64B1;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
 @media screen and (max-width: 1057px) {
     .column__img {
         display: none;
@@ -78,4 +143,81 @@
     .title__herobanner {
         text-align: center;
     }
+
+    .componentsHeroeSignup{
+    all:unset;
+    border:solid;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin-right: 15px;
+    width: 110px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #3C64B1;
+    border-color: #3C64B1;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-left: 30%;
+}
+}
+
+@media screen and (max-width: 770px) {
+    
+    .componentsHeroeSignup{
+    all:unset;
+    border:solid;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin-right: 15px;
+    width: 110px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #3C64B1;
+    border-color: #3C64B1;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-left: 26%;
+}
+}
+
+@media screen and (max-width: 380px) {
+    
+    .componentsHeroeSignup{
+    all:unset;
+    border:solid;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin-right: 15px;
+    width: 110px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #3C64B1;
+    border-color: #3C64B1;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-left: 6%;
+}
+}
+
+@media screen and (max-width: 330px) {
+    
+    .componentsHeroeSignup{
+    all:unset;
+    border:solid;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin-right: 15px;
+    width: 110px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #3C64B1;
+    border-color: #3C64B1;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-left: 0.5%;
+}
 }
