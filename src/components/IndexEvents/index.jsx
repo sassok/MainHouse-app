@@ -3,16 +3,17 @@ import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './style.css';
 import Cookies from 'js-cookie';
+import party from "../../assets/images/party.jpeg";
 
-const IndexBuilding = () => {
+const IndexEvent = () => {
     const agency = useSelector((state) => state.agency);
-    const [building, setBuilding] = useState([]);
+    const [event, setEvent] = useState([]);
     const id = useSelector(state => state.agency.id);
     const bearer = useSelector(token => token.bearer)
 
     useEffect (() => {
-      const fetchBuilding = async () => {
-      fetch(`https://mainhouseapi.herokuapp.com/agency-buildings/${id}` , {
+      const fetchEvent = async () => {
+      fetch(`https://mainhouseapi.herokuapp.com/agency-events/${id}` , {
         method: 'get',
         headers: {
         'Content-Type': 'application/json',
@@ -20,7 +21,7 @@ const IndexBuilding = () => {
         },
         }).then((response) => response.json())
           .then((response) => {
-            setBuilding(response.buildings);
+            setEvent(response.events);
             console.log(response)
             }).catch(function() {
               console.log("error");
@@ -28,25 +29,25 @@ const IndexBuilding = () => {
   
       };       
 
-      fetchBuilding()
+      fetchEvent()
       }, []);
 
   return (  
     <>
     
     <div className="cardscontainer row2Sidebar">
-  <div className="containerbuilding">
-  {building.map(build => (
-    <div className="card-building">
-      <div className="card-building-header">
-        <img className="card-building-img" src="https://us.123rf.com/450wm/zhudifeng/zhudifeng1410/zhudifeng141000067/32987276-modern-business-office-building-exterior.jpg?ver=6" alt="city" />
+  <div className="containerevent">
+  {event.map(events => (
+    <div className="card-event">
+      <div className="card-event-header">
+        <img className="card-event-img" src={party} alt="fiesta" />
       </div>
-      <div className="card-building-body">
-        <span className="cardbuildcity">{build.city}</span>
-        <div className="cardbuildname">
-        {build.name}
+      <div className="card-event-body">
+        <span className="cardeventcity">{events.datetime}</span>
+        <div className="cardeventname">
+        {events.title}
         </div>
-        <span className="cardbuildref">Ref : {build.reference}</span>
+        <span className="cardeventref">Ref : {events.description}</span>
       </div>
     </div>
     
@@ -59,4 +60,4 @@ const IndexBuilding = () => {
   );
 };
 
-export default IndexBuilding;
+export default IndexEvent;

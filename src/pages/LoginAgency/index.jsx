@@ -3,7 +3,9 @@ import LogInFormAgency from '../../components/LogInFormAgency';
 
 function LoginAgency  () {
     return (
-      < LogInFormAgency />
+    <>
+      <LogInFormAgency/>
+    </>
     )  
 }
 export default LoginAgency;

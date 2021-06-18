@@ -10,6 +10,16 @@
    
 }
 
+.logoLogin{
+    width: 160px;
+    height: 30px;
+}
+
+.LoginContainer{
+    margin-top: 150px;
+    margin-bottom:13%;
+}
+
 .padding-horizontal--48 {
     padding: 35px;
   }
@@ -79,4 +89,36 @@
             
 
     }
+
+@media screen and (max-width: 400px) {
+  .LoginContainer{
+    margin-top: 150px;
+    margin-bottom:57%;
+}
+  
+}
+
+@media screen and (max-width: 380px) {
+  .LoginContainer{
+    margin-top: 150px;
+    margin-bottom:18%;
+}
+  
+}
+
+@media screen and (max-width: 768px) {
+  .LoginContainer{
+    margin-top: 150px;
+    margin-bottom:55%;
+}
+  
+}
+
+@media screen and (max-width: 1025px) {
+  .LoginContainer{
+    margin-top: 150px;
+    margin-bottom:75%;
+}
+  
+}
    

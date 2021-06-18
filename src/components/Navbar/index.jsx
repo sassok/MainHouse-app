@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css';
-import logo from  '../../assets/images/Mainhouseblack.png';
-import { Link } from 'react-router-dom';
+import logo from  '../../assets/images/Mainhouseblack.png'
 
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     return(
         <div>
@@ -10,9 +10,9 @@ const Navbar = () => {
                 <p className="logoContainer">
                     <img className="logo" alt="logo" src={logo}></img>
                 </p>
-                <button className="componentsNavbarLogin"><Link to="/login/agency" className="link__login">Se connecter</Link></button>
-                <button className="componentsNavbarSignup"><Link to="/login/agency" className="link__signup">S'inscrire</Link></button>
-                
+                <button className="componentsNavbarLogin"><Link to="/connexion/proprietaire" className="link__login">Connexion propriétaire</Link></button>
+                <button className="componentsNavbarSignup"><Link to="/connexion/agence" className="link__signup">Connexion agence</Link></button>
+
             </div>
         </div>
             )
