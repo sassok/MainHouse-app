@@ -10,9 +10,9 @@ const Navbar = () => {
                 <p className="logoContainer">
                     <img className="logo" alt="logo" src={logo}></img>
                 </p>
-                <button className="componentsNavbarLogin"><Link to="/connexion/agence" className="link__login">Connexion Agence</Link></button>
-                <button className="componentsNavbarSignup"><Link to="/connexion/proprietaire" className="link__signup">Connexion Propriétaire</Link></button>
-                
+                <button className="componentsNavbarLogin"><Link to="/connexion/propriétaire" className="link__login">Connexion propriétaire</Link></button>
+                <button className="componentsNavbarSignup"><Link to="/connexion/agence" className="link__signup">Connexion agence</Link></button>
+
             </div>
         </div>
             )

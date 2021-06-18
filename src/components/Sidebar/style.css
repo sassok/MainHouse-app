@@ -73,8 +73,12 @@
   width: 500px;
 }
 
+.row1Collapsed{
+  width: 80px;
+}
+
 @media only screen and (max-width: 900px) {
-  #headerSidebar{
+  #header{
     display:none;
   }
   .row1Sidebar{

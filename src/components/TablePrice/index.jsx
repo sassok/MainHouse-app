@@ -16,7 +16,7 @@ const PriceTable = () => {
           <li class="pricing-features-item">Premier mois gratuit</li>
           <li class="pricing-features-item">Sans engagement</li>
             <li class="pricing-features-item">Acces à une messagerie immeuble</li>
-            <li class="pricing-features-item">De 1 à 9 immeubles par compte</li>
+            <li class="pricing-features-item">De 1 à 9 gestionaires d'immeubles par comptes</li>
             <li class="pricing-features-item">Calendrier par immeuble et mutualisé</li>
         </ul>
         <span class="pricing-price">39€</span>
@@ -31,7 +31,7 @@ const PriceTable = () => {
           <li class="pricing-features-item">Premier mois gratuit</li>
           <li class="pricing-features-item">Sans engagement</li>
             <li class="pricing-features-item">Acces à une messagerie immeuble</li>
-            <li class="pricing-features-item">De 10 à 19 immeubles par compte</li>
+            <li class="pricing-features-item">De 10 à 19 gestionaires immeubles par comptes</li>
             <li class="pricing-features-item">Calendrier par immeuble et mutualisé</li>
         </ul>
         <span class="pricing-price">55€</span>

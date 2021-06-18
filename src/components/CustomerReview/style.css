@@ -2,7 +2,7 @@
     --red: hsl(0, 78%, 62%);
     --cyan: hsl(180, 62%, 55%);
     --orange: hsl(34, 97%, 64%);
-    --blue: hsl(212, 86%, 64%);
+    --blue: #3C64B1;
     --varyDarkBlue: hsl(234, 12%, 34%);
     --grayishBlue: hsl(229, 6%, 66%);
     --veryLightGray: hsl(0, 0%, 98%);
@@ -25,15 +25,7 @@
     margin-top: -30px;
 }
 
-h1:first-of-type {
-    font-weight: var(--weight1);
-    color: var(--varyDarkBlue);
 
-}
-
-h1:last-of-type {
-    color: var(--varyDarkBlue);
-}
 
 
 .header {
@@ -56,7 +48,9 @@ h1:last-of-type {
 
 .box {
     border-radius: 5px;
-    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    border:solid;
+    border-width: 1px;
+    border-color: #3C64B1;
     padding: 30px;
     margin: 20px;  
 }
@@ -142,10 +136,6 @@ h1:last-of-type {
     border-top: 3px solid var(--orange);
 }
 
-h2 {
-    color: var(--varyDarkBlue);
-    font-weight: var(--weight3);
-}
 
 
 @media (min-width: 950px) {
