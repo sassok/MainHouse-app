@@ -82,6 +82,24 @@
     border-radius: 5px;
 }
 
+.link__login {
+  text-decoration: none;
+  color: #3C64B1;
+}
+
+.link__login:hover {
+  color: #ffffff;
+}
+
+.link__signup {
+  color:#ffffff;
+  text-decoration: none;
+}
+
+.link__signup:hover {
+  color: #3C64B1;
+}
+
 
 @media screen and (max-width: 900px) {
   .componentsNavbarLogin{

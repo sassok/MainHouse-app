@@ -4,10 +4,11 @@ import { useHistory } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import './style.css';
 import { login } from '../redux';
+import { Link } from 'react-router-dom';
 
 
-function LogInForm  () {
-  const user = useSelector((state) => state);
+function LogInFormAgency  () {
+  const agency = useSelector((state) => state.agency);
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -16,8 +17,8 @@ function LogInForm  () {
           const email = document.querySelector('#fmail').value;
           const password = document.querySelector('#fpassword').value;
           
-            const log = {"user": {"email": email, "password": password}};
-            fetch('http://127.0.0.1:3000/users/sign_in', {
+            const log = {"agency": {"email": email, "password": password}};
+            fetch('https://mainhouseapi.herokuapp.com/agencies/sign_in', {
               method: 'post',
               headers: {
                 'Content-Type': 'application/json', 
@@ -43,12 +44,10 @@ function LogInForm  () {
                   console.log(token)
                   console.log(json)
                   const email = json.token.email;
-                  const building = json.token.immeuble_id;
                   const id = json.token.id; 
-                  Cookies.set("user_id", json.token.id);
-                  Cookies.set('Bearer', token);
-                  Cookies.set('email', email);
-                  Cookies.set('immeuble', building);
+                  Cookies.set("agency_id", json.token.id);
+                  Cookies.set('Bearer_agency', token);
+                  Cookies.set('email_agency', email);
                   dispatch({ type: login(), token, email, id });
                 })
             )
@@ -56,30 +55,32 @@ function LogInForm  () {
         };
           useEffect(() => {
             
-            if (user.id !== (undefined || null)) {
+            if (agency.id !== (undefined || null)) {
               history.push('/');
             }
-          }, [user]);
+          }, [agency]);
+
     return (
+
     <div className="formcontainer">
         <form onSubmit={OnSend} className="signUp signform" >
-        <div className="formbg-inner padding-horizontal--48">
+          <div className="formbg-inner padding-horizontal--48">
               <span className="padding-bottom--15 titleform">Se connecter</span>
-              <div className="field">
+            <div className="field">
               <input className="champform" type="email" id="fmail" name="email" placeholder="Email" required />
-              </div>
-              <div className="field">
+            </div>
+            <div className="field">
               <input className="champform" type="password" id="fpassword" name="password" placeholder="Password" required />
-              </div>
+            </div>
               <button type="submit" id="loginButton" className="boutonform">Valider</button>
-              <div className="endform">
+            <div className="endform">
               <a className="endquestforms" >Pas de compte ? </a>
-              <a className="end__link" href="#">Inscrivez-vous</a>
-              </div>
-              </div>
+              <a className="end__link" href="#"><Link to="">Inscrivez-vous</Link></a>
+            </div>
+          </div>
         </form>
     </div>
     );
     
 }
-export default LogInForm;
+export default LogInFormAgency;
