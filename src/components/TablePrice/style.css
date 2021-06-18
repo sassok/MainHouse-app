@@ -4,6 +4,10 @@
   box-sizing: inherit;
 }
 
+  .centerContact{
+    display:inline-block;
+  }
+
 
 
 @media (min-width: 900px) {
@@ -103,6 +107,8 @@
   display: block;
   font-size: 25px;
   font-weight: 700;
+  width: auto;
+  padding-left: 3%;
 }
 
 .pricing-button {
@@ -115,6 +121,7 @@
   padding: 15px 35px;
   text-decoration: none;
   transition: all 150ms ease-in-out;
+  width:155px;
 }
 
 .pricing-button:hover,

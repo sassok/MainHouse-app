@@ -113,6 +113,22 @@ h1:last-of-type {
 }
 }
 
+@media (max-width: 380px) {
+    .box {
+        text-align: center;
+        height: 300px;
+        width: 100%;
+        margin-left:auto;
+        margin-right: auto
+    }
+    .starsPicture{
+    width: 30%;
+    height: 20%;
+    margin-bottom: -20px;
+    margin-top: -30px;
+}
+}
+
 .cyan {
     border-top: 3px solid var(--cyan);
 }

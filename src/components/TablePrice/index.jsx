@@ -16,7 +16,7 @@ const PriceTable = () => {
           <li class="pricing-features-item">Premier mois gratuit</li>
           <li class="pricing-features-item">Sans engagement</li>
             <li class="pricing-features-item">Acces à une messagerie immeuble</li>
-            <li class="pricing-features-item">De 1 à 9 immeuble</li>
+            <li class="pricing-features-item">De 1 à 9 immeubles par compte</li>
             <li class="pricing-features-item">Calendrier par immeuble et mutualisé</li>
         </ul>
         <span class="pricing-price">39€</span>
@@ -31,7 +31,7 @@ const PriceTable = () => {
           <li class="pricing-features-item">Premier mois gratuit</li>
           <li class="pricing-features-item">Sans engagement</li>
             <li class="pricing-features-item">Acces à une messagerie immeuble</li>
-            <li class="pricing-features-item">De 10 à 19 immeuble</li>
+            <li class="pricing-features-item">De 10 à 19 immeubles par compte</li>
             <li class="pricing-features-item">Calendrier par immeuble et mutualisé</li>
         </ul>
         <span class="pricing-price">55€</span>
@@ -46,10 +46,10 @@ const PriceTable = () => {
         <li class="pricing-features-item">Premier mois gratuit</li>
           <li class="pricing-features-item">Sans engagement</li>
             <li class="pricing-features-item">Acces à une messagerie immeuble</li>
-            <li class="pricing-features-item">Nombre d'immeuble personalisé</li>
+            <li class="pricing-features-item">Nombre d'immeubles personalisé</li>
             <li class="pricing-features-item">Calendrier par immeuble et mutualisé</li>
         </ul>
-        <span class="pricing-price">Contactez nous</span>
+        <span class="pricing-price centerContact">Contactez nous</span>
         <a href="#/" class="pricing-button">Interessé? Contactez nous ici</a>
         </div>
       
