@@ -51,21 +51,45 @@ const Sidebar = () => {
             </div>
           </SidebarHeader>
           <SidebarContent>
-            <Menu iconShape="square">
-              <MenuItem active={true}>
+            <Menu>
+              <MenuItem>
                 <Link to="/">Accueil</Link>
               </MenuItem>
               <MenuItem>
-                <Link to="/login/agency" >BITEZ-vous</Link>
+                <Link to="/notre_dashboard" >Dashboard</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/nos_messagerie" >Messagerie</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/nos_evenements" >Événements</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/nos_proprietaires" >Les propriétaires</Link>
               </MenuItem>
             </Menu>
           </SidebarContent>
           <SidebarFooter>
-            <Menu iconShape="square">
-              <MenuItem>        
-                <Link to="/logout" >Se déconnecter</Link>
-              </MenuItem>
-            </Menu>
+          <Menu>
+            <MenuItem>
+              <Link to="/aide" >Demande d'assistance</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/legal" >Mentions légales</Link>
+            </MenuItem>
+          <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
+            <MenuItem>
+              Dark Theme
+            </MenuItem>
+          <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
+            <MenuItem>
+              <Link to="/notre_profil" >Mon profil</Link>
+            </MenuItem>
+          <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
+            <MenuItem>        
+              <Link to="/deconnexion" >Se déconnecter</Link>
+            </MenuItem>
+          </Menu>
           </SidebarFooter>
         </ProSidebar>
       </div>
@@ -87,21 +111,42 @@ const Sidebar = () => {
               </div>
             </SidebarHeader>
             <SidebarContent>
-              <Menu iconShape="square">
-                <MenuItem active={true}>
-                  <Link to="/">Accueil</Link>
-                </MenuItem>
-                <MenuItem>
-                  <Link to="/login/agency" >MANGEZ-vous</Link>
-                </MenuItem>
-              </Menu>
-            </SidebarContent>
-            <SidebarFooter>
-              <Menu iconShape="square">
-                <MenuItem>        
-                  <Link to="/logout" >Se déconnecter</Link>
-                </MenuItem>
-              </Menu>
+            <Menu>
+              <MenuItem>
+                <Link to="/">Accueil</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/mon_dashboard" >Dashboard</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/ma_messagerie" >Messagerie</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/mes_evenements" >Événements</Link>
+              </MenuItem>
+            </Menu>
+          </SidebarContent>
+          <SidebarFooter>
+          <Menu>
+            <MenuItem>
+              <Link to="/aide" >Demande d'assistance</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/legal" >Mentions légales</Link>
+            </MenuItem>
+          <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
+            <MenuItem>
+              Dark Theme
+            </MenuItem>
+          <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
+            <MenuItem>
+              <Link to="/mon_profil" >Mon profil</Link>
+            </MenuItem>
+          <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
+            <MenuItem>        
+              <Link to="/deconnexion" >Se déconnecter</Link>
+            </MenuItem>
+          </Menu>
             </SidebarFooter>
           </ProSidebar>
         </div>

@@ -32,8 +32,9 @@ const IndexBuilding = () => {
       }, []);
 
   return (  
-
-  <div className="cardscontainer">
+    <>
+    
+    <div className="cardscontainer row2Sidebar">
   <div className="containerbuilding">
   {building.map(build => (
     <div className="card-building">
@@ -48,12 +49,13 @@ const IndexBuilding = () => {
         <span className="cardbuildref">Ref : {build.reference}</span>
       </div>
     </div>
-  
+    
     
   ))}
     </div>
     </div>
-    
+    </>
+
   );
 };
 
