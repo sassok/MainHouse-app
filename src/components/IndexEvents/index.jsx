@@ -34,8 +34,8 @@ const IndexEvent = () => {
 
   return (  
     <>
-    
-    <div className="cardscontainer row2Sidebar">
+    <main className="main">
+    <div className="cardscontainer Sidebar">
   <div className="containerevent">
   {event.map(events => (
     <div className="card-event">
@@ -55,6 +55,7 @@ const IndexEvent = () => {
   ))}
     </div>
     </div>
+    </main>
     </>
 
   );

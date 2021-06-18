@@ -20,9 +20,9 @@ const App = () => {
     return (  
     <>      
     <Router>
-    <Provider store={store}>      
+    <Provider store={store}>  
+    <div className="grid-container">     
         <Sidebar />
-            <main>
                 <Switch>
                     <Route path="/" exact>
                         <Navbar />
@@ -31,23 +31,19 @@ const App = () => {
                     <Route path="/connexion/proprietaire" exact>
                         <LogInFormAgency/>
                     </Route>
-                    <div id="sidebarContainer">
-                        <div className="row1Sidebar"> 
-                        </div>
-                        <div className ="row2Sidebar" > 
                             <Route path="/connexion/agence" exact>
-                                <IndexBuilding/>
+                                <LogInFormAgency/>
                             </Route>
                             <Route path="/nos_evenements" exact>
                                 <IndexEvent/>
                             </Route>
                             <Route path="/notre_dashboard" exact>
+                            
                                 <IndexBuilding/>
-                            </Route>
-                        </div>
-                    </div>
+                            
+                        </Route>
                 </Switch>
-            </main> 
+                </div>
         </Provider>
     </Router> 
     </>
