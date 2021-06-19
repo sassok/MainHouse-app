@@ -39,6 +39,7 @@ const AllOwnerListAgency = () => {
     }
 
   return (  
+    <main className="main">
   <div className="wrap">
     <div className="search">
       <input type="text" className="searchTerm" placeholder="What are you looking for?" onChange={(e) => handleSearch(e)}></input>
@@ -61,7 +62,7 @@ const AllOwnerListAgency = () => {
       }
     </div>
 </div>
-
+</main>
 
   );
 };

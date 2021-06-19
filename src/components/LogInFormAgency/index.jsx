@@ -58,9 +58,10 @@ function LogInFormAgency  () {
           useEffect(() => {
             
             if (agency.id !== (undefined || null)) {
-              history.push('/notre_dashboard');
+              history.push('/mes-immeubles');
             }
           }, [agency]);
+
 
     return (
   <>

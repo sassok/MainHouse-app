@@ -9,6 +9,39 @@ body {
   padding: 0;
 }
 
-.row1Sidebar{
-  width: 300px;
+.grid-container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 61px 1fr;
+  grid-template-areas:
+  "sidenav header header"
+  "sidenav main aside-right";
+  height: 100vh;
+}
+
+
+aside {
+  display: block;
+}
+.sidenav {
+  grid-area: sidenav;
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.aside-right {
+  grid-area: aside-right;
+  display: none;
+  position: fixed;
+  
+}
+
+.main {
+  grid-area: main;
+  display: block;
 }

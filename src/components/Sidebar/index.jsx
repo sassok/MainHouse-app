@@ -21,6 +21,7 @@ import "./style.css";
 import { useSelector } from 'react-redux';
 import Landingpage from '../../pages/Landingpage/index';
 import Navbar from '../Navbar/index';
+import HeaderMenu from '../HeaderMenu/index';
 
 const Sidebar = () => {
     //check state
@@ -37,6 +38,8 @@ const Sidebar = () => {
   if (is_connected_agency === true) {
   return (
     <>
+    <HeaderMenu/>
+    <aside className="sidenav">
       <div id="headerSidebar">
           {/* collapsed props to change menu size using menucollapse state */}
         <ProSidebar collapsed={menuCollapse}>
@@ -52,7 +55,7 @@ const Sidebar = () => {
           <SidebarContent>
             <Menu>
               <MenuItem>
-                <Link to="/notre_dashboard">Accueil</Link>
+                <Link to="/mes-immeubles">Mes Immeubles</Link>
               </MenuItem>
               <MenuItem>
                 <Link to="/nos_messagerie" >Messagerie</Link>
@@ -89,7 +92,9 @@ const Sidebar = () => {
           </SidebarFooter>
         </ProSidebar>
       </div>
+      </aside>
     </>
+
   )}
   if (is_connected_owner === true) {
     return (
@@ -108,9 +113,6 @@ const Sidebar = () => {
             </SidebarHeader>
             <SidebarContent>
             <Menu>
-              <MenuItem>
-                <Link to="/">Accueil</Link>
-              </MenuItem>
               <MenuItem>
                 <Link to="/mon_dashboard" >Dashboard</Link>
               </MenuItem>

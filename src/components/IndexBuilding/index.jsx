@@ -32,9 +32,9 @@ const IndexBuilding = () => {
       }, []);
 
   return (  
-    <>
+      <main className="main">
     
-    <div className="cardscontainer row2Sidebar" style={{paddingLeft:"100"+"px"}}>
+  <div className="cardscontainer">
   <div className="containerbuilding">
   {building.map(build => (
     <div className="card-building">
@@ -54,7 +54,7 @@ const IndexBuilding = () => {
   ))}
     </div>
     </div>
-    </>
+    </main>
 
   );
 };
