@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import './style.css';
 import Cookies from 'js-cookie';
+import { IoMdSearch} from "react-icons/io";
 
 const AllOwnerListAgency = () => {
   const [ownerList, setOwnerList] = useState([]);
@@ -40,30 +41,42 @@ const AllOwnerListAgency = () => {
 
   return (  
     <main className="main">
-  <div className="wrap">
-    <div className="search">
-      <input type="text" className="searchTerm" placeholder="What are you looking for?" onChange={(e) => handleSearch(e)}></input>
-      { searchTerme.length > 0 ? 
-      ownerList.map(list_owner => (
-    <div>
-    <p>{list_owner.first_name}</p>
-    <p>{list_owner.last_name}</p>
-    <br/>
-   </div>
-      ))
-   :
-      searchResult.map(list_owner => (
-    <div>
-    <p>{list_owner.first_name}</p>
-    <p>{list_owner.last_name}</p>
-    <br/>
-   </div>
-      ))
-      }
-    </div>
-</div>
-</main>
-
+      <div className="wrap">
+        <div className="ownersearchbar">
+          <input type="text" className="searchTerm" placeholder="Rechercher un propriétaire"  onChange={(e) => handleSearch(e)}></input>
+          <p type="text" className="iconownersearch"><IoMdSearch className="iconownerbar"/></p>
+          <p type="text" className="owneraddchp"><button className="addownbt">Ajouter</button></p>
+        </div>
+      </div>
+      <div className="ownerlistcards">
+        <div className="listowners">
+          { searchTerme.length > 0 ? 
+          ownerList.map(list_owner => (
+            <div className="list-item-owner">
+              <div className="img-owner-list">
+                <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" className="owner-image"/>
+              </div>
+              <div className="owner-list-content">
+              <p className="owner-list-name">{list_owner.first_name}</p>
+              <p className="owner-list-reff">{list_owner.last_name}</p>
+            </div>
+          </div>
+          ))
+          :
+          searchResult.map(list_owner => (
+            <div className="list-item-owner">
+              <div className="img-owner-list">
+                <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" className="owner-image"/>
+              </div>
+              <div className="owner-list-content">
+                <p className="owner-list-name">{list_owner.first_name}</p>
+                <p className="owner-list-reff">{list_owner.last_name}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </main>
   );
 };
 
