@@ -114,9 +114,6 @@ const Sidebar = () => {
             <SidebarContent>
             <Menu>
               <MenuItem>
-                <Link to="/">Accueil</Link>
-              </MenuItem>
-              <MenuItem>
                 <Link to="/mon_dashboard" >Dashboard</Link>
               </MenuItem>
               <MenuItem>

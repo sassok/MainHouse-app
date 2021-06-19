@@ -15,6 +15,7 @@ import IndexBuilding from './components/IndexBuilding/index';
 import Navbar from './components/Navbar/index';
 import Landingpage from './pages/Landingpage/index';
 import IndexEvent from './components/IndexEvent/index';
+import AllOwnerListAgency from './components/AllOwnerListAgency/index';
 
 
 const AppWrapper = () => {
@@ -31,24 +32,25 @@ const App = () => {
     return (    
   
     <>
-    {is_connected_a || is_connected_o ? 
+    
        
     <Router>
+    {is_connected_a || is_connected_o ? 
         <div className="grid-container">
         <Sidebar />
                 <Switch>
-                    <Route path="/mes-immeubles" exact>
+                    <Route path="/mes-immeubles">
                         <IndexBuilding/>
                     </Route>
                     <Route path="/nos_evenements" exact>
                         <IndexEvent/>
                     </Route>
+                    <Route path="/nos_proprietaires" exact>
+                        <AllOwnerListAgency/>
+                    </Route>
                 </Switch>
                 </div>
-                </Router>  
-                
                     :
-                    <Router>
                     <Switch>
                     <Route path="/" exact>
                         <Navbar />
@@ -62,8 +64,9 @@ const App = () => {
                     </Route>
                 </Switch>
         
-    </Router> 
     }
+    </Router> 
+    
     </>
     );
   };

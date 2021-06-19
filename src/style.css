@@ -14,8 +14,8 @@ body {
   grid-template-columns: 220px 1fr;
   grid-template-rows: 61px 1fr;
   grid-template-areas:
-  "sidenav header"
-  "sidenav main";
+  "sidenav header header"
+  "sidenav main aside-right";
   height: 100vh;
 }
 
@@ -32,6 +32,13 @@ aside {
   position: fixed;
   overflow-y: auto;
   z-index: 100;
+}
+
+.aside-right {
+  grid-area: aside-right;
+  display: none;
+  position: fixed;
+  
 }
 
 .main {
