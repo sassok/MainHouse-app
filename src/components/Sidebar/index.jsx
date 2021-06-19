@@ -55,7 +55,7 @@ const Sidebar = () => {
           <SidebarContent>
             <Menu>
               <MenuItem>
-                <Link to="/notre_dashboard">Accueil</Link>
+                <Link to="/mes-immeubles">Mes Immeubles</Link>
               </MenuItem>
               <MenuItem>
                 <Link to="/nos_messagerie" >Messagerie</Link>

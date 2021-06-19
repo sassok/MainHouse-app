@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './components/redux/store';
+import { useSelector } from 'react-redux';
 import {
     BrowserRouter as Router,
     Route,
@@ -13,42 +14,58 @@ import LogInFormOwner from './components/LogInFormOwner';
 import IndexBuilding from './components/IndexBuilding/index';
 import Navbar from './components/Navbar/index';
 import Landingpage from './pages/Landingpage/index';
-import IndexEvent from './components/IndexEvents/index';
+import IndexEvent from './components/IndexEvent/index';
 
+
+const AppWrapper = () => {
+return (
+    <Provider store={store}>
+        <App/>
+    </Provider>
+)
+}
 const App = () => {
-
-    return (  
-    <>      
+    const is_connected_a = useSelector(state => state.agency.is_connected_agency);
+    const is_connected_o = useSelector(state => state.owner.is_connected_owner);
+    
+    return (    
+  
+    <>
+    {is_connected_a || is_connected_o ? 
+       
     <Router>
-    <Provider store={store}>  
-    <div className="grid-container">     
+        <div className="grid-container">
         <Sidebar />
                 <Switch>
+                    <Route path="/mes-immeubles" exact>
+                        <IndexBuilding/>
+                    </Route>
+                    <Route path="/nos_evenements" exact>
+                        <IndexEvent/>
+                    </Route>
+                </Switch>
+                </div>
+                </Router>  
+                
+                    :
+                    <Router>
+                    <Switch>
                     <Route path="/" exact>
                         <Navbar />
                         <Landingpage />
                     </Route>
-                    <Route path="/connexion/proprietaire" exact>
+                    <Route path="/connexion/proprietaire">
                         <LogInFormAgency/>
                     </Route>
-                            <Route path="/connexion/agence" exact>
-                                <LogInFormAgency/>
-                            </Route>
-                            <Route path="/nos_evenements" exact>
-                                <IndexEvent/>
-                            </Route>
-                            <Route path="/notre_dashboard" exact>
-                            
-                                <IndexBuilding/>
-                            
-                        </Route>
+                    <Route path="/connexion/agence">
+                        <LogInFormAgency/>
+                    </Route>
                 </Switch>
-                </div>
-        </Provider>
+        
     </Router> 
+    }
     </>
-
     );
   };
 
-  ReactDOM.render(<App />, document.getElementById('root'));
+  ReactDOM.render(<AppWrapper />, document.getElementById('root'));
