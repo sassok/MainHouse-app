@@ -22,6 +22,8 @@ import { useSelector } from 'react-redux';
 import Landingpage from '../../pages/Landingpage/index';
 import Navbar from '../Navbar/index';
 import HeaderMenu from '../HeaderMenu/index';
+import DeleteAgencySession from "../DeleteAgencySession";
+
 
 const Sidebar = () => {
     //check state
@@ -86,7 +88,7 @@ const Sidebar = () => {
             </MenuItem>
           <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
             <MenuItem>        
-              <Link to="/deconnexion" >Se déconnecter</Link>
+              <Link to="/deconnexion">Se déconnecter</Link>
             </MenuItem>
           </Menu>
           </SidebarFooter>
