@@ -22,42 +22,27 @@ const IndexEvent = () => {
         }).then((response) => response.json())
           .then((response) => {
             setEvent(response.events);
-            console.log(response)
             }).catch(function() {
               console.log("error");
         });
-  
       };       
 
       fetchEvent()
       }, []);
 
-  return (  
-    <>
+  return ( 
     <main className="main">
-    <div className="cardscontainer Sidebar">
-  <div className="containerevent">
-  {event.map(events => (
-    <div className="card-event">
-      <div className="card-event-header">
-        <img className="card-event-img" src={party} alt="fiesta" />
-      </div>
-      <div className="card-event-body">
-        <span className="cardeventcity">{events.datetime}</span>
-        <div className="cardeventname">
-        {events.title}
+      <div className="eventlistcards">
+        <div className="listevents">
+          {event.map(events => (
+            <div className="list-item-event">      
+              <p className="event-list-title">{events.title}</p>
+              <p className="event-list-date">{events.datetime}</p>    
+            </div>
+          ))}
         </div>
-        <span className="cardeventref">Ref : {events.description}</span>
       </div>
-    </div>
-    
-    
-  ))}
-    </div>
-    </div>
     </main>
-    </>
-
   );
 };
 
