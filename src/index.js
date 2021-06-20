@@ -17,6 +17,7 @@ import Landingpage from './pages/Landingpage/index';
 import IndexEvent from './components/IndexEvent/index';
 import AllOwnerListAgency from './components/AllOwnerListAgency/index';
 import DeleteAgencySession from './components/DeleteAgencySession';
+import EventsOwner from './components/EventsOwner/index';
 
 
 const AppWrapper = () => {
@@ -46,6 +47,9 @@ const App = () => {
                     <Route path="/nos_evenements" exact>
                         <IndexEvent/>
                     </Route>
+                    <Route path="/mes_evenements" exact>
+                        <EventsOwner/>
+                    </Route>
                     <Route path="/nos_proprietaires" exact>
                         <AllOwnerListAgency/>
                     </Route>
@@ -61,7 +65,7 @@ const App = () => {
                         <Landingpage />
                     </Route>
                     <Route path="/connexion/proprietaire">
-                        <LogInFormAgency/>
+                        <LogInFormOwner/>
                     </Route>
                     <Route path="/connexion/agence">
                         <LogInFormAgency/>
