@@ -19,6 +19,7 @@ import AllOwnerListAgency from './components/AllOwnerListAgency/index';
 import DeleteAgencySession from './components/DeleteAgencySession';
 import EventsOwner from './components/EventsOwner/index';
 import AgencyProfile from './components/AgencyProfile/index';
+import EditOwnerProfile from './components/EditOwnerProfile/index';
 
 
 const AppWrapper = () => {
@@ -56,6 +57,9 @@ const App = () => {
                     </Route>
                     <Route path="/notre_profil" exact>
                         <AgencyProfile/>
+                    </Route>
+                    <Route path="/mon_profil" exact>
+                        <EditOwnerProfile/>
                     </Route>
                         <Route path="/deconnexion" >
                             <DeleteAgencySession />
