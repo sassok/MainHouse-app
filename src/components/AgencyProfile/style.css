@@ -1,0 +1,19 @@
+.headprofile{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    color: #10182f;
+    height: 50px;
+    border-bottom: 1px solid;
+    border-color: #E1E3E6;
+}
+
+.left-head-profile {
+    margin-left: 3%;
+    font-weight: bold;
+}
+
+
+
