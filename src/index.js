@@ -18,6 +18,7 @@ import IndexEvent from './components/IndexEvent/index';
 import AllOwnerListAgency from './components/AllOwnerListAgency/index';
 import DeleteAgencySession from './components/DeleteAgencySession';
 import EventsOwner from './components/EventsOwner/index';
+import AgencyProfile from './components/AgencyProfile/index';
 
 
 const AppWrapper = () => {
@@ -52,6 +53,9 @@ const App = () => {
                     </Route>
                     <Route path="/nos_proprietaires" exact>
                         <AllOwnerListAgency/>
+                    </Route>
+                    <Route path="/notre_profil" exact>
+                        <AgencyProfile/>
                     </Route>
                         <Route path="/deconnexion" >
                             <DeleteAgencySession />
