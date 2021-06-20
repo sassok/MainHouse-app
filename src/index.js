@@ -16,6 +16,7 @@ import Navbar from './components/Navbar/index';
 import Landingpage from './pages/Landingpage/index';
 import IndexEvent from './components/IndexEvent/index';
 import AllOwnerListAgency from './components/AllOwnerListAgency/index';
+import DeleteAgencySession from './components/DeleteAgencySession';
 
 
 const AppWrapper = () => {
@@ -48,6 +49,9 @@ const App = () => {
                     <Route path="/nos_proprietaires" exact>
                         <AllOwnerListAgency/>
                     </Route>
+                        <Route path="/deconnexion" >
+                            <DeleteAgencySession />
+                        </Route>
                 </Switch>
                 </div>
                     :
@@ -63,7 +67,6 @@ const App = () => {
                         <LogInFormAgency/>
                     </Route>
                 </Switch>
-        
     }
     </Router> 
     
