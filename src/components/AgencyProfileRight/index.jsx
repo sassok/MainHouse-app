@@ -72,10 +72,10 @@ const AgencyProfileRight = () => {
               </div>
         </div>
       </div>
-      <div className="bodyprofileright">
+    
      
 
-   
+  <div className="backgroundprofright">
   <div class="inner-div">
     <div class="front">
       <div class="front__bkg-photo"></div>
@@ -99,6 +99,7 @@ const AgencyProfileRight = () => {
   </div>
   
       </div>
+   
     </div>
   );
 };

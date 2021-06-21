@@ -37,16 +37,16 @@ const EditOwnerProfile = () => {
     var last_name = profile.last_name;
     var email = profile.email;
     var phone_number = profile.phone_number;
-    if (document.querySelector('#first_name').value != "") {
+    if (document.querySelector('#first_name').value !== "") {
         first_name = document.querySelector('#first_name').value;
     }
-    if (document.querySelector('#last_name').value != "") {
+    if (document.querySelector('#last_name').value !== "") {
         last_name = document.querySelector('#last_name').value;
     }
-    if (document.querySelector('#email').value != "") {
+    if (document.querySelector('#email').value !== "") {
       email = document.querySelector('#email').value;
     }
-    if (document.querySelector('#phone_number').value != "") {
+    if (document.querySelector('#phone_number').value !== "") {
       phone_number = document.querySelector('#phone_number').value;
     }
 
