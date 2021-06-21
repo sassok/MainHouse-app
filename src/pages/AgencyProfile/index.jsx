@@ -4,9 +4,7 @@ import EditAgencyProfile from '../../components/EditAgencyProfile';
 const AgencyProfile = () => {
   
   return (  
-    <main className="main">
     <EditAgencyProfile />
-    </main>
   );
 };
 

@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import './style.css';
 import Cookies from 'js-cookie';
 import { IoMdSearch } from "react-icons/io";
+import AgencyProfileRight from '../AgencyProfileRight/index';
 
 const EditAgencyProfile = () => {
   const agency = useSelector((state) => state.agency);
@@ -11,6 +12,7 @@ const EditAgencyProfile = () => {
   const bearer = useSelector(token => token.bearer)
 
   useEffect(() => {
+    document.getElementsByClassName('aside-right')[0].style.display = "block";
     const fetchProfile = () => {
       fetch(`https://mainhouseapi.herokuapp.com/agencies/${id}`, {
         method: 'get',
@@ -75,7 +77,7 @@ const EditAgencyProfile = () => {
   }
 
   return (
-
+<>
     <main className="main">
       <div className="wrap">
         <div className="headprofile">
@@ -116,6 +118,10 @@ const EditAgencyProfile = () => {
         </form>
       </div>
     </main>
+        <aside className="aside-right">
+        <AgencyProfileRight />
+  </aside>
+  </>
   );
 };
 
