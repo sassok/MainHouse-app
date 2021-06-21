@@ -45,7 +45,9 @@ const App = () => {
     {is_connected_a || is_connected_o ? 
         <div className="grid-container">
         <Sidebar />
-             
+        <div className="hamburger">
+            <Hamburger/>
+        </div>                
             <Switch>
                 <Route path="/mes-immeubles">
                     <IndexBuilding/>

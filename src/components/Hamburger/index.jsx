@@ -17,7 +17,7 @@ const Hamburger=()=> {
           <Link to="/nos_evenements" >Événements</Link>
           <Link to="/nos_proprietaires" >Les propriétaires</Link>
           <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
-          Dark Theme
+          <p>Dark Theme</p>
           <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
           <Link to="/notre_profil" >Mon profil</Link>
           <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
