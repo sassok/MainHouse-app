@@ -32,10 +32,10 @@ const CreateOwner = () => {
   return (
     <>
   <div className="FormContainer">
-    <div className="formcontainer">
+    <div className="formcontainer1">
         <form onSubmit={OnSend} className="ownerForm" >
           <div className="formbg-inner padding-horizontal--48">
-              <span className="padding-bottom--15 titleform"> Ajouter un nouveau propriétaire </span>
+              <span className="padding-bottom--15 titleformCreate"> Ajouter un nouveau propriétaire </span>
               <div className="field">
               <input className="champform" type="first_name" id="ffirst_name" name="mail" placeholder="Prenom" required />
             </div>

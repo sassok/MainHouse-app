@@ -6,6 +6,7 @@
     width: 100%;
     font-family: "Roboto", sans-serif;
     color: #10182f;
+    position: fixed;
   }
   .containerbuilding-show {
     
@@ -19,7 +20,7 @@
     width: 100%;
   }
   .card-building-header-show .card-building-img-show {
-    width: 100%;
+    width: 500px;
     height: 200px;
     object-fit: cover;
   }

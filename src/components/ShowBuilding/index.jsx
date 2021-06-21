@@ -29,7 +29,6 @@ const ShowBuilding = (props) => {
       }, [props]);
   
     return (
-      <div className="containerShowBuilding">
 
 <div className="showbuildingcard">
 <div className="containerbuilding-show">
@@ -38,13 +37,13 @@ const ShowBuilding = (props) => {
       <img className="card-building-img-show " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
     </div>
     <div className="card-building-body-show">
-      <span className="cardbuildcity-show">Lyon</span>
       <div className="cardbuildname-show">
         <p>{oneBuilding.name}</p>
       </div>
-      <span className="cardbuildref-show">{oneBuilding.reference}</span>
+      <span className="cardbuildref-show">Ville: {oneBuilding.city}</span>
+      <span className="cardbuildref-show">Adresse: {oneBuilding.adress}</span>
+      <span className="cardbuildref-show">Reference: {oneBuilding.reference}</span>
     </div>
-  </div>
   </div>
   </div>
   </div>
