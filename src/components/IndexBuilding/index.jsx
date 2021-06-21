@@ -55,7 +55,7 @@ const getID = (id) => {
         {build.name}
         </div>
         <span className="cardbuildref">Ref : {build.reference}</span> 
-        <button onClick={() => getID(build.id)}>Clique grosse folle</button>
+        <button onClick={() => getID(build.id)}>En savoir plus</button>
       </div>
     </div> 
   ))}
