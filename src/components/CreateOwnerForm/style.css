@@ -1,6 +1,6 @@
 
 
-.formcontainer {
+.formcontainer1 {
   text-align: center;
   margin: 0px auto;
   width: 100%;
@@ -28,7 +28,7 @@
   padding-bottom: 15px;
 }
 
-.titleform{
+.titleformCreate{
   font-size: 35px;
   color: white;
 }

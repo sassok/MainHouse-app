@@ -11,7 +11,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 220px 1fr 500px;
+  grid-template-columns: 220px 1fr;
   grid-template-rows: 61px 1fr;
   grid-template-areas:
   "sidenav header header"
@@ -34,11 +34,12 @@ aside {
 
 .aside-right {
   grid-area: aside-right;
-  position: fixed;
-  display: block;
+  display: none;
+  width: 500px;
 }
 
 .main {
   grid-area: main;
   display: block;
+  border-right: 1px solid #E1E3E6;
 }
