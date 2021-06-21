@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import './style.css';
 import Cookies from 'js-cookie';
 import { IoMdSearch} from "react-icons/io";
+import PopUpButton from '../PopUpButton/index';
 
 const AllOwnerListAgency = () => {
   const [ownerList, setOwnerList] = useState([]);
@@ -45,7 +46,7 @@ const AllOwnerListAgency = () => {
         <div className="ownersearchbar">
           <input type="text" className="searchTerm" placeholder="Rechercher un propriétaire"  onChange={(e) => handleSearch(e)}></input>
           <p type="text" className="iconownersearch"><IoMdSearch className="iconownerbar"/></p>
-          <p type="text" className="owneraddchp"><button className="addownbt">Ajouter</button></p>
+          <p type="text" className="owneraddchp"><PopUpButton/></p>
         </div>
       </div>
       <div className="ownerlistcards">
