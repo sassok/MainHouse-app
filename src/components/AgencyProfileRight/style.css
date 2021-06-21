@@ -1,3 +1,7 @@
+.backgroundprofright {
+  height: 100%;
+}
+
 .headprofileright{
     display: flex;
     align-items: center;
@@ -13,15 +17,10 @@
     width: 100%;
     text-align: right;
     justify-content: right;
- 
     font-weight: bold;
 }
 
-.bodyprofileright{
-    background-color: #F3F6FA;
-    border-left: 1px solid;
-    border-color: #E1E3E6;
-}
+
 
 .owner-image-profile {  
     width: 40px;
@@ -49,19 +48,19 @@
    
   
   .front {
-
+    background-color:#F3F6FA; 
     cursor: pointer;
     height: 100%;
     backface-visibility: hidden;
-    background-color: #ffffff;
+   
   }
   
   .front__bkg-photo {
     position: relative;
     height: 150px;
-    background-color:#F3F6FA; 
     overflow: hidden;
     width: 100%;
+    background-color: #ffffff;
   }
   
   .front__face-photo {
