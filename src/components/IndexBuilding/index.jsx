@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './style.css';
 import Cookies from 'js-cookie';
+import ShowBuilding from '../ShowBuilding';
+import { Link } from 'react-router-dom';
+import { SidebarHeader } from 'react-pro-sidebar';
 
 const IndexBuilding = () => {
     const agency = useSelector((state) => state.agency);
     const [building, setBuilding] = useState([]);
+    const [buildingId, setBuildingId] = useState([]);
     const id = useSelector(state => state.agency.id);
-    const bearer = useSelector(token => token.bearer)
 
     useEffect (() => {
       const fetchBuilding = async () => {
@@ -21,7 +24,6 @@ const IndexBuilding = () => {
         }).then((response) => response.json())
           .then((response) => {
             setBuilding(response.buildings);
-            console.log(response.adress)
             }).catch(function() {
               console.log("error");
         });
@@ -31,9 +33,15 @@ const IndexBuilding = () => {
       fetchBuilding()
       }, []);
 
+
+const getID = (id) => {
+  setBuildingId(id);
+}
+
+
   return (  
-      <main className="main">
-    
+  <>
+  <main className="main">
   <div className="cardscontainer">
   <div className="containerbuilding">
   {building.map(build => (
@@ -46,15 +54,17 @@ const IndexBuilding = () => {
         <div className="cardbuildname">
         {build.name}
         </div>
-        <span className="cardbuildref">Ref : {build.reference}</span>
+        <span className="cardbuildref">Ref : {build.reference}</span> 
+        <button onClick={() => getID(build.id)}>Clique grosse folle</button>
       </div>
-    </div>
-    
-    
+    </div> 
   ))}
     </div>
-    </div>
+          <ShowBuilding id={buildingId}/>
+        </div>
     </main>
+    
+    </>
 
   );
 };
