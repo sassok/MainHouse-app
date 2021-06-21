@@ -20,6 +20,8 @@ import DeleteAgencySession from './components/DeleteAgencySession';
 import EventsOwner from './components/EventsOwner/index';
 import AgencyProfile from './pages/AgencyProfile/index';
 import EditOwnerProfile from './components/EditOwnerProfile/index';
+import ShowBuilding from './components/ShowBuilding';
+
 
 
 const AppWrapper = () => {
