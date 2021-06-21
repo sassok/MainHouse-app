@@ -72,21 +72,21 @@ const EditOwnerProfile = () => {
       </div>
       <div className="editform">
         <form onSubmit={OnSend}>
-          <div class="input-style-long">
-            <label class="label">Nom</label>
-            <input class="input--style-4" type="text" name="first_name" id="first_name" placeholder={profile.first_name} />
+          <div className="input-style-long">
+            <label className="label">Nom</label>
+            <input className="input--style-4" type="text" name="first_name" id="first_name" placeholder={profile.first_name} />
           </div>
-          <div class="input-style-long">
-            <label class="label">Prénom</label>
-            <input class="input--style-4" type="text" name="last_name" id="last_name" placeholder={profile.last_name} />
+          <div className="input-style-long">
+            <label className="label">Prénom</label>
+            <input className="input--style-4" type="text" name="last_name" id="last_name" placeholder={profile.last_name} />
           </div>
-          <div class="input-style-long">
-            <label class="label">Email</label>
-            <input class="input--style-4" type="text" name="email" id="email" placeholder={profile.email} />
+          <div className="input-style-long">
+            <label className="label">Email</label>
+            <input className="input--style-4" type="text" name="email" id="email" placeholder={profile.email} />
           </div>
-          <div class="input-style-long">
-            <label class="label">Téléphone</label>
-            <input class="input--style-4" type="text" name="phone_number" id="phone_number" placeholder={profile.phone_number} />
+          <div className="input-style-long">
+            <label className="label">Téléphone</label>
+            <input className="input--style-4" type="text" name="phone_number" id="phone_number" placeholder={profile.phone_number} />
           </div>
           <button type="submit" className="btcreateform">Modifier</button>
         </form>

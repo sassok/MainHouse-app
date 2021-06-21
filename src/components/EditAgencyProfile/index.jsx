@@ -84,33 +84,33 @@ const EditAgencyProfile = () => {
       </div>
       <div className="editform">
         <form onSubmit={OnSend}>
-          <div class="input-style-long">
-            <label class="label">Nom de l'agence</label>
-            <input class="input--style-4" type="text" name="name" id="name" placeholder={profile.name} />
+          <div className="input-style-long">
+            <label className="label">Nom de l'agence</label>
+            <input className="input--style-4" type="text" name="name" id="name" placeholder={profile.name} />
           </div>
-          <div class="input-style-long">
-            <label class="label">N° de Siret</label>
-            <input class="input--style-4" type="text" name="siren" id="siren" placeholder={profile.siren} />
+          <div className="input-style-long">
+            <label className="label">N° de Siret</label>
+            <input className="input--style-4" type="text" name="siren" id="siren" placeholder={profile.siren} />
           </div>
-          <div class="input-style-long">
-            <label class="label">Adresse</label>
-            <input class="input--style-4" type="text" name="adress" id="adress" placeholder={profile.adress} />
+          <div className="input-style-long">
+            <label className="label">Adresse</label>
+            <input className="input--style-4" type="text" name="adress" id="adress" placeholder={profile.adress} />
           </div>
-          <div class="input-style-long">
-            <label class="label">Code postal</label>
-            <input class="input--style-4" type="text" name="zipcode" id="zipcode" placeholder={profile.zipcode} />
+          <div className="input-style-long">
+            <label className="label">Code postal</label>
+            <input className="input--style-4" type="text" name="zipcode" id="zipcode" placeholder={profile.zipcode} />
           </div>
-          <div class="input-style-long">
-            <label class="label">Ville</label>
-            <input class="input--style-4" type="text" name="city" id="city" placeholder={profile.city} />
+          <div className="input-style-long">
+            <label className="label">Ville</label>
+            <input className="input--style-4" type="text" name="city" id="city" placeholder={profile.city} />
           </div>
-          <div class="input-style-long">
-            <label class="label">Email</label>
-            <input class="input--style-4" type="text" name="email" id="email" placeholder={profile.email} />
+          <div className="input-style-long">
+            <label className="label">Email</label>
+            <input className="input--style-4" type="text" name="email" id="email" placeholder={profile.email} />
           </div>
-          <div class="input-style-long">
-            <label class="label">Téléphone</label>
-            <input class="input--style-4" type="text" name="phone_number" id="phone_number" placeholder={profile.phone_number} />
+          <div className="input-style-long">
+            <label className="label">Téléphone</label>
+            <input className="input--style-4" type="text" name="phone_number" id="phone_number" placeholder={profile.phone_number} />
           </div>
           <button type="submit" className="btcreateform">Modifier</button>
         </form>
