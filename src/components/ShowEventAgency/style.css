@@ -1,0 +1,52 @@
+  .showbuildingcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    color: #10182f;
+    position: fixed;
+  }
+  .containerbuilding-show {
+    
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .card-building-show {
+    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+  }
+  .card-building-header-show .card-building-img-show {
+    width: 500px;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-building-body-show {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-height: 60px;
+  }
+  
+.cardbuildcity-show {
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+ 
+.cardbuildname-show {
+    font-size: 20px;
+}
+  
+  .card-building-body-show  {
+    font-size: 13px;
+    margin: 0 0 40px;
+  }
+
+  .cardbuildref-show {
+      padding-top: 20px;
+    font-size: 12px;
+    padding-bottom: 2px;
+}

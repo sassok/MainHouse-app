@@ -3,13 +3,18 @@ import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './style.css';
 import Cookies from 'js-cookie';
-import party from "../../assets/images/party.jpeg";
+import ShowEventAgency from '../ShowEventAgency/index';
 
 const IndexEvent = () => {
     const agency = useSelector((state) => state.agency);
     const [event, setEvent] = useState([]);
     const id = useSelector(state => state.agency.id);
     const bearer = useSelector(token => token.bearer)
+    const [EventId, setEventId] = useState([]);
+
+    const setDisplay = () => {
+      document.getElementsByClassName('aside-right')[0].style.display = "block";
+    }
 
     useEffect (() => {
       const fetchEvent = async () => {
@@ -30,12 +35,18 @@ const IndexEvent = () => {
       fetchEvent()
       }, []);
 
+      const getID = (id) => {
+        setEventId(id);
+        setDisplay();
+      }
+
   return ( 
+    <>
     <main className="main">
       <div className="eventlistcards">
         <div className="listevents">
           {event.map(events => (
-            <div className="list-item-event">      
+            <div className="list-item-event" onClick={() => getID(events.id)}>      
               <p className="event-list-title">{events.title}</p>
               <p className="event-list-date">{events.datetime}</p>    
             </div>
@@ -43,6 +54,10 @@ const IndexEvent = () => {
         </div>
       </div>
     </main>
+        <aside className="aside-right">
+        <ShowEventAgency id={EventId}/>
+  </aside>
+  </>
   );
 };
 
