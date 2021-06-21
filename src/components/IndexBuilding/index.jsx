@@ -21,7 +21,7 @@ const IndexBuilding = () => {
         }).then((response) => response.json())
           .then((response) => {
             setBuilding(response.buildings);
-            console.log(response)
+            console.log(response.adress)
             }).catch(function() {
               console.log("error");
         });
