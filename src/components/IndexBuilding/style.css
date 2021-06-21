@@ -19,8 +19,13 @@
     border-radius: 25px 25px 0px 0px;
     overflow: hidden;
     width: 250px;
-    border-bottom: 2px solid;
+    border-bottom: 1px solid;
     border-color: #E1E3E6;
+  }
+
+  .card-building:hover {
+    cursor: pointer;
+    border-bottom: 3px solid #3C64B1;
   }
   .card-building-header .card-building-img {
     width: 100%;

@@ -12,6 +12,20 @@ const IndexBuilding = () => {
     const [building, setBuilding] = useState([]);
     const [buildingId, setBuildingId] = useState([]);
     const id = useSelector(state => state.agency.id);
+    var display = false;
+
+    const setDisplay = () => {
+      document.getElementsByClassName('aside-right')[0].style.display = "block";
+    }
+
+    const setDisplayNone = () => {
+      document.getElementsByClassName('aside-right')[0].style.display = "none";
+    }
+
+    const switchDisplay = () => {
+
+    }
+
 
     useEffect (() => {
       const fetchBuilding = async () => {
@@ -36,6 +50,7 @@ const IndexBuilding = () => {
 
 const getID = (id) => {
   setBuildingId(id);
+  setDisplay();
 }
 
 
@@ -45,7 +60,7 @@ const getID = (id) => {
   <div className="cardscontainer">
   <div className="containerbuilding">
   {building.map(build => (
-    <div className="card-building">
+    <div className="card-building" onClick={() => getID(build.id)}>
       <div className="card-building-header">
         <img className="card-building-img" src="https://us.123rf.com/450wm/zhudifeng/zhudifeng1410/zhudifeng141000067/32987276-modern-business-office-building-exterior.jpg?ver=6" alt="city" />
       </div>
@@ -55,14 +70,15 @@ const getID = (id) => {
         {build.name}
         </div>
         <span className="cardbuildref">Ref : {build.reference}</span> 
-        <button onClick={() => getID(build.id)}>En savoir plus</button>
       </div>
     </div> 
   ))}
     </div>
-          <ShowBuilding id={buildingId}/>
         </div>
     </main>
+    <aside className="aside-right">
+          <ShowBuilding id={buildingId}/>
+    </aside>
     
     </>
 
