@@ -12,6 +12,7 @@
     
     display: flex;
     width: 100%;
+    height: 100vh;
     flex-wrap: wrap;
   }
   .card-building-show {
@@ -49,4 +50,22 @@
       padding-top: 20px;
     font-size: 12px;
     padding-bottom: 2px;
+}
+
+.iconeCloseButton{
+  height: 50px;
+  width: 50px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  position: fixed;
+  bottom:0;
+}
+
+.iconeCloseButton:hover {
+  height: 55px;
+  width: 55px;
+  margin-left: 13px;
+  margin-top: -2px;
+  transition: 0.2s;
+  cursor: pointer;
 }

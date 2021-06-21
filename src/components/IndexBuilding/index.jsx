@@ -18,13 +18,7 @@ const IndexBuilding = () => {
       document.getElementsByClassName('aside-right')[0].style.display = "block";
     }
 
-    const setDisplayNone = () => {
-      document.getElementsByClassName('aside-right')[0].style.display = "none";
-    }
-
-    const switchDisplay = () => {
-
-    }
+    
 
 
     useEffect (() => {

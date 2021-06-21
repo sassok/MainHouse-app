@@ -4,6 +4,12 @@ import { useHistory, useParams } from 'react-router-dom';
 import './style.css';
 import Cookies from 'js-cookie';
 import './style.css';
+import closeButton from '../../assets/images/iconeCloseButton.png';
+
+
+const setDisplayNone = () => {
+      document.getElementsByClassName('aside-right')[0].style.display = "none";
+    }
 
 const ShowBuilding = (props) => {
     const [oneBuilding, setOneBuilding] = useState([]);
@@ -44,6 +50,7 @@ const ShowBuilding = (props) => {
       <span className="cardbuildref-show">Adresse: {oneBuilding.adress}</span>
       <span className="cardbuildref-show">Reference: {oneBuilding.reference}</span>
     </div>
+     <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
   </div>
   </div>
   </div>
