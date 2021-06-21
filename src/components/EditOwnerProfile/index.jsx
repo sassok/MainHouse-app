@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import './style.css';
 import Cookies from 'js-cookie';
 import { IoMdSearch } from "react-icons/io";
+import OwnerProfileRight from '../OwnerProfileRight/index';
 
 const EditOwnerProfile = () => {
     const owner = useSelector((state) => state.owner);
@@ -91,6 +92,7 @@ const EditOwnerProfile = () => {
           <button type="submit" className="btcreateform">Modifier</button>
         </form>
       </div>
+      <OwnerProfileRight />
     </main>
   );
 };

@@ -64,7 +64,7 @@ const OwnerProfileRight = () => {
 */
   return (
 
-    <main className="main">
+    <div className="containerShowBuilding">
       <div className="wrap">
         <div className="headprofileright">
         <div className="img-owner-profile">
@@ -99,7 +99,7 @@ const OwnerProfileRight = () => {
   </div>
   
       </div>
-    </main>
+    </div>
   );
 };
 
