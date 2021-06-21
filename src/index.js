@@ -18,6 +18,7 @@ import IndexEvent from './components/IndexEvent/index';
 import AllOwnerListAgency from './components/AllOwnerListAgency/index';
 import DeleteAgencySession from './components/DeleteAgencySession';
 import EventsOwner from './components/EventsOwner/index';
+import ShowBuilding from './components/ShowBuilding';
 
 
 const AppWrapper = () => {
