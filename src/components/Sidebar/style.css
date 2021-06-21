@@ -65,7 +65,10 @@
 
 
 @media only screen and (max-width: 900px) {
-  #header{
+  #headerSidebar{
     display:none;
+  }
+  .hamburger{
+    display:block;
   }
 }

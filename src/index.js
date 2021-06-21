@@ -21,6 +21,7 @@ import EventsOwner from './components/EventsOwner/index';
 import AgencyProfile from './pages/AgencyProfile/index';
 import EditOwnerProfile from './components/EditOwnerProfile/index';
 import ShowBuilding from './components/ShowBuilding';
+import Hamburger from './components/Hamburger/index';
 
 
 
@@ -44,43 +45,46 @@ const App = () => {
     {is_connected_a || is_connected_o ? 
         <div className="grid-container">
         <Sidebar />
+        <div className="hamburger">
+            <Hamburger/>
+        </div>                
+            <Switch>
+                <Route path="/mes-immeubles">
+                    <IndexBuilding/>
+                </Route>
+                <Route path="/nos_evenements" exact>
+                    <IndexEvent/>
+                </Route>
+                <Route path="/mes_evenements" exact>
+                    <EventsOwner/>
+                </Route>
+                <Route path="/nos_proprietaires" exact>
+                    <AllOwnerListAgency/>
+                </Route>
+                <Route path="/notre_profil" exact>
+                    <AgencyProfile/>
+                </Route>
+                <Route path="/mon_profil" exact>
+                    <EditOwnerProfile/>
+                </Route>
+                    <Route path="/deconnexion" >
+                        <DeleteAgencySession />
+                    </Route>
+            </Switch>
+            </div>
+                :
                 <Switch>
-                    <Route path="/mes-immeubles">
-                        <IndexBuilding/>
-                    </Route>
-                    <Route path="/nos_evenements" exact>
-                        <IndexEvent/>
-                    </Route>
-                    <Route path="/mes_evenements" exact>
-                        <EventsOwner/>
-                    </Route>
-                    <Route path="/nos_proprietaires" exact>
-                        <AllOwnerListAgency/>
-                    </Route>
-                    <Route path="/notre_profil" exact>
-                        <AgencyProfile/>
-                    </Route>
-                    <Route path="/mon_profil" exact>
-                        <EditOwnerProfile/>
-                    </Route>
-                        <Route path="/deconnexion" >
-                            <DeleteAgencySession />
-                        </Route>
-                </Switch>
-                </div>
-                    :
-                    <Switch>
-                    <Route path="/" exact>
-                        <Navbar />
-                        <Landingpage />
-                    </Route>
-                    <Route path="/connexion/proprietaire">
-                        <LogInFormOwner/>
-                    </Route>
-                    <Route path="/connexion/agence">
-                        <LogInFormAgency/>
-                    </Route>
-                </Switch>
+                <Route path="/" exact>
+                    <Navbar />
+                    <Landingpage />
+                </Route>
+                <Route path="/connexion/proprietaire">
+                    <LogInFormOwner/>
+                </Route>
+                <Route path="/connexion/agence">
+                    <LogInFormAgency/>
+                </Route>
+            </Switch>
     }
     </Router> 
     
