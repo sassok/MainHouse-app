@@ -18,7 +18,7 @@ import IndexEvent from './components/IndexEvent/index';
 import AllOwnerListAgency from './components/AllOwnerListAgency/index';
 import DeleteAgencySession from './components/DeleteAgencySession';
 import EventsOwner from './components/EventsOwner/index';
-import AgencyProfile from './components/AgencyProfile/index';
+import AgencyProfile from './pages/AgencyProfile/index';
 import EditOwnerProfile from './components/EditOwnerProfile/index';
 
 
