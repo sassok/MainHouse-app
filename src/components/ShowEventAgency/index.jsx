@@ -1,8 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
-import './style.css';
-import Cookies from 'js-cookie';
 import './style.css';
 
 const ShowEventAgency = (props) => {
