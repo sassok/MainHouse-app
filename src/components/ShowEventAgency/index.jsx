@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
+import { BiTrash } from "react-icons/bi";
 import './style.css';
 import Cookies from 'js-cookie';
 import './style.css';
+import DeleteEvent from '../DeleteEvent/index';
+
 
 const ShowEventAgency = (props) => {
     const [event, setOneEvent] = useState([]);
+    const [DeleteId, setDeleteId] = useState([]);
 
     useEffect (() => {
       const fetchShowEvent = async () => {
@@ -27,7 +31,10 @@ const ShowEventAgency = (props) => {
       fetchShowEvent()
       
       }, [props]);
-  
+
+      const selectID = (id) => {
+        setDeleteId(id);
+      }
     return (
 
 <div className="showbuildingcard">
@@ -39,9 +46,11 @@ const ShowEventAgency = (props) => {
       <span className="cardbuildref-show">Titre: {event.title}</span>
       <span className="cardbuildref-show">Description: {event.description}</span>
       <span className="cardbuildref-show">Date: {event.datetime}</span>
+      <BiTrash className="icondeleteevent" onClick={() => selectID(event.id)}/>
     </div>
   </div>
   </div>
+  <DeleteEvent id={DeleteId}/>
   </div>
     );
 }

@@ -45,3 +45,25 @@ display: flex;
     box-shadow:  3px 3px 3px #3C64B1; 
   }
  
+  .positionicaddeve {
+    width: 100%;
+    text-align: right;
+  }
+  .iconaddevent {
+    margin-right: 20px;
+   font-size: 20px;
+   color: #2ECC71;
+   cursor: pointer;
+  }
+
+ .showdetailsevent {
+   display: block;
+ }
+
+ .formcreateevent {
+  display: block;
+ }
+
+ .closeaddeventform {
+   display: flex;
+ }
