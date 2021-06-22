@@ -50,3 +50,17 @@
     font-size: 12px;
     padding-bottom: 2px;
 }
+
+.icondeleteevent {
+  font-size: 30px;
+  color: red;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+
