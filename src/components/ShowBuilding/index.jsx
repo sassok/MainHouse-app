@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
 import './style.css';
-import Cookies from 'js-cookie';
 import './style.css';
+import closeButton from '../../assets/images/iconeCloseButton.png';
+import OwnerShowBuilding from '../OwnerShowBuilding';
+import EventShowBuilding from '../EventShowBuilding/index'
+
+
+const setDisplayNone = () => {
+      document.getElementsByClassName('aside-right')[0].style.display = "none";
+    }
 
 const ShowBuilding = (props) => {
     const [oneBuilding, setOneBuilding] = useState([]);
@@ -42,7 +47,18 @@ const ShowBuilding = (props) => {
       </div>
       <span className="cardbuildref-show">Ville: {oneBuilding.city}</span>
       <span className="cardbuildref-show">Adresse: {oneBuilding.adress}</span>
-      <span className="cardbuildref-show">Reference: {oneBuilding.reference}</span>
+      <span className="cardbuildref-show mb-5">Reference: {oneBuilding.reference}</span>
+      <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
+      <hr/>
+      <span className="cardbuildref-show-owner mb-5">Propriétaires: </span>
+      <div className="ContainerOwnerEventShowBuilding">
+        <div className="ContainerOwnerShowBuilding">
+          <OwnerShowBuilding id={oneBuilding.id}/>
+        </div>
+        <div className="ContainerEventShowBuilding">
+          <EventShowBuilding id={oneBuilding.id}/>
+        </div>
+      </div>
     </div>
   </div>
   </div>

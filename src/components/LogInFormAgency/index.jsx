@@ -7,6 +7,7 @@ import { login } from '../redux';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer/index'
 import logo from  '../../assets/images/Mainhouseblack.png'
+import  { Redirect } from 'react-router-dom'
 
 
 function LogInFormAgency  () {
@@ -43,8 +44,6 @@ function LogInFormAgency  () {
                   json,
                 }))
                 .then(({ token, json }) => {
-                  console.log(token)
-                  console.log(json)
                   const email = json.token.email;
                   const id = json.token.id; 
                   Cookies.set("agency_id", json.token.id);
@@ -53,14 +52,13 @@ function LogInFormAgency  () {
                   dispatch({ type: login(), token, email, id });
                 })
             )
-            
+            history.push('/mes-immeubles');
         };
           useEffect(() => {
-            
             if (agency.id !== (undefined || null)) {
-              history.push('/notre_dashboard');
+              console.log("AAAAAAAAHHHHHHHHHHHHHHH");
             }
-          }, [agency]);
+          }, [agency.id]);
 
     return (
   <>

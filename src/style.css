@@ -38,6 +38,10 @@ aside {
   width: 500px;
 }
 
+.eventlistcardsBuilding {
+    overflow:auto;
+}
+
 .main {
   grid-area: main;
   display: block;

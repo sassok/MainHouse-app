@@ -3,13 +3,26 @@ import { useSelector } from 'react-redux';
 import './style.css';
 import Cookies from 'js-cookie';
 import { IoMdSearch} from "react-icons/io";
-import PopUpButton from '../PopUpButton/index';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import CreateOwner from '../CreateOwnerForm/index';
+ 
+const PopUpButton = () => (
+    <Popup trigger={<button className="button addownbt"> Ajouter </button>} modal>
+      <span> <CreateOwner /> </span>
+    </Popup>
+);
 
 const AllOwnerListAgency = () => {
   const [ownerList, setOwnerList] = useState([]);
   const id = useSelector(state => state.agency.id);
   const [searchTerme, setSearchTerme] = useState("");
   const [searchResult, setSearchResult] = useState([]);
+  const [owner, setOwnerId] = useState([]);
+
+  const setDisplay = () => {
+    document.getElementsByClassName('aside-right')[0].style.display = "block";
+  }
 
     const fetchBuilding =  async () => {
     fetch(`https://mainhouseapi.herokuapp.com/agency-owners/${id}` , {
@@ -40,7 +53,13 @@ const AllOwnerListAgency = () => {
       fetchBuilding();
     }
 
+    const getID = (id) => {
+      setOwnerId(id);
+      setDisplay();
+    }
+
   return (  
+    <>
     <main className="main">
       <div className="wrap">
         <div className="ownersearchbar">
@@ -53,7 +72,7 @@ const AllOwnerListAgency = () => {
         <div className="listowners">
           { searchTerme.length > 0 ? 
           ownerList.map(list_owner => (
-            <div className="list-item-owner">
+            <div className="list-item-owner" onClick={() => getID(list_owner.id)}>
               <div className="img-owner-list">
                 <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" className="owner-image"/>
               </div>
@@ -65,7 +84,7 @@ const AllOwnerListAgency = () => {
           ))
           :
           searchResult.map(list_owner => (
-            <div className="list-item-owner">
+            <div className="list-item-owner" onClick={() => getID(list_owner.id)}>
               <div className="img-owner-list">
                 <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" className="owner-image"/>
               </div>
@@ -78,6 +97,10 @@ const AllOwnerListAgency = () => {
         </div>
       </div>
     </main>
+    <aside className="aside-right">
+      <ShowOwnerAgency id={owner} />
+    </aside>
+    </>
   );
 };
 

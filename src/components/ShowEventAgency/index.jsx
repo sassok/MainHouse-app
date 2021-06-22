@@ -4,7 +4,6 @@ import { useHistory, useParams } from 'react-router-dom';
 import { BiTrash } from "react-icons/bi";
 import './style.css';
 import Cookies from 'js-cookie';
-import './style.css';
 import DeleteEvent from '../DeleteEvent/index';
 
 

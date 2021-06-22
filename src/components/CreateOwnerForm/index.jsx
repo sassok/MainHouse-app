@@ -3,32 +3,58 @@ import './style.css';
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
+import PopUpButton from '../PopUpButton/index';
 
 const CreateOwner = () => {
   const agencyId = useSelector(state => state.agency.id);
   const Bienvenue = "Bienvenue"
+  const [isOpen, setIsOpen] = useState(true);
+
   const OnSend = (e) => {
     e.preventDefault();
 
+    if (document.querySelector('#ffirst_name').value !== "") {
+      var first_name = document.querySelector('#ffirst_name').value;
+    }
+    if (document.querySelector('#flast_name').value !== "") {
+      var last_name = document.querySelector('#flast_name').value;
+    }
+    if (document.querySelector('#fmail').value !== "") {
+      var mail = document.querySelector('#fmail').value;
+    }
+    if (document.querySelector('#fphone_number').value !== "") {
+      var phone_number = document.querySelector('#fphone_number').value;
+    }
+    if (document.querySelector('#fflat_number').value !== "") {
+      var flat_number = document.querySelector('#fflat_number').value;
+    }
+    if (document.querySelector('#fbuildingId').value !== "") {
+      var buildingId = document.querySelector('#fbuildingId').value;
+    }
+  
+    const data = {"owner": {
+      "first_name": first_name,
+      "last_name": last_name,
+      "email": mail,
+      "phone_number": phone_number,
+      "flat_number": flat_number,
+      "building_id": buildingId,
+      "agency_id": agencyId,
+      "password": Bienvenue
+      }}
         fetch('https://mainhouseapi.herokuapp.com/owners', {
           method: 'post',
           headers: {
             'Content-Type': 'application/json', 
             //'Authorization': `Bearer ${Cookies.get('Bearer_agency')}`
           },
-          body: JSON.stringify({
-              first_name: document.querySelector('#ffirst_name').value,
-              last_name: document.querySelector('#flast_name').value,
-              email: document.querySelector('#fmail').value,
-              phone_number: document.querySelector('#fphone_number').value,
-              flat_number: document.querySelector('#fflat_number').value,
-              building: document.querySelector('#fbuildingId').value,
-              agency: agencyId.value,
-              password: Bienvenue.value,
-          }
-        )  
+          body: JSON.stringify(data)
+        })
+        .then( (response) => { 
+          console.log(response);
+      })
       }
-      )}
   return (
     <>
   <div className="FormContainer">
