@@ -7,6 +7,8 @@
     font-family: "Roboto", sans-serif;
     color: #10182f;
     position: fixed;
+    overflow: scroll;
+    max-height: 100vh;
   }
   .containerbuilding-show {
     
@@ -18,7 +20,8 @@
   .card-building-show {
     background-color: #fff;
     overflow: hidden;
-    width: 100%;
+    width: 100vh;
+     
   }
   .card-building-header-show .card-building-img-show {
     width: 500px;
@@ -30,6 +33,7 @@
     flex-direction: column;
     padding: 20px;
     min-height: 60px;
+  overflow: auto;
   }
   
 .cardbuildcity-show {
@@ -53,19 +57,45 @@
 }
 
 .iconeCloseButton{
-  height: 50px;
-  width: 50px;
-  margin-left: 15px;
-  margin-bottom: 15px;
+  height: 35px;
+  width: 35px;
+  margin-left: -65px;
+  margin-bottom: 9px;
   position: fixed;
   bottom:0;
 }
 
 .iconeCloseButton:hover {
-  height: 55px;
-  width: 55px;
-  margin-left: 13px;
+  height: 40px;
+  width: 40px;
+  margin-left: -65px;
   margin-top: -2px;
+  margin-bottom: 6px;
   transition: 0.2s;
   cursor: pointer;
+}
+
+.ContainerOwnerEventShowBuilding{
+  
+}
+
+.ContainerOwnerShowBuilding {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    
+}
+
+.ContainerEventShowBuilding {
+    vertical-align: middle;
+    float: none;
+    
+}
+
+.mb-5 {
+  margin-bottom: 20px;
+}
+
+.cardbuildref-show-owner {
+    font-size: 12px;
 }

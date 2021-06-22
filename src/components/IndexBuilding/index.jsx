@@ -1,18 +1,13 @@
 import React, { useState, useEffect} from 'react';
 import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import './style.css';
 import Cookies from 'js-cookie';
 import ShowBuilding from '../ShowBuilding';
-import { Link } from 'react-router-dom';
-import { SidebarHeader } from 'react-pro-sidebar';
 
 const IndexBuilding = () => {
-    const agency = useSelector((state) => state.agency);
     const [building, setBuilding] = useState([]);
     const [buildingId, setBuildingId] = useState([]);
     const id = useSelector(state => state.agency.id);
-    var display = false;
 
     const setDisplay = () => {
       document.getElementsByClassName('aside-right')[0].style.display = "block";
