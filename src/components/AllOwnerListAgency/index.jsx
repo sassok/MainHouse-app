@@ -3,8 +3,15 @@ import { useSelector } from 'react-redux';
 import './style.css';
 import Cookies from 'js-cookie';
 import { IoMdSearch} from "react-icons/io";
-import PopUpButton from '../PopUpButton/index';
-import ShowOwnerAgency from '../ShowOwnerAgency';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import CreateOwner from '../CreateOwnerForm/index';
+ 
+const PopUpButton = () => (
+    <Popup trigger={<button className="button addownbt"> Ajouter </button>} modal>
+      <span> <CreateOwner /> </span>
+    </Popup>
+);
 
 const AllOwnerListAgency = () => {
   const [ownerList, setOwnerList] = useState([]);

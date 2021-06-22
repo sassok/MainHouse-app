@@ -4,7 +4,7 @@ import 'reactjs-popup/dist/index.css';
 import CreateOwner from '../CreateOwnerForm/index';
  
 const PopUpButton = () => (
-    <Popup trigger={<button className="button addownbt"> Ajouter </button>} modal>
+    <Popup trigger={<button className="button addownbt"> Ajouter </button>} modal closeOnDocumentClick>
       <span> <CreateOwner /> </span>
     </Popup>
 );
