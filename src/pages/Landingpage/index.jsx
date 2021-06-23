@@ -4,6 +4,7 @@ import IconsLanding from '../../components/IconsLanding/index'
 import CustomerReview from '../../components/CustomerReview/index'
 import Footer from '../../components/Footer/index'
 import TablePrice from '../../components/TablePrice/index'
+import Navbar from '../../components/Navbar/index';
 import "../../style.css" 
 import { useSelector } from 'react-redux';
 
@@ -14,6 +15,7 @@ const Landingpage= () => {
   if (is_connected_agency === false || is_connected_agency === false) {
   return (
     <div>
+      <Navbar/>
       <HeroBannerLandingPage/>
       <IconsLanding/>
       <CustomerReview/>

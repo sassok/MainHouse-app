@@ -1,9 +1,9 @@
 import React from 'react';
-import LogInFormAgency from '../../components/LogInFormAgency';
+import LogInFormOwner from '../../components/LogInFormOwner';
 
-function LoginAgency  () {
+function LoginOwner  () {
     return (
-      < LogInFormAgency />
+      < LogInFormOwner />
     )  
 }
-export default LoginAgency;
+export default LoginOwner;
