@@ -6,6 +6,7 @@ import { IoMdSearch} from "react-icons/io";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import CreateOwner from '../CreateOwnerForm/index';
+import ShowOwnerAgency from '../ShowOwnerAgency/index';
  
 const PopUpButton = () => (
     <Popup trigger={<button className="button addownbt"> Ajouter </button>} modal>

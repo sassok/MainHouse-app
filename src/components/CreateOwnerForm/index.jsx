@@ -1,37 +1,21 @@
 import React from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
-import Cookies from 'js-cookie';
 import { useSelector } from 'react-redux';
-import { useState } from 'react';
-import PopUpButton from '../PopUpButton/index';
 
 const CreateOwner = () => {
   const agencyId = useSelector(state => state.agency.id);
   const Bienvenue = "Bienvenue"
-  const [isOpen, setIsOpen] = useState(true);
 
   const OnSend = (e) => {
     e.preventDefault();
-
-    if (document.querySelector('#ffirst_name').value !== "") {
-      var first_name = document.querySelector('#ffirst_name').value;
-    }
-    if (document.querySelector('#flast_name').value !== "") {
-      var last_name = document.querySelector('#flast_name').value;
-    }
-    if (document.querySelector('#fmail').value !== "") {
-      var mail = document.querySelector('#fmail').value;
-    }
-    if (document.querySelector('#fphone_number').value !== "") {
-      var phone_number = document.querySelector('#fphone_number').value;
-    }
-    if (document.querySelector('#fflat_number').value !== "") {
-      var flat_number = document.querySelector('#fflat_number').value;
-    }
-    if (document.querySelector('#fbuildingId').value !== "") {
-      var buildingId = document.querySelector('#fbuildingId').value;
-    }
+    
+      const first_name = document.querySelector('#ffirst_name').value;
+      const last_name = document.querySelector('#flast_name').value;
+      const mail = document.querySelector('#fmail').value;
+      const phone_number = document.querySelector('#fphone_number').value;
+      const flat_number = document.querySelector('#fflat_number').value;
+      const buildingId = document.querySelector('#fbuildingId').value;
   
     const data = {"owner": {
       "first_name": first_name,
@@ -42,12 +26,11 @@ const CreateOwner = () => {
       "building_id": buildingId,
       "agency_id": agencyId,
       "password": Bienvenue
-      }}
-        fetch('https://mainhouseapi.herokuapp.com/owners', {
+      } }
+        fetch('https://mainhouseapi.herokuapp.com/create-owner', {
           method: 'post',
           headers: {
             'Content-Type': 'application/json', 
-            //'Authorization': `Bearer ${Cookies.get('Bearer_agency')}`
           },
           body: JSON.stringify(data)
         })

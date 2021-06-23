@@ -8,20 +8,20 @@ import {
     Route,
     Switch,
   } from 'react-router-dom';
+
 import Sidebar from './components/Sidebar';
-import LogInFormAgency from './components/LogInFormAgency';
-import LogInFormOwner from './components/LogInFormOwner';
-import IndexBuilding from './components/IndexBuilding/index';
-import Navbar from './components/Navbar/index';
-import Landingpage from './pages/Landingpage/index';
-import IndexEvent from './components/IndexEvent/index';
-import AllOwnerListAgency from './components/AllOwnerListAgency/index';
-import DeleteAgencySession from './components/DeleteAgencySession';
-import EventsOwner from './components/EventsOwner/index';
-import AgencyProfile from './pages/AgencyProfile/index';
-import EditOwnerProfile from './components/EditOwnerProfile/index';
-import ShowBuilding from './components/ShowBuilding';
 import Hamburger from './components/Hamburger/index';
+import DeleteAgencySession from './components/DeleteAgencySession';
+import LoginAgency from './pages/LoginAgency';
+import LoginOwner from './pages/LoginOwner';
+import PageIndexBuilding from './pages/IndexBuildingPage';
+import Landingpage from './pages/Landingpage/index';
+import PageIndexEvent from './pages/IndexEventPage';
+import PageOwnerListAgency from './pages/OwnerListAgencyPage/index';
+import PageEventsOwner from './pages/EventsOwnerPage/index';
+import AgencyProfile from './pages/AgencyProfile/index';
+import PageEditOwnerProfile from './pages/EditOwnerProfilePage/index';
+
 
 
 
@@ -50,22 +50,22 @@ const App = () => {
         </div>                
             <Switch>
                 <Route path="/mes-immeubles">
-                    <IndexBuilding/>
+                    <PageIndexBuilding/>
                 </Route>
                 <Route path="/nos_evenements" exact>
-                    <IndexEvent/>
+                    <PageIndexEvent/>
                 </Route>
                 <Route path="/mes_evenements" exact>
-                    <EventsOwner/>
+                    <PageEventsOwner/>
                 </Route>
                 <Route path="/nos_proprietaires" exact>
-                    <AllOwnerListAgency/>
+                    <PageOwnerListAgency/>
                 </Route>
                 <Route path="/notre_profil" exact>
                     <AgencyProfile/>
                 </Route>
                 <Route path="/mon_profil" exact>
-                    <EditOwnerProfile/>
+                    <PageEditOwnerProfile/>
                 </Route>
                     <Route path="/deconnexion" >
                         <DeleteAgencySession />
@@ -75,14 +75,13 @@ const App = () => {
                 :
                 <Switch>
                 <Route path="/" exact>
-                    <Navbar />
                     <Landingpage />
                 </Route>
                 <Route path="/connexion/proprietaire">
-                    <LogInFormOwner/>
+                    <LoginOwner/>
                 </Route>
                 <Route path="/connexion/agence">
-                    <LogInFormAgency/>
+                    <LoginAgency/>
                 </Route>
             </Switch>
     }
