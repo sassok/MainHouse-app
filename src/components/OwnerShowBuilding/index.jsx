@@ -26,20 +26,19 @@ const OwnerShowBuilding = (props) => {
   return (
     <>
     <div className="ownerlistcards">
-    <div className="listowners">
-      { listOwners.map(owner => (
-        <div className="list-item-owner">
-          <div className="img-owner-list">
-            <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" className="owner-image"/>
+      <div className="listowners">
+        { listOwners.map(owner => (
+          <div className="list-item-owner">
+            <div className="img-owner-list">
+              <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" className="owner-image"/>
+            </div>
+            <div className="owner-list-content">
+              <p className="owner-list-name">{owner.first_name} {owner.last_name}</p>
+              <p className="owner-list-reff">{owner.email} <br/> {owner.phone_number}</p>
+            </div>        
           </div>
-          <div className="owner-list-content">
-          <p className="owner-list-name">{owner.first_name} {owner.last_name}</p>
-          <p className="owner-list-reff">{owner.email} <br/> {owner.phone_number}</p>
+        ))}
         </div>
-        
-      </div>
-      ))}
-      </div>
       </div>
       </>
       

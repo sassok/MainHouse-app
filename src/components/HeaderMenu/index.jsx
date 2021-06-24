@@ -1,11 +1,10 @@
 import "./style.css";
-
+import logo from "../../assets/images/Mainhouseblack.png"
 const HeaderMenu = () => {
     return(
         <>
             <header class="header">
-                <div class="header__search">Search...</div>
-                <div class="header__avatar">Your face</div>
+                <img src={logo} className="respoLogo" alt="blackLogo"/>
             </header>
         </>
             )
