@@ -4,6 +4,8 @@ import './style.css';
 import closeButton from '../../assets/images/iconeCloseButton.png';
 import OwnerShowBuilding from '../OwnerShowBuilding';
 import EventShowBuilding from '../EventShowBuilding/index'
+import { BiTrash } from "react-icons/bi";
+import EditBuilding from '../EditBuilding/index'
 
 
 const setDisplayNone = () => {
@@ -12,6 +14,7 @@ const setDisplayNone = () => {
 
 const ShowBuilding = (props) => {
     const [oneBuilding, setOneBuilding] = useState([]);
+    const [EditId, setEditId] = useState([]);
 
     useEffect (() => {
       const fetchShowBuilding = async () => {
@@ -32,6 +35,10 @@ const ShowBuilding = (props) => {
       fetchShowBuilding()
       
       }, [props]);
+  const selectID = (id) => {
+          setEditId(id);
+          console.log(id);
+      }
   
     return (
 
@@ -58,10 +65,12 @@ const ShowBuilding = (props) => {
         <div className="ContainerEventShowBuilding">
           <EventShowBuilding id={oneBuilding.id}/>
         </div>
+        <BiTrash className="icondeleteevent" onClick={() => selectID(oneBuilding.id)}/>
       </div>
     </div>
   </div>
   </div>
+  <EditBuilding id={EditId}/>
   </div>
     );
 }
