@@ -17,11 +17,15 @@ const AllOwnerListAgency = () => {
 
   const setDisplay = () => {
     document.getElementsByClassName('aside-right')[0].style.display = "block";
+    document.getElementsByClassName('aside-right-form')[0].style.display = "none";
+    document.getElementsByClassName('createownerright')[0].style.display = "none";
   }
 
   const setDisplayCreate = () => {
     document.getElementsByClassName('aside-right-form')[0].style.display = "block";
     document.getElementsByClassName('createownerright')[0].style.display = "block";
+    document.getElementsByClassName('aside-right')[0].style.display = "none";
+
   }
     const fetchBuilding =  async () => {
     fetch(`https://mainhouseapi.herokuapp.com/agency-owners/${id}` , {

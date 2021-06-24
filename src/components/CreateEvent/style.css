@@ -94,10 +94,12 @@ input:focus{
   }
   .formdropdowncreate {
     font-size: 14px;
+    text-align: justify;
+    border-radius: 5px;
     padding: 4px;
     width: 80%;
     min-height: 30px;
-    border: unset;
+    border: solid 0.01px;
     background: #ffffff;
     }
 
