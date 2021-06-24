@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 
 
 const CreateEvent = () => {
-  const agencyId = Cookies.get('agency_id');
   const agency = useSelector((state) => state.agency);
   const [building, setBuilding] = useState([]);
   const id = useSelector(state => state.agency.id);
@@ -61,56 +60,56 @@ const CreateEvent = () => {
     }
   
   return (
-    <div className="bodyevent">
   <div className="FormContainerevent">
-    <div className="formcontainer1">
-        <form onSubmit={OnSend} className="ownerForm" >
-          <div className="formbg-inner padding-horizontal--48">
-              <span className="padding-bottom--15 titleformCreate"> Créer un événement </span>
-              <div className="field">
-              <input className="champform" type="texte" id="title" name="title" placeholder="Titre" required />
+        <form onSubmit={OnSend} >
+            <div className="createbuidform">
+            <div className="titlebuildform">
+              Créer un événement
             </div>
-            <div className="labelformcreate">
-            <label class="labelform">Nom de l'immeuble</label>
-            <select className="formdropdowncreate" id="buildingid" name="buildingid"> 
+            <div class="input-style-long">
+            <label class="label">Titre de l'événement</label>
+            <input className="input--style-4" type="texte" id="title" name="title" placeholder="Titre" required />
+            </div>
+            <div className="input-style-long">
+            <label class="label">Sélectionner un bâtiment</label>
+            <select className="input--style-4" id="buildingid" name="buildingid"> 
             {building.map(building => (
             <option className="champform" value={building.id}>{building.name}</option>     
-          ))}
-  </select>
+            ))}
+            </select>
             </div>
-            <div className="labelformcreate">
-            <label class="labelform">Date JJ/MM/AAAA hh:mm</label>
-            <input className="formdropdowncreate" type="datetime-local" id="datetime" name="datetime" />
+            <div class="input-style-long">
+            <label class="label">Date</label>
+            <input className="input--style-4" type="datetime-local" id="datetime" name="datetime" />
             </div>
-            <div className="labelformcreate">
-            <label class="labelform">Durée de l'événement</label>
-            <select className="formdropdowncreate" id="duration" name="duration"> 
-            <option className="champform" value="5">5 minutes</option> 
-            <option className="champform" value="10">10 minutes</option>
-            <option className="champform" value="15">15 minutes</option>  
-            <option className="champform" value="20">20 minutes</option>  
-            <option className="champform" value="25">25 minutes</option>  
-            <option className="champform" value="30">30 minutes</option>  
-            <option className="champform" value="35">35 minutes</option>  
-            <option className="champform" value="40">40 minutes</option>  
-            <option className="champform" value="45">45 minutes</option>  
-            <option className="champform" value="50">50 minutes</option>  
-            <option className="champform" value="55">55 minutes</option>        
-            <option className="champform" value="60">60 minutes</option>
-            <option className="champform" value="90">90 minutes</option>
-            <option className="champform" value="120">120 minutes</option>
-            <option className="champform" value="180">180 minutes</option>
-  </select>
-  </div>
-            <div className="field">
-            <textarea className="champform" id="description" name="description" />
+            <div className="input-style-long">
+              <label class="label">Durée de l'événement</label>
+              <select className="input--style-4" id="duration" name="duration"> 
+                <option className="champform" value="5">5 minutes</option> 
+                <option className="champform" value="10">10 minutes</option>
+                <option className="champform" value="15">15 minutes</option>  
+                <option className="champform" value="20">20 minutes</option>  
+                <option className="champform" value="25">25 minutes</option>  
+                <option className="champform" value="30">30 minutes</option>  
+                <option className="champform" value="35">35 minutes</option>  
+                <option className="champform" value="40">40 minutes</option>  
+                <option className="champform" value="45">45 minutes</option>  
+                <option className="champform" value="50">50 minutes</option>  
+                <option className="champform" value="55">55 minutes</option>        
+                <option className="champform" value="60">60 minutes</option>
+                <option className="champform" value="90">90 minutes</option>
+                <option className="champform" value="120">120 minutes</option>
+                <option className="champform" value="180">180 minutes</option>
+              </select>
+            </div>
+            <div className="input-style-long">
+            <label class="label">Description</label>
+            <textarea className="input--style-4" id="description" name="description" />
             </div>
               <button type="submit" className="boutonform">Créer</button>
           </div>
         </form>
     </div>
-  </div>
-  </div>
   )
 };
 
