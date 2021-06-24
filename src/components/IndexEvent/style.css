@@ -67,3 +67,14 @@ display: flex;
  .closeaddeventform {
    display: flex;
  }
+
+ .createeventright {
+  display: none;
+}
+
+.aside-right {
+  grid-area: aside-right;
+  display: none;
+  width: 500px;
+  background-color: white;
+}
