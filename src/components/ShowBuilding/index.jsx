@@ -5,7 +5,7 @@ import closeButton from '../../assets/images/iconeCloseButton.png';
 import OwnerShowBuilding from '../OwnerShowBuilding';
 import EventShowBuilding from '../EventShowBuilding/index'
 import { BiTrash } from "react-icons/bi";
-import EditBuilding from '../EditBuilding/index'
+
 
 
 const setDisplayNone = () => {

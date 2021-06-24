@@ -7,6 +7,7 @@ import IndexBuilding from '../IndexBuilding/index';
 
 const CreateBuilding = () => {
 
+
   return (  
     <main className="main">
       <div className="createbuidform">
