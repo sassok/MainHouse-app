@@ -1,47 +1,81 @@
 import React, { useEffect, useState } from 'react';
+import ShowOwner from '../ShowOwner';
 import './style.css';
+import { BiPencil, BiTrash, BiMobileAlt, BiMessageRounded } from "react-icons/bi";
 
 const ShowOwnerAgency = (props) => {
-    const [owner, setOwner] = useState([]);
+  const [owner, setOwner] = useState([]);
+  const [building, setBuilding] = useState([]);
 
-    useEffect (() => {
-      const fetchShowOwner = async () => {
-      fetch(`https://mainhouseapi.herokuapp.com/owners/${props.id}` , {
+  useEffect(() => {
+    const fetchShowOwner = async () => {
+      fetch(`https://mainhouseapi.herokuapp.com/owners/${props.id}`, {
         method: 'get',
         headers: {
-        'Content-Type': 'application/json',
+          'Content-Type': 'application/json',
         },
-        }).then((response) => response.json())
-          .then((response) => {
-            setOwner(response);
-            console.log(response)
-            }).catch(function() {
-              console.log("error");
+      }).then((response) => response.json())
+        .then((response) => {
+          setOwner(response);
+          console.log(response)
+        }).catch(function () {
+          console.log("error");
         });
-      };       
+    };
+    fetchShowOwner()
+  }, [props]);
 
-      fetchShowOwner()
-      
-      }, [props]);
-  
-    return (
+  useEffect(() => {
+    const fetchShowBuilding = async () => {
+      fetch(`https://mainhouseapi.herokuapp.com/buildings/${owner.building_id}`, {
+        method: 'get',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then((response) => response.json())
+        .then((response) => {
+          setBuilding(response);
+          console.log(response)
+        }).catch(function () {
+          console.log("error");
+        });
+    };
+    fetchShowBuilding()
+  }, [owner]);
 
-<div className="showbuildingcard">
-<div className="containerbuilding-show">
-  <div className="card-building-show">
-    <div className="card-building-body-show">
-      <div className="cardbuildname-show">
+  return (
+    <div>
+      <div className="infoshead">
+        <div className="ajustprofile">
+          <div className="ownerifoshead">
+            <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" class="owner-image-show" />
+          </div>
+          <div className="ownerifoshead">
+            <p className="nameownercard">{owner.first_name} {owner.last_name}</p>
+            <p className="ownerinfoshead"><BiPencil className="iconowneredit" /><BiTrash className="iconownerdelete" /></p>
+          </div>
+        </div>
       </div>
-      <span className="cardbuildref-show"><h2>Prénom: {owner.first_name}</h2></span>
-      <span className="cardbuildref-show"><h2>Nom: {owner.last_name}</h2></span>
-      <span className="cardbuildref-show"><h2>Email: {owner.email}</h2></span>
-      <span className="cardbuildref-show"><h2>Numéro de téléphone: {owner.phone_number}</h2></span>
-      <span className="cardbuildref-show"><h2>Numéro de lot: {owner.lot}</h2></span>
-      <span className="cardbuildref-show"><h2>Numéro d'appartement: {owner.flat_number}</h2></span>
+      <div className="mailandphone">
+        <div className="iconifos">
+          <p className="iconifos emailowner"><BiMessageRounded className="emailiconowner" /></p>
+          <p className="iconifos">{owner.email}</p>
+        </div>
+        <div className="iconifos">
+          <p className="iconifos">< BiMobileAlt className="phoneiconowner" /></p>
+          <p className="iconifos phoneowner">{owner.phone_number}</p>
+        </div>
+      </div>
+      <div className="infosownerbody">
+        <p className="infoownerbuildname">{building.name}</p>
+        <p className="infoowneradress">{building.adress}</p>
+        <p className="infoowneradress">{building.zipcode} {building.city}</p>
+        <p className="infoownerrefbuild">Ref : {building.reference}</p>
+        <p className="infoownerlotnb">Lot N°{owner.lot}</p>
+        <p className="infoownerflatnb">Appartement N°{owner.flat_number}</p>
+      </div>
     </div>
-  </div>
-  </div>
-  </div>
-    );
+
+  );
 }
 export default ShowOwnerAgency;
