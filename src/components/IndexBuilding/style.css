@@ -188,10 +188,6 @@ transition: 0.2s;
 cursor: pointer;
 }
 
-.ContainerOwnerEventShowBuilding{
-
-}
-
 .ContainerOwnerShowBuilding {
   display: inline-block;
   vertical-align: middle;
@@ -211,4 +207,16 @@ margin-bottom: 20px;
 
 .cardbuildref-show-owner {
   font-size: 12px;
+}
+
+.icondeletebuilding {
+  font-size: 30px;
+  color: red;
+  cursor: pointer;
+}
+
+.iconeditbuilding {
+  font-size: 30px;
+  color: orange;
+  cursor: pointer;
 }

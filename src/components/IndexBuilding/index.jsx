@@ -149,8 +149,8 @@ const IndexBuilding = () => {
                 <div className="ContainerEventShowBuilding">
                   <EventShowBuilding id={oneBuilding.id} />
                 </div>
-                <BiTrash className="icondeleteevent" onClick={() => Ondeletebuilding(oneBuilding.id)} />
-                <BiPencil className="iconedit" onClick={() => editID(oneBuilding)} />
+                <BiTrash className="icondeletebuilding" onClick={() => Ondeletebuilding(oneBuilding.id)} />
+                <BiPencil className="iconeditbuilding" onClick={() => editID(oneBuilding)} />
               </div>
             </div>
           </div>
