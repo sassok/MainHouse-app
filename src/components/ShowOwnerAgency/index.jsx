@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
+import { BiTrash } from "react-icons/bi";
+import DeleteOwner from '../DeleteOwner';
 
 const ShowOwnerAgency = (props) => {
-    const [owner, setOwner] = useState([]);
+  const [owner, setOwner] = useState([]);
+  const [deleteIdOwner, setDeleteIdOwner] = useState([]);
 
     useEffect (() => {
       const fetchShowOwner = async () => {
@@ -23,9 +26,12 @@ const ShowOwnerAgency = (props) => {
       fetchShowOwner()
       
       }, [props]);
+
+const selectID = (id) => {
+        setDeleteIdOwner(id);
+      }
   
     return (
-
 <div className="showbuildingcard">
 <div className="containerbuilding-show">
   <div className="card-building-show">
@@ -38,9 +44,11 @@ const ShowOwnerAgency = (props) => {
       <span className="cardbuildref-show"><h2>Numéro de téléphone: {owner.phone_number}</h2></span>
       <span className="cardbuildref-show"><h2>Numéro de lot: {owner.lot}</h2></span>
       <span className="cardbuildref-show"><h2>Numéro d'appartement: {owner.flat_number}</h2></span>
+      <BiTrash className="icondeleteevent" onClick={() => selectID(owner.id)}/>
     </div>
   </div>
   </div>
+  <DeleteOwner id={deleteIdOwner}/>
   </div>
     );
 }

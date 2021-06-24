@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
 import './style.css';
-import Cookies from 'js-cookie';
-import { IoMdSearch } from "react-icons/io";
 
 const OwnerProfileRight = () => {
  /*   const owner = useSelector((state) => state.owner);

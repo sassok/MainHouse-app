@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
-import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import { useSelector } from 'react-redux';
 
@@ -62,46 +61,46 @@ const CreateEvent = () => {
   
   return (
     <div className="bodyevent">
-  <div className="FormContainerevent">
-    <div className="formcontainer1">
-        <form onSubmit={OnSend} className="ownerForm" >
-          <div className="formbg-inner padding-horizontal--48">
+    <div className="FormContainerevent">
+      <div className="formcontainer1">
+          <form onSubmit={OnSend} className="ownerForm" >
+            <div className="formbg-inner padding-horizontal--48">
               <span className="padding-bottom--15 titleformCreate"> Créer un événement </span>
               <div className="field">
               <input className="champform" type="texte" id="title" name="title" placeholder="Titre" required />
             </div>
             <div className="labelformcreate">
-            <label class="labelform">Nom de l'immeuble</label>
-            <select className="formdropdowncreate" id="buildingid" name="buildingid"> 
-            {building.map(building => (
-            <option className="champform" value={building.id}>{building.name}</option>     
-          ))}
-  </select>
+              <label class="labelform">Nom de l'immeuble</label>
+              <select className="formdropdowncreate" id="buildingid" name="buildingid"> 
+              {building.map(building => (
+                <option className="champform" value={building.id}>{building.name}</option>     
+                ))}
+              </select>
             </div>
             <div className="labelformcreate">
-            <label class="labelform">Date JJ/MM/AAAA hh:mm</label>
-            <input className="formdropdowncreate" type="datetime-local" id="datetime" name="datetime" />
+              <label class="labelform">Date JJ/MM/AAAA hh:mm</label>
+              <input className="formdropdowncreate" type="datetime-local" id="datetime" name="datetime" />
             </div>
             <div className="labelformcreate">
-            <label class="labelform">Durée de l'événement</label>
-            <select className="formdropdowncreate" id="duration" name="duration"> 
-            <option className="champform" value="5">5 minutes</option> 
-            <option className="champform" value="10">10 minutes</option>
-            <option className="champform" value="15">15 minutes</option>  
-            <option className="champform" value="20">20 minutes</option>  
-            <option className="champform" value="25">25 minutes</option>  
-            <option className="champform" value="30">30 minutes</option>  
-            <option className="champform" value="35">35 minutes</option>  
-            <option className="champform" value="40">40 minutes</option>  
-            <option className="champform" value="45">45 minutes</option>  
-            <option className="champform" value="50">50 minutes</option>  
-            <option className="champform" value="55">55 minutes</option>        
-            <option className="champform" value="60">60 minutes</option>
-            <option className="champform" value="90">90 minutes</option>
-            <option className="champform" value="120">120 minutes</option>
-            <option className="champform" value="180">180 minutes</option>
-  </select>
-  </div>
+              <label class="labelform">Durée de l'événement</label>
+              <select className="formdropdowncreate" id="duration" name="duration"> 
+                <option className="champform" value="5">5 minutes</option> 
+                <option className="champform" value="10">10 minutes</option>
+                <option className="champform" value="15">15 minutes</option>  
+                <option className="champform" value="20">20 minutes</option>  
+                <option className="champform" value="25">25 minutes</option>  
+                <option className="champform" value="30">30 minutes</option>  
+                <option className="champform" value="35">35 minutes</option>  
+                <option className="champform" value="40">40 minutes</option>  
+                <option className="champform" value="45">45 minutes</option>  
+                <option className="champform" value="50">50 minutes</option>  
+                <option className="champform" value="55">55 minutes</option>        
+                <option className="champform" value="60">60 minutes</option>
+                <option className="champform" value="90">90 minutes</option>
+                <option className="champform" value="120">120 minutes</option>
+                <option className="champform" value="180">180 minutes</option>
+              </select>
+            </div>
             <div className="field">
             <textarea className="champform" id="description" name="description" />
             </div>

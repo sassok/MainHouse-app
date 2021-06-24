@@ -82,3 +82,7 @@
     font-size: 18px;
     backface-visibility: hidden;
   }
+
+  .front__text-para{
+    margin: 10px;
+  }

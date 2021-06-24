@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 
-const DeleteEvent = (props) => {
+const DeleteOwner = (props) => {
  
-            useEffect (() => {
+    
+     console.log(props.id)
+        useEffect (() => {
           const fetchDeleteEvent = async () => {
              
-          fetch(`https://mainhouseapi.herokuapp.com/events/${props.id}` , {
+          fetch(`https://mainhouseapi.herokuapp.com/owners/${props.id}` , {
             method: 'delete',
             headers: {
             'Content-Type': 'application/json',
@@ -27,4 +29,4 @@ const DeleteEvent = (props) => {
  
 return(<p></p>)
 }
-export default DeleteEvent;
+export default DeleteOwner;

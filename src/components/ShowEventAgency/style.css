@@ -57,6 +57,12 @@
   cursor: pointer;
 }
 
+.iconeditevent {
+  font-size: 30px;
+  color: rgb(255, 166, 0);
+  cursor: pointer;
+}
+
 .tooltip {
   position: relative;
   display: inline-block;

@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import './style.css';
 import Cookies from 'js-cookie';
 import ShowEventAgency from '../ShowEventAgency/index';
-import { BiPlusCircle } from "react-icons/bi";
+import { BiPlusCircle } from "react-icons/bi"; 
+import { FaRegEdit } from "react-icons/fa"; 
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import CreateEvent from '../CreateEvent';
-
-
 
 const PopUpButton = () => (
   <Popup trigger={<BiPlusCircle className="iconaddevent" />} modal>

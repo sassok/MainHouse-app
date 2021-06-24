@@ -47,3 +47,15 @@ aside {
   display: block;
   border-right: 1px solid #E1E3E6;
 }
+
+@media only screen and (max-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 61px 1fr;
+    grid-template-areas:
+    "sidenav header header"
+    "sidenav main aside-right";
+    height: 100vh;
+  }
+}

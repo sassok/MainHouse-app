@@ -1,6 +1,4 @@
 import React, { useState, useEffect} from 'react';
-import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import './style.css';
 import Cookies from 'js-cookie';
 
@@ -19,7 +17,6 @@ const [eventBuilding, setEventB] = useState([]);
         }).then((response) => response.json())
           .then((response) => {
             setEventB(response.events);
-            console.log(response.events);
             }).catch(function() {
               console.log("error");
         });
