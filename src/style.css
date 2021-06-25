@@ -110,13 +110,15 @@ aside {
   @media only screen and (max-width: 1025px) {
     .grid-container {
       display: grid;
-      grid-template-columns: 220px 1fr;
-      grid-template-rows: 61px 1fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
       grid-template-areas:
-      "sidenav header header"
-      "aside-right aside-right aside-right"
-      "main main main";
+      "sidenav main";
       height: 100vh;
+    }
+
+    .main {
+      margin-top: 110px;
     }
     .aside-right {
       grid-area: aside-right;
