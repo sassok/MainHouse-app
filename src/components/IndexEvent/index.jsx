@@ -18,11 +18,14 @@ const IndexEvent = () => {
 
     const setDisplay = () => {
       document.getElementsByClassName('aside-right')[0].style.display = "block";
+      document.getElementsByClassName('showeventright')[0].style.display = "block";
+      document.getElementsByClassName('createeventright')[0].style.display = "none";
     }
    
     const setDisplayCreate = () => {
       document.getElementsByClassName('aside-right')[0].style.display = "block";
       document.getElementsByClassName('createeventright')[0].style.display = "block";
+      document.getElementsByClassName('showeventright')[0].style.display = "none";
     }
 
     useEffect (() => {
@@ -54,7 +57,6 @@ const IndexEvent = () => {
   return ( 
     <>
     <main className="main">
-    
       <div className="eventlistcards">
         <div className="listevents">
         <div className="positionicaddeve ">
@@ -72,6 +74,9 @@ const IndexEvent = () => {
       <aside className="aside-right">
         <div className="createeventright">
           <CreateEvent  />
+        </div>
+        <div className="showeventright">
+          <ShowEventAgency id={EventId} />
         </div>
       </aside>
   </>

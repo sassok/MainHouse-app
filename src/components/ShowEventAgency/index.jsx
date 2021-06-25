@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
-import { BiTrash } from "react-icons/bi";
 import './style.css';
-import Cookies from 'js-cookie';
 import DeleteEvent from '../DeleteEvent/index';
+import {IoTrashBinOutline} from 'react-icons/io5'
+import closeButton from '../../assets/images/iconeCloseButton.png';
 
 
 const ShowEventAgency = (props) => {
@@ -34,8 +32,11 @@ const ShowEventAgency = (props) => {
       const selectID = (id) => {
         setDeleteId(id);
       }
+    const setDisplayNone = () => {
+    document.getElementsByClassName('aside-right')[0].style.display = "none";
+  }
     return (
-
+<>
 <div className="showbuildingcard">
 <div className="containerbuilding-show">
   <div className="card-building-show">
@@ -45,12 +46,14 @@ const ShowEventAgency = (props) => {
       <span className="cardbuildref-show">Titre: {event.title}</span>
       <span className="cardbuildref-show">Description: {event.description}</span>
       <span className="cardbuildref-show">Date: {event.datetime}</span>
-      <BiTrash className="icondeleteevent" onClick={() => selectID(event.id)}/>
+      <IoTrashBinOutline className="icondeleteevent" onClick={() => selectID(event.id)}/>
     </div>
   </div>
   </div>
   <DeleteEvent id={DeleteId}/>
   </div>
+  <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
+</>
     );
 }
 export default ShowEventAgency;

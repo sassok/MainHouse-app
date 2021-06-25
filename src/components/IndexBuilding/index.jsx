@@ -4,10 +4,12 @@ import './style.css';
 import Cookies from 'js-cookie';
 import { BiPlusCircle } from "react-icons/bi";
 import { FaAsterisk } from "react-icons/fa";
-import { BiTrash, BiPencil } from "react-icons/bi";
+import {BiPencil } from "react-icons/bi";
 import closeButton from '../../assets/images/iconeCloseButton.png';
 import OwnerShowBuilding from '../OwnerShowBuilding';
 import EventShowBuilding from '../EventShowBuilding/index'
+import {IoTrashBinOutline} from 'react-icons/io5'
+
 
 
 
@@ -137,6 +139,10 @@ const IndexBuilding = () => {
               <span className="cardbuildref-show">Adresse: {oneBuilding.adress}</span>
               <span className="cardbuildref-show mb-5">Reference: {oneBuilding.reference}</span>
               <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
+                <div>
+               <IoTrashBinOutline className="icondeletebuilding" onClick={() => Ondeletebuilding(oneBuilding.id)} />
+                <BiPencil className="iconeditbuilding" onClick={() => editID(oneBuilding)} />
+              </div>
               <hr />
               <span className="cardbuildref-show-owner mb-5">Propriétaires: </span>
               <div className="ContainerOwnerEventShowBuilding">
@@ -146,8 +152,6 @@ const IndexBuilding = () => {
                 <div className="ContainerEventShowBuilding">
                   <EventShowBuilding id={oneBuilding.id} />
                 </div>
-                <BiTrash className="icondeletebuilding" onClick={() => Ondeletebuilding(oneBuilding.id)} />
-                <BiPencil className="iconeditbuilding" onClick={() => editID(oneBuilding)} />
               </div>
             </div>
           </div>
@@ -204,7 +208,7 @@ const IndexBuilding = () => {
         });
     }
     return (
-
+    <>
       <div className="createbuidform">
         <div className="titlebuildform">
           Modifier l'immeuble
@@ -233,6 +237,8 @@ const IndexBuilding = () => {
           <button type="submit" className="btcreateform">Modifier</button>
         </form>
       </div>
+      <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
+      </>
 
     );
   }
@@ -269,6 +275,7 @@ const IndexBuilding = () => {
     <>
       <main className="main">
         <div className="positionicaddeve ">
+        <p type="text" className="eventaddchp"><BiPlusCircle className="iconaddevent" onClick={() => createForm()}/></p>
           <BiPlusCircle className="iconaddevent" onClick={() => createForm()} />
         </div>
         <div className="cardscontainer">
@@ -326,6 +333,7 @@ const IndexBuilding = () => {
               <button type="submit" className="btcreateform">Ajouter</button>
             </form>
           </div>
+        <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
         </div>
       </aside>
     </>

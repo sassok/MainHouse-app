@@ -100,7 +100,7 @@ const EventsOwner = () => {
   return ( 
     <>
     <main className="main">
-      <div className="eventlistcards">
+      <div className="eventslistcards">
         <div className="listevents">
           {event.map(events => (
             <div className="list-item-event" key="events.id" onClick={() => getId(events.id)}>      

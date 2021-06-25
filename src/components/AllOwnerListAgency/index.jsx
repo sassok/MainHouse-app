@@ -66,7 +66,7 @@ const AllOwnerListAgency = () => {
     <main className="main">
       <div className="wrap">
         <div className="ownersearchbar">
-          <input type="text" className="searchTerm" placeholder="Rechercher un propriétaire"  onChange={(e) => handleSearch(e)}></input>
+          <input type="text" className="searchTerm" placeholder="     Rechercher un propriétaire"  onChange={(e) => handleSearch(e)}></input>
           <p type="text" className="iconownersearch"><IoMdSearch className="iconownerbar"/></p>
           <p type="text" className="owneraddchp"><BiPlusCircle className="iconaddevent" onClick={() => setDisplayCreate()}/></p>
         </div>

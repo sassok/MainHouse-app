@@ -7,14 +7,14 @@
   .iconowneredit {
       width: 30px;
       height: 30px;
-      color: orange;
+      color: rgb(124, 124, 123);
   }
 
   .iconownerdelete {
       width: 30px;
       height: 30px;
       margin-left: 5px;
-      color: red;
+      color: rgb(17, 17, 17);
   }
 
   .owner-show-icons-edit {
@@ -83,7 +83,7 @@
 }
 
   .infoshead {
-      padding-top: 40px;
+      padding-top: 80px;
       flex-wrap: wrap;
       text-align: center;
       padding-bottom: 50px;
