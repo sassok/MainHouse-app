@@ -1,30 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import './style.css';
 import Cookies from 'js-cookie';
 import ShowEventAgency from '../ShowEventAgency/index';
-import { BiPlusCircle } from "react-icons/bi";
-import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import CreateEvent from '../CreateEvent';
+import CreateEvent from '../CreateEvent/index';
+import { BiPlusCircle } from "react-icons/bi";
 
-
-
-const PopUpButton = () => (
-  <Popup trigger={<BiPlusCircle className="iconaddevent" />} modal>
-
-        {close => (
-           <div>
-      <div className="closeaddeventform" onClick={close}>
-          &times;
-        </div>
-        <CreateEvent />
-        </div>  
-        )}
-  </Popup>
-
-  );
 
 const IndexEvent = () => {
  
@@ -38,6 +20,10 @@ const IndexEvent = () => {
       document.getElementsByClassName('aside-right')[0].style.display = "block";
     }
    
+    const setDisplayCreate = () => {
+      document.getElementsByClassName('aside-right')[0].style.display = "block";
+      document.getElementsByClassName('createeventright')[0].style.display = "block";
+    }
 
     useEffect (() => {
       const fetchEvent = async () => {
@@ -72,7 +58,7 @@ const IndexEvent = () => {
       <div className="eventlistcards">
         <div className="listevents">
         <div className="positionicaddeve ">
-        <PopUpButton/>
+        <BiPlusCircle className="iconaddevent" onClick={() => setDisplayCreate()}/>
       </div>
           {event.map(events => (
             <div className="list-item-event" key={events.id} onClick={() => getID(events.id)}>      
@@ -83,9 +69,11 @@ const IndexEvent = () => {
         </div>
       </div>
     </main>
-        <aside className="aside-right">
-        <ShowEventAgency id={EventId}/>
-  </aside>
+      <aside className="aside-right">
+        <div className="createeventright">
+          <CreateEvent  />
+        </div>
+      </aside>
   </>
   );
 };

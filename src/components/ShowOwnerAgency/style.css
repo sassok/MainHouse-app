@@ -1,0 +1,115 @@
+.owner-image-show {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .iconowneredit {
+      width: 30px;
+      height: 30px;
+      color: orange;
+  }
+
+  .iconownerdelete {
+      width: 30px;
+      height: 30px;
+      margin-left: 5px;
+      color: red;
+  }
+
+  .owner-show-icons-edit {
+      margin-top: 50px;
+      margin-right: 1px; 
+  }
+
+  .mailandphone {
+      padding-right: 20px;
+      text-align: center;
+  }
+
+  .iconifos{
+      display:inline-block;
+  }
+
+  .phoneiconowner {
+      padding-left: 20px;
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      padding-right: 10px;
+  }
+
+  .emailiconowner {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      padding-right: 10px;
+  }
+
+  .phoneowner {
+      justify-content: center;   
+  }
+
+  .emailowner {
+      justify-content: center; 
+  }
+
+  .infosownerbody {
+      padding-top: 50px;
+      width: 100%;
+      text-align: center;   
+  }
+
+  .infoownerbuildname {
+      font-size: 25px;
+      font-weight: bold;
+      padding-bottom: 10px;
+  }
+
+  .infoownerrefbuild {
+      padding-top: 20px;
+  }
+
+  .infoownerlotnb {
+      font-weight: bold;
+      font-size: 25px;
+      padding-top: 20px;
+  }
+
+  .infoownerflatnb {
+  
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+  .infoshead {
+      padding-top: 40px;
+      flex-wrap: wrap;
+      text-align: center;
+      padding-bottom: 50px;
+  }
+
+  .ownerifoshead{ 
+      vertical-align:top;
+      margin-left: 15%;
+      display:inline-block;
+  }
+  .nameownercard {
+      padding-top: 20px;
+      font-weight: bold;
+      padding-bottom: 60px;
+  }
+  .ajustprofile { 
+      margin-right: 15%;
+  }
+ 
+  @media all and (max-width: 540px) {
+      .phoneiconowner {
+          padding-left: 0px;
+      }
+
+      .mailandphone {
+          padding-right: 20px;
+      }
+  
+      }

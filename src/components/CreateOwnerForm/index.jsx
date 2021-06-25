@@ -2,6 +2,8 @@ import React from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { Cookies } from 'js-cookie';
 
 const CreateOwner = () => {
   const agencyId = useSelector(state => state.agency.id);
@@ -40,37 +42,44 @@ const CreateOwner = () => {
       }
   return (
     <>
-  <div className="FormContainer">
-    <div className="formcontainer1">
-        <form onSubmit={OnSend} className="ownerForm" >
-          <div className="formbg-inner padding-horizontal--48">
-              <span className="padding-bottom--15 titleformCreate"> Ajouter un nouveau propriétaire </span>
-              <div className="field">
-              <input className="champform" type="first_name" id="ffirst_name" name="mail" placeholder="Prenom" required />
+  <div className="FormContainerevent">
+        <form onSubmit={OnSend} >
+            <div className="createbuidform">
+            <div className="titlebuildform">
+              Ajouter un propriétaire
             </div>
-            <div className="field">
-              <input className="champform" type="last_name" id="flast_name" name="last_name" placeholder="Nom" required />
+            <div class="input-style-long">
+            <label class="label">Prénom</label>
+            <input className="input--style-4" type="first_name" id="ffirst_name" name="first_name" required />
             </div>
-            <div className="field">
-              <input className="champform" type="mail" id="fmail" name="mail" placeholder="Email" required />
+            <div class="input-style-long">
+            <label class="label">Nom</label>
+            <input className="input--style-4" type="last_name" id="flast_name" name="last_name" required />
             </div>
-            <div className="field">
-              <input className="champform" type="phone_number" id="fphone_number" name="phone_number" placeholder="Telephone" required />
+            <div class="input-style-long">
+            <label class="label">Email</label>
+            <input className="input--style-4" type="mail" id="fmail" name="mail" required />
             </div>
-            <div className="field">
-              <input className="champform" type="flat_number" id="fflat_number" name="flat_number" placeholder="Numéro d'appartement" required />
+            <div class="input-style-long">
+            <label class="label">Telephone</label>
+            <input className="input--style-4" type="phone_number" id="fphone_number" name="phone_number" required />
             </div>
-            <div className="field">
-              <input className="champform" type="buildingId" id="fbuildingId" name="buildingId" placeholder="ID de l'immeuble" required />
+            <div class="input-style-long">
+            <label class="label">Numéro d'appartement</label>
+            <input className="input--style-4" type="flat_number" id="fflat_number" name="flat_number" required />
             </div>
-              <button type="submit" id="formOwnerButton" className="boutonform">Valider</button>
+          
+            <div className="input-style-long">
+            <label class="label">Identifiant du bâtiment</label>
+            <input className="input--style-4" type="buildingId" id="fbuildingId" name="buildingId" required />
+            </div>
+            <button type="submit" id="formOwnerButton" className="boutonform">Valider</button>
             <div className="endform">
-              <a  href="#"><Link to="" className="end__link">Nous contacter</Link></a>
+              <a href="#"><Link to="" className="end__link">Nous contacter</Link></a>
             </div>
           </div>
         </form>
     </div>
-  </div>
   </>
   )
 };
