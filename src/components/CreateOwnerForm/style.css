@@ -92,7 +92,7 @@ input:focus{
 
 @media screen and (max-width: 400px) {
 .FormContainer{
-  margin-top: 150px;
+  margin-top: 200px;
   margin-bottom:57%;
 }
 
@@ -100,7 +100,7 @@ input:focus{
 
 @media screen and (max-width: 380px) {
 .FormContainer{
-  margin-top: 150px;
+  margin-top: 200px;
   margin-bottom:18%;
 }
 
@@ -108,7 +108,7 @@ input:focus{
 
 @media screen and (max-width: 768px) {
 .FormContainer{
-  margin-top: 150px;
+  margin-top: 200px;
   margin-bottom:55%;
 }
 
@@ -116,9 +116,14 @@ input:focus{
 
 @media screen and (max-width: 1025px) {
 .FormContainer{
-  margin-top: 150px;
+  margin-top: 200px;
   margin-bottom:75%;
 }
 
+.FormContainerowner{
+  width: 100%;
+  border: solid 1px black;
+  margin-top: 0px;
+  padding-bottom: 120px;
 }
- 
+}

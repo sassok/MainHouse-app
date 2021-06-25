@@ -63,4 +63,21 @@
   border-bottom: 1px dotted black;
 }
 
+.responsiveCloseButtonEvent{
+  display:none;
+}
 
+@media all and (max-width: 1025px) {
+  .responsiveCloseButtonEvent{
+      width: 30px;
+      display:block;
+      float: left;
+      margin-right: 30px;
+  }
+  .iconowneredit {
+      width: 30px;
+      height: 30px;
+      color: rgb(124, 124, 123);
+      margin-right: 60px;
+  }
+  }

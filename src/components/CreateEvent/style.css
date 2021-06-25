@@ -12,7 +12,7 @@
 }
 
 .FormContainerevent{
-width: 100%;
+  width: 100%;
 }
 
 .padding-horizontal--48 {
@@ -129,6 +129,20 @@ input:focus{
   margin-top: 150px;
   margin-bottom:75%;
 }
-
+.boutonform {
+  background-color: #3C64B1;
+  padding: 4px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  min-height: 25px;
+  }
+  .FormContainerevent{
+    width: 100%;
+    border: solid 1px black;
+    margin-top: 10px;
+    padding-bottom: 100px;
+  }
 }
  

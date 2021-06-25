@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import closeButton from '../../assets/images/iconeCloseButton.png';
-
 import Cookies from 'js-cookie';
-import party from "../../assets/images/party.jpeg";
 
 const EventsOwner = () => {
     const owner = useSelector((state) => state.owner);

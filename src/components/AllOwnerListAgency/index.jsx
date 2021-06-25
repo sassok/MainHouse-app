@@ -7,6 +7,7 @@ import 'reactjs-popup/dist/index.css';
 import CreateOwner from '../CreateOwnerForm/index';
 import ShowOwnerAgency from '../ShowOwnerAgency/index';
 import { BiPlusCircle } from 'react-icons/bi';
+import closeButton from '../../assets/images/iconeCloseButton.png';
 
 const AllOwnerListAgency = () => {
   const [ownerList, setOwnerList] = useState([]);
@@ -15,16 +16,22 @@ const AllOwnerListAgency = () => {
   const [searchResult, setSearchResult] = useState([]);
   const [owner, setOwnerId] = useState([]);
 
+  const setDisplayNone = () => {
+    document.getElementsByClassName('aside-right')[0].style.display = "none";
+    document.getElementsByClassName('showownerright')[0].style.display = "none";
+    document.getElementsByClassName('createownerright')[0].style.display = "none";
+  }
+
   const setDisplay = () => {
     document.getElementsByClassName('aside-right')[0].style.display = "block";
-    document.getElementsByClassName('aside-right-form')[0].style.display = "none";
+    document.getElementsByClassName('showownerright')[0].style.display = "block";
     document.getElementsByClassName('createownerright')[0].style.display = "none";
   }
 
   const setDisplayCreate = () => {
-    document.getElementsByClassName('aside-right-form')[0].style.display = "block";
+    document.getElementsByClassName('showownerright')[0].style.display = "none";
     document.getElementsByClassName('createownerright')[0].style.display = "block";
-    document.getElementsByClassName('aside-right')[0].style.display = "none";
+    document.getElementsByClassName('aside-right')[0].style.display = "block";
 
   }
     const fetchBuilding =  async () => {
@@ -77,7 +84,7 @@ const AllOwnerListAgency = () => {
           ownerList.map(list_owner => (
             <div className="list-item-owner" onClick={() => getID(list_owner.id)}>
               <div className="img-owner-list">
-                <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" className="owner-image"/>
+                <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" className="owner-image" alt="propriétaire"/>
               </div>
               <div className="owner-list-content">
               <p className="owner-list-name">{list_owner.first_name}</p>
@@ -89,7 +96,7 @@ const AllOwnerListAgency = () => {
           searchResult.map(list_owner => (
             <div className="list-item-owner" onClick={() => getID(list_owner.id)}>
               <div className="img-owner-list">
-                <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" className="owner-image"/>
+                <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" className="owner-image" alt="propriétaire"/>
               </div>
               <div className="owner-list-content">
                 <p className="owner-list-name">{list_owner.first_name}</p>
@@ -101,12 +108,14 @@ const AllOwnerListAgency = () => {
       </div>
     </main>
     <aside className="aside-right">
+    <div className="showownerright">
       <ShowOwnerAgency id={owner} />
-    </aside>
-    <aside className="aside-right-form">
+      </div>
+      <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
       <div className="createownerright">
           <CreateOwner  />
-        </div>
+      </div>
+      <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
     </aside>
     </>
   );

@@ -93,7 +93,10 @@ function LogInFormOwner  () {
         </form>
     </div>
 </div>
-    <Footer/>
+    <footer className="footerLogin">
+      <h3>Besoin d’aide ? Contactez nous à hello@mkdev.com</h3>
+      <p className="copyrights">Mk Dev corporation | 2021 © Tous droits réservés</p>
+    </footer>
   </>
     );
     
