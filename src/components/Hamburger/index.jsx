@@ -34,8 +34,6 @@ const Hamburger=()=> {
       
       <div className="burger">
         <Menu>
-        <Link to="/mon_dashboard" >Dashboard</Link>
-        <Link to="/ma_messagerie" >Messagerie</Link>
         <Link to="/mes_evenements" >Événements</Link>
         <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
         <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
