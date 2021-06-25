@@ -210,7 +210,8 @@ const IndexEvent = () => {
         'Content-Type': 'application/json',
       },
     })
-    setDestroy(deleteeventid + 1)
+    setDestroy(deleteeventid + 1);
+    setDisplayNone();
   };
 
   const getID = (id) => {
