@@ -36,11 +36,10 @@ const Hamburger=()=> {
         <Link to="/ma_messagerie" >Messagerie</Link>
         <Link to="/mes_evenements" >Événements</Link>
         <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
-        Dark Theme
         <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
         <Link to="/mon_profil" >Mon profil</Link>
         <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
-        <Link to="/deconnexion" >Se déconnecter</Link>
+        <Link to="/deconnexion-owner" >Se déconnecter</Link>
         </ Menu>
       </div>
       

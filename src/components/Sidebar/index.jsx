@@ -144,7 +144,7 @@ const Sidebar = () => {
             </MenuItem>
           <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
             <MenuItem>        
-              <Link to="/deconnexion" >Se déconnecter</Link>
+              <Link to="/deconnexion-owner" >Se déconnecter</Link>
             </MenuItem>
           </Menu>
             </SidebarFooter>
