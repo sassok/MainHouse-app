@@ -49,4 +49,11 @@ display: flex;
   .list-item-event:hover {
     box-shadow:  3px 3px 3px #3C64B1; 
   }
+
+  .showownereventright {
+    width: 100%;
+    text-align: center;  
+  }
+ 
+ 
  
