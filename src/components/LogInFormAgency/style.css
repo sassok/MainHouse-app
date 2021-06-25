@@ -74,6 +74,17 @@
         text-decoration:none; 
     }
 
+.footerLogin {
+  height: 5%;
+  width: 100%;
+  background-color: #3C64B1;
+  color: #ffff;
+  text-align: center;
+  position: fixed;
+  bottom:0;
+  padding-bottom: 5px;
+}
+
     @media all and (max-width:220px){
         .boutonform {
          

@@ -174,3 +174,43 @@
 .phoneagency {
     padding-bottom: 5px;
 }
+
+
+
+@media only screen and (max-width: 1025px) {
+  
+.headprofileright{
+      display: block;
+      align-items: center;
+      width: 100%;
+      font-family: "Roboto", sans-serif;
+      color: #10182f;
+      height: 50px;
+      border-bottom: 1px solid;
+      border-color: #E1E3E6;
+  }
+
+  .backgroundprofright {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .editform {
+   padding-top: 20px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    margin-top: 550px;
+  }
+
+  .headprofile{
+    display: none;
+}
+
+.wrap{
+  display: none;
+}
+}

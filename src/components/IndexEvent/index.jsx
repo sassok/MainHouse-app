@@ -6,7 +6,7 @@ import ShowEventAgency from '../ShowEventAgency/index';
 import 'reactjs-popup/dist/index.css';
 import CreateEvent from '../CreateEvent/index';
 import { BiPlusCircle } from "react-icons/bi";
-
+import closeButton from '../../assets/images/iconeCloseButton.png';
 
 const IndexEvent = () => {
  
@@ -28,6 +28,11 @@ const IndexEvent = () => {
       document.getElementsByClassName('showeventright')[0].style.display = "none";
     }
 
+    const setDisplayNone = () => {
+      document.getElementsByClassName('aside-right')[0].style.display = "none";
+      document.getElementsByClassName('createeventright')[0].style.display = "none";
+      document.getElementsByClassName('showeventright')[0].style.display = "none";
+    }
     useEffect (() => {
       const fetchEvent = async () => {
       fetch(`https://mainhouseapi.herokuapp.com/agency-events/${id}` , {
@@ -86,6 +91,7 @@ const IndexEvent = () => {
         <div className="showeventright">
           <ShowEventAgency id={EventId} />
         </div>
+        <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
       </aside>
   </>
   );

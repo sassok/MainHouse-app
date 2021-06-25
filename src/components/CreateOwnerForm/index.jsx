@@ -9,6 +9,10 @@ const CreateOwner = () => {
   const agencyId = useSelector(state => state.agency.id);
   const Bienvenue = "Bienvenue"
 
+  const setDisplayNone = () => {
+    document.getElementsByClassName('aside-right')[0].style.display = "none";
+  }
+
   const OnSend = (e) => {
     e.preventDefault();
     
@@ -42,7 +46,7 @@ const CreateOwner = () => {
       }
   return (
     <>
-  <div className="FormContainerevent">
+  <div className="FormContainerowner">
         <form onSubmit={OnSend} >
             <div className="createbuidform">
             <div className="titlebuildform">
@@ -73,9 +77,9 @@ const CreateOwner = () => {
             <label class="label">Identifiant du bâtiment</label>
             <input className="input--style-4" type="buildingId" id="fbuildingId" name="buildingId" required />
             </div>
-            <button type="submit" id="formOwnerButton" className="boutonform">Valider</button>
+            <button type="submit" id="formOwnerButton" className="boutonform" onClick={() => setDisplayNone()}>Valider</button>
             <div className="endform">
-              <a href="#"><Link to="" className="end__link">Nous contacter</Link></a>
+              <a href="#"><Link to="" className="end__link" >Nous contacter</Link></a>
             </div>
           </div>
         </form>

@@ -269,10 +269,36 @@ right: 0;
   display: none;
 }
 
+.responsiveCloseButtonBuilding{
+  display:none;
+}
+
 @media all and (max-width: 900px) {
   .eventaddchp{
     display: block;
     margin-top: 15px;
   }
+}
 
+.responsiveCloseButtonEvent{
+  display:none;
+}
+
+@media all and (max-width: 1025px) {
+  .responsiveCloseButtonBuilding{
+      width: 30px;
+      margin-right: 3px;
+      display: block;
+  }
+  .containerCloseButton {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .createbuildingright{
+    width: 100%;
+    border: solid 1px black;
+    margin-top: 10px;
+    padding-bottom: 120px;
+  }
   }

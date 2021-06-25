@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import ShowOwner from '../ShowOwner';
 import './style.css';
 import { BiPencil, BiMobileAlt, BiMessageRounded } from "react-icons/bi";
 import {IoTrashBinOutline} from 'react-icons/io5'
 import closeButton from '../../assets/images/iconeCloseButton.png';
+
 const ShowOwnerAgency = (props) => {
   const [owner, setOwner] = useState([]);
   const [building, setBuilding] = useState([]);
@@ -49,6 +49,9 @@ const ShowOwnerAgency = (props) => {
   }
   return (
     <div>
+      <div className="containerCloseButton">
+        <img className="responsiveCloseButton rotated" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()} />
+      </div>
       <div className="infoshead">
         <div className="ajustprofile">
           <div className="ownerifoshead">
@@ -56,7 +59,7 @@ const ShowOwnerAgency = (props) => {
           </div>
           <div className="ownerifoshead">
             <p className="nameownercard">{owner.first_name} {owner.last_name}</p>
-            <p className="ownerinfoshead"><IoTrashBinOutline className="iconownerdelete" /><BiPencil className="iconowneredit" /></p>
+            <p className="ownerinfoshead"><BiPencil className="iconowneredit" /><IoTrashBinOutline className="iconownerdelete" /></p>
           </div>
         </div>
       </div>

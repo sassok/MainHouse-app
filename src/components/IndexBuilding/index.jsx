@@ -126,8 +126,12 @@ const IndexBuilding = () => {
 
     return (
       <div className="showbuildingcard">
+        
         <div className="containerbuilding-show">
           <div className="card-building-show">
+  <div className="containerCloseButton">
+    <img className="responsiveCloseButtonBuilding rotated" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()} />
+  </div>
             <div className="card-building-header-show">
               <img className="card-building-img-show " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
             </div>
@@ -140,9 +144,9 @@ const IndexBuilding = () => {
               <span className="cardbuildref-show mb-5">Reference: {oneBuilding.reference}</span>
               <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
                 <div>
-               <IoTrashBinOutline className="icondeletebuilding" onClick={() => Ondeletebuilding(oneBuilding.id)} />
                 <BiPencil className="iconeditbuilding" onClick={() => editID(oneBuilding)} />
-              </div>
+                <IoTrashBinOutline className="icondeletebuilding" onClick={() => Ondeletebuilding(oneBuilding.id)} />
+                </div>
               <hr />
               <span className="cardbuildref-show-owner mb-5">Propriétaires: </span>
               <div className="ContainerOwnerEventShowBuilding">
@@ -209,17 +213,17 @@ const IndexBuilding = () => {
     }
     return (
     <>
-      <div className="createbuidform">
+      <div className="createbuidingform">
         <div className="titlebuildform">
           Modifier l'immeuble
-  </div>
+      </div>
         <form onSubmit={OnSendEdit}>
           <div class="input-style-long">
             <label class="label">Nom de l'immeuble</label>
             <input class="input--style-4" type="text" name="editname" id="editname" placeholder={editname} />
           </div>
           <div class="input-style-long">
-            <label class="label">adresse</label>
+            <label class="label">Adresse</label>
             <input class="input--style-4" type="text" name="editadress" id="editadress" placeholder={editadress} />
           </div>
           <div class="input-style-long">
@@ -231,7 +235,7 @@ const IndexBuilding = () => {
             <input class="input--style-4" type="text" name="editcity" id="editcity" placeholder={editcity} />
           </div>
           <div class="input-style-long">
-            <label class="label">Réfférence</label>
+            <label class="label">Référence</label>
             <input class="input--style-4" type="text" name="editreference" id="editreference" placeholder={editreference} />
           </div>
           <button type="submit" className="btcreateform">Modifier</button>
@@ -315,7 +319,7 @@ const IndexBuilding = () => {
                 <input class="input--style-4" type="text" name="name" id="name" />
               </div>
               <div class="input-style-long">
-                <label class="label">adresse<FaAsterisk className="astericolor" /></label>
+                <label class="label">Adresse<FaAsterisk className="astericolor" /></label>
                 <input class="input--style-4" type="text" name="adress" id="adress" />
               </div>
               <div class="input-style-long">
@@ -327,7 +331,7 @@ const IndexBuilding = () => {
                 <input class="input--style-4" type="text" name="city" id="city" />
               </div>
               <div class="input-style-long">
-                <label class="label">Réfférence<FaAsterisk className="astericolor" /></label>
+                <label class="label">Référence<FaAsterisk className="astericolor" /></label>
                 <input class="input--style-4" type="text" name="reference" id="reference" />
               </div>
               <button type="submit" className="btcreateform">Ajouter</button>

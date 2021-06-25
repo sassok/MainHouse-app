@@ -10,6 +10,10 @@ const CreateEvent = () => {
   const [building, setBuilding] = useState([]);
   const id = useSelector(state => state.agency.id);
 
+  const setDisplayNone = () => {
+    document.getElementsByClassName('aside-right')[0].style.display = "none";
+  }
+  
   useEffect (() => {
     const fetchBuilding = async () => {
     fetch(`https://mainhouseapi.herokuapp.com/agency-buildings/${id}` , {
@@ -105,9 +109,12 @@ const CreateEvent = () => {
             <div className="input-style-long">
             <label class="label">Description</label>
             <textarea className="input--style-4" id="description" name="description" />
+            <p><button type="submit" className="boutonform" onClick={() => setDisplayNone()}>Créer</button></p>
             </div>
-              <button type="submit" className="boutonform">Créer</button>
-          </div>
+            <div className="input-style-long">
+            <label class="label"></label>
+            </div>
+          </div>          
         </form>
     </div>
   )
