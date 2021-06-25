@@ -100,21 +100,25 @@
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1025px) {
   .componentsNavbarLogin{
     display: block;
     position: fixed;
+    margin-left: 5px;
   }
 
     .componentsNavbarSignup{
       display: block;
       position: fixed;
-      margin-left: 70%;  
+      margin-right: 20px;
+      margin-left: 80%;  
   }
 
     .logoContainer{
-    margin-left: 30%;
-    margin-top: 50px;
+      position:absolute;
+      z-index: 100;
+      margin-left: 44%;
+    
 }
 }
 
@@ -122,16 +126,17 @@
   .componentsNavbarLogin{
     display: block;
     position: fixed;
+    margin-left: 30px;
   }
 
     .componentsNavbarSignup{
     display: block;
     position: fixed;
-    margin-left: 70%;  
+    margin-left: 72%;  
   }
 
     .logoContainer{
-    margin-left: 30%;
+    margin-left: 40%;
     margin-top: 50px;
 }
 }
@@ -140,16 +145,17 @@
   .componentsNavbarLogin{
     display: block;
     position: fixed;
+    margin-left: 5px;
   }
 
     .componentsNavbarSignup{
       display: block;
       position: fixed;
-      margin-left: 50%;  
+      margin-left: 44%;  
   }
 
     .logoContainer{
-      margin-left: 26%;
+      margin-left: 29%;
       margin-top: 50px;
     }
 }
