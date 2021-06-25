@@ -36,6 +36,7 @@ aside {
   grid-area: aside-right;
   display: none;
   width: 500px;
+  background-color: white;
 }
 
 .eventlistcardsBuilding {
@@ -47,3 +48,83 @@ aside {
   display: block;
   border-right: 1px solid #E1E3E6;
 }
+
+.respoLogo{
+  display: none;
+}
+  
+  @media only screen and (max-width: 300px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: 61px 1fr;
+      grid-template-areas:
+      "sidenav header header"
+      "aside-right aside-right aside-right"
+      "main main main";
+      height: 100vh;
+    }
+    .aside-right {
+      grid-area: aside-right;
+      display: none;
+      width: 100%;
+      position: absolute;
+      margin-top: 450px;
+    }
+    .respoLogo{
+      width: 200px;
+      margin-left: -100px;
+      display: block;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: 61px 1fr;
+      grid-template-areas:
+      "sidenav header header"
+      "aside-right aside-right aside-right"
+      "main main main";
+      height: 100vh;
+    }
+    .aside-right {
+      grid-area: aside-right;
+      display: none;
+      width: 100%;
+      position: absolute;
+      margin-top: 450px;
+    }
+    .respoLogo{
+      width: 200px;
+      margin-left: 15%;
+      display: block;
+    }
+  }
+  
+  @media only screen and (max-width: 1025px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: 61px 1fr;
+      grid-template-areas:
+      "sidenav header header"
+      "aside-right aside-right aside-right"
+      "main main main";
+      height: 100vh;
+    }
+    .aside-right {
+      grid-area: aside-right;
+      display: none;
+      width: 100%;
+      position: absolute;
+      margin-top: 450px;
+    }
+    .respoLogo{
+      width: 200px;
+      margin-left: -100px;
+      margin-top: 35px;
+      display: block;
+    }
+  }

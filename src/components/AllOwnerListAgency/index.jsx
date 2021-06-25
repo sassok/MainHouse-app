@@ -3,16 +3,10 @@ import { useSelector } from 'react-redux';
 import './style.css';
 import Cookies from 'js-cookie';
 import { IoMdSearch} from "react-icons/io";
-import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import CreateOwner from '../CreateOwnerForm/index';
 import ShowOwnerAgency from '../ShowOwnerAgency/index';
- 
-const PopUpButton = () => (
-    <Popup trigger={<button className="button addownbt"> Ajouter </button>} modal>
-      <span> <CreateOwner /> </span>
-    </Popup>
-);
+import { BiPlusCircle } from 'react-icons/bi';
 
 const AllOwnerListAgency = () => {
   const [ownerList, setOwnerList] = useState([]);
@@ -23,8 +17,16 @@ const AllOwnerListAgency = () => {
 
   const setDisplay = () => {
     document.getElementsByClassName('aside-right')[0].style.display = "block";
+    document.getElementsByClassName('aside-right-form')[0].style.display = "none";
+    document.getElementsByClassName('createownerright')[0].style.display = "none";
   }
 
+  const setDisplayCreate = () => {
+    document.getElementsByClassName('aside-right-form')[0].style.display = "block";
+    document.getElementsByClassName('createownerright')[0].style.display = "block";
+    document.getElementsByClassName('aside-right')[0].style.display = "none";
+
+  }
     const fetchBuilding =  async () => {
     fetch(`https://mainhouseapi.herokuapp.com/agency-owners/${id}` , {
       method: 'get',
@@ -66,7 +68,7 @@ const AllOwnerListAgency = () => {
         <div className="ownersearchbar">
           <input type="text" className="searchTerm" placeholder="Rechercher un propriétaire"  onChange={(e) => handleSearch(e)}></input>
           <p type="text" className="iconownersearch"><IoMdSearch className="iconownerbar"/></p>
-          <p type="text" className="owneraddchp"><PopUpButton/></p>
+          <p type="text" className="owneraddchp"><BiPlusCircle className="iconaddevent" onClick={() => setDisplayCreate()}/></p>
         </div>
       </div>
       <div className="ownerlistcards">
@@ -100,6 +102,11 @@ const AllOwnerListAgency = () => {
     </main>
     <aside className="aside-right">
       <ShowOwnerAgency id={owner} />
+    </aside>
+    <aside className="aside-right-form">
+      <div className="createownerright">
+          <CreateOwner  />
+        </div>
     </aside>
     </>
   );

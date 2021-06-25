@@ -94,7 +94,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .hamburger{
   display:none;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1025px) {
   .hamburger{
     display:block;
   }
