@@ -54,14 +54,8 @@ function LogInFormOwner  () {
                   dispatch({ type: login_owner(), token, email, id });
                 })
             )
-            
+            history.push('/mes_evenements');
         };
-          useEffect(() => {
-            
-            if (owner.id !== (undefined || null)) {
-              history.push('/');
-            }
-          }, [owner]);
 
     return (
   <>
