@@ -21,6 +21,7 @@ import PageOwnerListAgency from './pages/OwnerListAgencyPage/index';
 import PageEventsOwner from './pages/EventsOwnerPage/index';
 import AgencyProfile from './pages/AgencyProfile/index';
 import PageEditOwnerProfile from './pages/EditOwnerProfilePage/index';
+import DeleteOwnerSession from './components/DeleteOwnerSession';
 
 
 
@@ -70,6 +71,9 @@ const App = () => {
                     <Route path="/deconnexion" >
                         <DeleteAgencySession />
                     </Route>
+                <Route path="/deconnexion-owner" >
+                    <DeleteOwnerSession />
+                </Route>
             </Switch>
             </div>
                 :

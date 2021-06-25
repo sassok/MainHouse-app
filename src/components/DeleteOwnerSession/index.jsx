@@ -1,16 +1,16 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { logout } from '../../components/redux';
+import { logout_owner } from '../../components/redux';
 
-const DeleteAgencySession = () => {
+const DeleteOwnerSession = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-    dispatch({ type: logout() });
+    dispatch({ type: logout_owner() });
       history.push('/');
   
-
+console.log("bonjour");
   return null;
 
 };
 
-export default DeleteAgencySession;
+export default DeleteOwnerSession;
