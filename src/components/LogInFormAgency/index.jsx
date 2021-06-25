@@ -7,7 +7,6 @@ import { login } from '../redux';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer/index'
 import logo from  '../../assets/images/Mainhouseblack.png'
-import  { Redirect } from 'react-router-dom'
 
 
 function LogInFormAgency  () {
@@ -54,12 +53,7 @@ function LogInFormAgency  () {
             )
             history.push('/mes-immeubles');
         };
-          useEffect(() => {
-            if (agency.id !== (undefined || null)) {
-              console.log("AAAAAAAAHHHHHHHHHHHHHHH");
-            }
-          }, [agency.id]);
-
+      
     return (
   <>
     <div>

@@ -72,7 +72,6 @@ const EventsOwner = () => {
                 <p>{singleevent.title}</p>
               </div>
               <span className="cardbuildref-show">Description: {singleevent.description}</span>
-              <span className="cardbuildref-show">Le: {singleevent.datetime}</span>
               <span className="cardbuildref-show mb-5">Durée: {singleevent.duration} minutes</span>
               <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
             </div>
@@ -102,7 +101,14 @@ const EventsOwner = () => {
           {event.map(events => (
             <div className="list-item-event" key="events.id" onClick={() => getId(events.id)}>      
               <p className="event-list-title">{events.title}</p>
-              <p className="event-list-date">{events.datetime}</p>
+              <p className="event-list-date">{new Intl.DateTimeFormat("fr-FR", {
+                year: "numeric",
+                month: "long",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit"
+                }).format(new Date(events.datetime))}</p>
+                <p className="event-list-title">{events.duration} minutes</p>
               <p className="event-list-description">{events.description}</p>    
             </div>
           ))}

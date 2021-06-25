@@ -70,7 +70,15 @@ const IndexEvent = () => {
           {event.map(events => (
             <div className="list-item-event" key={events.id} onClick={() => getID(events.id)}>      
               <p className="event-list-title">{events.title}</p>
-              <p className="event-list-date">{events.datetime}</p>    
+              <p className="event-list-date">{new Intl.DateTimeFormat("fr-FR", {
+                year: "numeric",
+                month: "long",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit"
+                }).format(new Date(events.datetime))}
+              </p>   
+              <p className="event-list-title">{events.duration} minutes</p>
             </div>
           ))}
         </div>

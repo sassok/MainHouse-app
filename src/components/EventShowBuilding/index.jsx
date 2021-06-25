@@ -38,6 +38,13 @@ const [eventBuilding, setEventB] = useState([]);
             <div className="list-item-eventBuilding">      
               <p className="event-list-titleBuilding">{eventsB.title}</p>   
               <p className="event-list-descBuilding">{eventsB.description}</p>
+              <p className="event-list-descBuilding">{new Intl.DateTimeFormat("fr-FR", {
+                year: "numeric",
+                month: "long",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit"
+                }).format(new Date(eventsB.datetime))}</p>
             </div>
           
         </div>

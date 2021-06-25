@@ -48,8 +48,8 @@ const ShowEventAgency = (props) => {
       <span className="cardbuildref-show">Titre: {event.title}</span>
       <span className="cardbuildref-show">Description: {event.description}</span>
       <span className="cardbuildref-show">Date: {event.datetime}</span>
-
-      
+      <span className="cardbuildref-show">Durée: {event.duration} minutes</span>
+      <IoTrashBinOutline className="icondeleteevent" onClick={() => selectID(event.id)}/>
     </div>
   </div>
   </div>
