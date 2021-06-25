@@ -3,8 +3,8 @@ import logo from "../../assets/images/Mainhouseblack.png"
 const HeaderMenu = () => {
     return(
         <>
-            <header class="header">
-                <img src={logo} className="respoLogo" alt="blackLogo"/>
+            <header class="header whiteSpaceHeader">
+                    <img src={logo} className="respoLogo " alt="blackLogo"/>
             </header>
         </>
             )

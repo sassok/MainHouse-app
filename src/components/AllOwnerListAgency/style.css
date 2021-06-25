@@ -5,6 +5,7 @@
     width: 100%;
     font-family: "Roboto", sans-serif;
     color: #10182f;
+    margin-top: 100px;
   }
   
   
@@ -61,7 +62,9 @@
         width: 100%;
         font-family: "Roboto", sans-serif;
         color: #10182f;
-        margin-left: 15px;
+        position:fixed;
+        background-color: white;
+        padding-top: 10px;
       }
       .searchTerm {
         height: 50px;
@@ -75,8 +78,6 @@
         border-color: #E1E3E6;
         caret-color: #3C64B1;
         font-size: 18px; 
-         
-      
       }
       .iconownersearch {
         height: 50px;
@@ -87,6 +88,8 @@
         border-right: none;
         border-bottom: 1px solid;
         border-color: #E1E3E6;
+        position:fixed;
+        margin-top: 0px;
       }
 
       .iconownerbar {
@@ -106,6 +109,8 @@
         border-bottom: 1px solid;
         border-color: #E1E3E6;
         justify-content: center;
+        position:fixed;
+        margin-left: 75%;
       }
 
       .addownbt {
@@ -132,4 +137,10 @@
 
       .createownerright {
         display: none;
+      }
+
+      @media only screen and (max-width: 1025px) {
+        .aside-right-form {
+          margin: 30px;
+        }
       }

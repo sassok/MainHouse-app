@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ShowOwner from '../ShowOwner';
 import './style.css';
-import { BiPencil, BiTrash, BiMobileAlt, BiMessageRounded } from "react-icons/bi";
-
+import { BiPencil, BiMobileAlt, BiMessageRounded } from "react-icons/bi";
+import {IoTrashBinOutline} from 'react-icons/io5'
+import closeButton from '../../assets/images/iconeCloseButton.png';
 const ShowOwnerAgency = (props) => {
   const [owner, setOwner] = useState([]);
   const [building, setBuilding] = useState([]);
@@ -43,6 +44,9 @@ const ShowOwnerAgency = (props) => {
     fetchShowBuilding()
   }, [owner]);
 
+ const setDisplayNone = () => {
+    document.getElementsByClassName('aside-right')[0].style.display = "none";
+  }
   return (
     <div>
       <div className="infoshead">
@@ -52,7 +56,7 @@ const ShowOwnerAgency = (props) => {
           </div>
           <div className="ownerifoshead">
             <p className="nameownercard">{owner.first_name} {owner.last_name}</p>
-            <p className="ownerinfoshead"><BiPencil className="iconowneredit" /><BiTrash className="iconownerdelete" /></p>
+            <p className="ownerinfoshead"><IoTrashBinOutline className="iconownerdelete" /><BiPencil className="iconowneredit" /></p>
           </div>
         </div>
       </div>
@@ -74,6 +78,7 @@ const ShowOwnerAgency = (props) => {
         <p className="infoownerlotnb">Lot N°{owner.lot}</p>
         <p className="infoownerflatnb">Appartement N°{owner.flat_number}</p>
       </div>
+      <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
     </div>
 
   );
