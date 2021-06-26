@@ -60,9 +60,6 @@ const Sidebar = () => {
                 <Link to="/mes-immeubles">Mes Immeubles</Link>
               </MenuItem>
               <MenuItem>
-                <Link to="/nos_messagerie" >Messagerie</Link>
-              </MenuItem>
-              <MenuItem>
                 <Link to="/nos_evenements" >Événements</Link>
               </MenuItem>
               <MenuItem>

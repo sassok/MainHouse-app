@@ -185,6 +185,9 @@ const IndexEvent = () => {
       <div className="showbuildingcard">
         <div className="containerbuilding-show">
           <div className="card-building-show">
+          <div className="containerCloseButton">
+          <img className="responsiveCloseButtonBuilding rotated" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()} />
+        </div>
             <div className="card-building-header-show">
               <img className="card-building-img-show " src="http://www.riadmehdi.net/wp-content/uploads/2018/11/csm_img-event_54745635d1.jpg" alt="rover" />
             </div>
