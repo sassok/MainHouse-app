@@ -13,7 +13,6 @@ const Hamburger=()=> {
       <div className="burger">
         <Menu>
           <Link to="/mes-immeubles">Mes Immeubles</Link>
-          <Link to="/nos_messagerie" >Messagerie</Link>
           <Link to="/nos_evenements" >Événements</Link>
           <Link to="/nos_proprietaires" >Les propriétaires</Link>
           <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
@@ -36,6 +35,7 @@ const Hamburger=()=> {
         <Menu>
         <Link to="/mes_evenements" >Événements</Link>
         <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
+        <p>Dark Theme</p>
         <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />
         <Link to="/mon_profil" >Mon profil</Link>
         <hr style={{ backgroundColor: "#464647", height: 1, border: "none"}} />

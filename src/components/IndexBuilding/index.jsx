@@ -128,10 +128,10 @@ const IndexBuilding = () => {
       <div className="showbuildingcard">
         
         <div className="containerbuilding-show">
-          <div className="card-building-show">
-  <div className="containerCloseButton">
-    <img className="responsiveCloseButtonBuilding rotated" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()} />
-  </div>
+        <div className="card-building-show">
+        <div className="containerCloseButton">
+          <img className="responsiveCloseButtonBuilding rotated" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()} />
+        </div>
             <div className="card-building-header-show">
               <img className="card-building-img-show " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
             </div>
@@ -279,7 +279,6 @@ const IndexBuilding = () => {
     <>
       <main className="main">
         <div className="positionicaddeve ">
-        <p type="text" className="eventaddchp"><BiPlusCircle className="iconaddevent" onClick={() => createForm()}/></p>
           <BiPlusCircle className="iconaddevent" onClick={() => createForm()} />
         </div>
         <div className="cardscontainer">
