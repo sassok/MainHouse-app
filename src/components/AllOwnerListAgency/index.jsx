@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+
 import './style.css';
 import Cookies from 'js-cookie';
 import { IoMdSearch } from "react-icons/io";
 import 'reactjs-popup/dist/index.css';
 import { BiPlusCircle } from 'react-icons/bi';
 import closeButton from '../../assets/images/iconeCloseButton.png';
-import {BiMobileAlt, BiMessageRounded } from "react-icons/bi";
-import {IoTrashBinOutline} from 'react-icons/io5'
+import { BiMobileAlt, BiMessageRounded } from "react-icons/bi";
+import { IoTrashBinOutline } from 'react-icons/io5';
+import { init } from 'emailjs-com';
+import * as emailjs from "emailjs-com";
+init("user_lgjHrR8tpZ6KOnNqV1v1a");
+const faker = require('faker');
 
 const AllOwnerListAgency = () => {
   const [ownerList, setOwnerList] = useState([]);
@@ -17,7 +22,6 @@ const AllOwnerListAgency = () => {
   const agency_id = useSelector(state => state.agency.id);
   const [createowner, setCreateOwner] = useState();
   const [deleteownerid, setDestroy] = useState(0);
-
 
   const setDisplayNone = () => {
     document.getElementsByClassName('aside-right')[0].style.display = "none";
@@ -35,10 +39,7 @@ const AllOwnerListAgency = () => {
     document.getElementsByClassName('showownerright')[0].style.display = "none";
     document.getElementsByClassName('createownerright')[0].style.display = "block";
     document.getElementsByClassName('aside-right')[0].style.display = "block";
-
   }
-
-
 
   const fetchBuilding = async () => {
     fetch(`https://mainhouseapi.herokuapp.com/agency-owners/${agency_id}`, {
@@ -60,11 +61,9 @@ const AllOwnerListAgency = () => {
   const handleSearch = (e) => {
     setSearchTerme(e.target.value);
     setOwnerList(ownerList.filter(owner => owner.first_name.toString().toLowerCase().includes(searchTerme.toLowerCase())));
-
   };
 
   React.useEffect(() => { fetchBuilding() }, [createowner, deleteownerid]);
-
 
   if (ownerList.length == 0) {
     fetchBuilding();
@@ -83,6 +82,7 @@ const AllOwnerListAgency = () => {
     const setDisplayNone = () => {
       document.getElementsByClassName('aside-right')[0].style.display = "none";
     }
+
     useEffect(() => {
       const fetchBuildingList = async () => {
         fetch(`https://mainhouseapi.herokuapp.com/agency-buildings/${agency_id}`, {
@@ -110,6 +110,7 @@ const AllOwnerListAgency = () => {
       const phone_number = document.querySelector('#fphone_number').value;
       const flat_number = document.querySelector('#fflat_number').value;
       const buildingId = document.querySelector('#fbuildingId').value;
+      var createpassword = faker.random.number();
 
       const datacreate = {
         "owner": {
@@ -120,9 +121,10 @@ const AllOwnerListAgency = () => {
           "flat_number": flat_number,
           "building_id": buildingId,
           "agency_id": agencyId,
-          "password": Bienvenue
+          "password": createpassword
         }
       }
+
       fetch('https://mainhouseapi.herokuapp.com/create-owner', {
         method: 'post',
         headers: {
@@ -133,6 +135,21 @@ const AllOwnerListAgency = () => {
         .then((response) => {
           setCreateOwner(response)
         })
+
+      var data = {
+        to_email: mail,
+        to_name: first_name,
+        message: `Salut le boss bienvenue chez Mainhouse, voici ton mot de passe: ${createpassword}`
+      };
+
+      emailjs.send('service_bqbhd5r', 'template_ws5mx09', data, 'user_lgjHrR8tpZ6KOnNqV1v1a').then(
+        function (response) {
+          console.log(response.status, response.text);
+        },
+        function (err) {
+          console.log(err);
+        }
+      );
     }
     return (
       <>
@@ -178,98 +195,97 @@ const AllOwnerListAgency = () => {
     )
   };
 
-const ShowOwnerAgency = (props) => {
-  const [showowner, setShowOwner] = useState([]);
-  const [showbuilding, setShowBuilding] = useState([]);
+  const ShowOwnerAgency = (props) => {
+    const [showowner, setShowOwner] = useState([]);
+    const [showbuilding, setShowBuilding] = useState([]);
 
-  useEffect(() => {
-    const fetchShowOwner = async () => {
-      fetch(`https://mainhouseapi.herokuapp.com/owners/${props.id}`, {
-        method: 'get',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }).then((response) => response.json())
-        .then((response) => {
-          setShowOwner(response);
-          
-        }).catch(function () {
-          console.log("error");
-        });
-    };
-    fetchShowOwner()
-  }, [props]);
+    useEffect(() => {
+      const fetchShowOwner = async () => {
+        fetch(`https://mainhouseapi.herokuapp.com/owners/${props.id}`, {
+          method: 'get',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }).then((response) => response.json())
+          .then((response) => {
+            setShowOwner(response);
 
-  useEffect(() => {
-    const fetchShowBuilding = async () => {
-      fetch(`https://mainhouseapi.herokuapp.com/buildings/${showowner.building_id}`, {
-        method: 'get',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }).then((response) => response.json())
-        .then((response) => {
-          setShowBuilding(response);
-        
-        }).catch(function () {
-          console.log("error");
-        });
-    };
-    fetchShowBuilding()
-  }, []);
+          }).catch(function () {
+            console.log("error");
+          });
+      };
+      fetchShowOwner()
+    }, [props]);
+
+    useEffect(() => {
+      const fetchShowBuilding = async () => {
+        fetch(`https://mainhouseapi.herokuapp.com/buildings/${showowner.building_id}`, {
+          method: 'get',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }).then((response) => response.json())
+          .then((response) => {
+            setShowBuilding(response);
+
+          }).catch(function () {
+            console.log("error");
+          });
+      };
+      fetchShowBuilding()
+    }, []);
 
 
-  return (
-    <div>
-      <div className="containerCloseButton">
-        <img className="responsiveCloseButton rotated" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()} />
-      </div>
-      <div className="infoshead">
-        <div className="ajustprofile">
-          <div className="ownerifoshead">
-            <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" class="owner-image-show" />
+    return (
+      <div>
+        <div className="containerCloseButton">
+          <img className="responsiveCloseButton rotated" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()} />
+        </div>
+        <div className="infoshead">
+          <div className="ajustprofile">
+            <div className="ownerifoshead">
+              <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" class="owner-image-show" />
+            </div>
+            <div className="ownerifoshead">
+              <p className="nameownercard">{showowner.first_name} {showowner.last_name}</p>
+              <p className="ownerinfoshead"><IoTrashBinOutline onClick={() => deleteOwner(showowner.id)} className="iconownerdelete" /></p>
+            </div>
           </div>
-          <div className="ownerifoshead">
-            <p className="nameownercard">{showowner.first_name} {showowner.last_name}</p>
-            <p className="ownerinfoshead"><IoTrashBinOutline onClick={() => deleteOwner(showowner.id)} className="iconownerdelete" /></p>
+        </div>
+        <div className="mailandphone">
+          <div className="iconifos">
+            <p className="iconifos emailowner"><BiMessageRounded className="emailiconowner" /></p>
+            <p className="iconifos">{showowner.email}</p>
+          </div>
+          <div className="iconifos">
+            <p className="iconifos">< BiMobileAlt className="phoneiconowner" /></p>
+            <p className="iconifos phoneowner">{showowner.phone_number}</p>
           </div>
         </div>
-      </div>
-      <div className="mailandphone">
-        <div className="iconifos">
-          <p className="iconifos emailowner"><BiMessageRounded className="emailiconowner" /></p>
-          <p className="iconifos">{showowner.email}</p>
+        <div className="infosownerbody">
+          <p className="infoownerbuildname">{showbuilding.name}</p>
+          <p className="infoowneradress">{showbuilding.adress}</p>
+          <p className="infoowneradress">{showbuilding.zipcode} {showbuilding.city}</p>
+          <p className="infoownerrefbuild">Ref : {showbuilding.reference}</p>
+          <p className="infoownerlotnb">Lot N°{showowner.lot}</p>
+          <p className="infoownerflatnb">Appartement N°{showowner.flat_number}</p>
         </div>
-        <div className="iconifos">
-          <p className="iconifos">< BiMobileAlt className="phoneiconowner" /></p>
-          <p className="iconifos phoneowner">{showowner.phone_number}</p>
-        </div>
+        <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
       </div>
-      <div className="infosownerbody">
-        <p className="infoownerbuildname">{showbuilding.name}</p>
-        <p className="infoowneradress">{showbuilding.adress}</p>
-        <p className="infoowneradress">{showbuilding.zipcode} {showbuilding.city}</p>
-        <p className="infoownerrefbuild">Ref : {showbuilding.reference}</p>
-        <p className="infoownerlotnb">Lot N°{showowner.lot}</p>
-        <p className="infoownerflatnb">Appartement N°{showowner.flat_number}</p>
-      </div>
-      <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
-    </div>
 
-  );
-}
+    );
+  }
 
-const deleteOwner = (deleteid) => {
-
-  fetch(`https://mainhouseapi.herokuapp.com/owners/${deleteid}`, {
-    method: 'delete',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-  setDestroy(deleteownerid + 1);
-  setDisplayNone();
-};
+  const deleteOwner = (deleteid) => {
+    fetch(`https://mainhouseapi.herokuapp.com/owners/${deleteid}`, {
+      method: 'delete',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    setDestroy(deleteownerid + 1);
+    setDisplayNone();
+  };
 
   return (
     <>
