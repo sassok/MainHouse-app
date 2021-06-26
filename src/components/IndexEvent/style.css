@@ -227,3 +227,14 @@ input:focus{
   }
 }
  
+.iconeditevent {
+  font-size: 30px;
+  color: rgb(160, 160, 160);
+  cursor: pointer;
+}
+
+.icondeleteevent {
+  font-size: 30px;
+  color: rgb(19, 19, 19);
+  cursor: pointer;
+}
