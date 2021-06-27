@@ -4,11 +4,11 @@ import './style.css';
 import Cookies from 'js-cookie';
 import { BiPlusCircle } from "react-icons/bi";
 import { FaAsterisk } from "react-icons/fa";
-import {BiPencil } from "react-icons/bi";
+import { BiPencil } from "react-icons/bi";
 import closeButton from '../../assets/images/iconeCloseButton.png';
 import OwnerShowBuilding from '../OwnerShowBuilding';
 import EventShowBuilding from '../EventShowBuilding/index'
-import {IoTrashBinOutline} from 'react-icons/io5'
+import { IoTrashBinOutline } from 'react-icons/io5'
 
 
 
@@ -126,12 +126,11 @@ const IndexBuilding = () => {
 
     return (
       <div className="showbuildingcard">
-        
         <div className="containerbuilding-show">
-        <div className="card-building-show">
-        <div className="containerCloseButton">
-          <img className="responsiveCloseButtonBuilding rotated" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()} />
-        </div>
+          <div className="card-building-show">
+            <div className="containerCloseButton">
+              <img className="responsiveCloseButtonBuilding rotated" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()} />
+            </div>
             <div className="card-building-header-show">
               <img className="card-building-img-show " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
             </div>
@@ -142,11 +141,10 @@ const IndexBuilding = () => {
               <span className="cardbuildref-show">Ville: {oneBuilding.city}</span>
               <span className="cardbuildref-show">Adresse: {oneBuilding.adress}</span>
               <span className="cardbuildref-show mb-5">Reference: {oneBuilding.reference}</span>
-              <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
-                <div>
+              <div>
                 <BiPencil className="iconeditbuilding" onClick={() => editID(oneBuilding)} />
                 <IoTrashBinOutline className="icondeletebuilding" onClick={() => Ondeletebuilding(oneBuilding.id)} />
-                </div>
+              </div>
               <hr />
               <span className="cardbuildref-show-owner mb-5">Propriétaires: </span>
               <div className="ContainerOwnerEventShowBuilding">
@@ -212,36 +210,35 @@ const IndexBuilding = () => {
         });
     }
     return (
-    <>
-      <div className="createbuidingform">
-        <div className="titlebuildform">
-          Modifier l'immeuble
+      <>
+        <div className="createbuidingform">
+          <div className="titlebuildform">
+            Modifier l'immeuble
       </div>
-        <form onSubmit={OnSendEdit}>
-          <div class="input-style-long">
-            <label class="label">Nom de l'immeuble</label>
-            <input class="input--style-4" type="text" name="editname" id="editname" placeholder={editname} />
-          </div>
-          <div class="input-style-long">
-            <label class="label">Adresse</label>
-            <input class="input--style-4" type="text" name="editadress" id="editadress" placeholder={editadress} />
-          </div>
-          <div class="input-style-long">
-            <label class="label">Code postal</label>
-            <input class="input--style-4" type="text" name="editzipcode" id="editzipcode" placeholder={editzipcode} />
-          </div>
-          <div class="input-style-long">
-            <label class="label">Ville</label>
-            <input class="input--style-4" type="text" name="editcity" id="editcity" placeholder={editcity} />
-          </div>
-          <div class="input-style-long">
-            <label class="label">Référence</label>
-            <input class="input--style-4" type="text" name="editreference" id="editreference" placeholder={editreference} />
-          </div>
-          <button type="submit" className="btcreateform">Modifier</button>
-        </form>
-      </div>
-      <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
+          <form onSubmit={OnSendEdit}>
+            <div className="input-style-long">
+              <label className="label">Nom de l'immeuble</label>
+              <input className="input--style-4" type="text" name="editname" id="editname" placeholder={editname} />
+            </div>
+            <div className="input-style-long">
+              <label className="label">Adresse</label>
+              <input className="input--style-4" type="text" name="editadress" id="editadress" placeholder={editadress} />
+            </div>
+            <div className="input-style-long">
+              <label className="label">Code postal</label>
+              <input className="input--style-4" type="text" name="editzipcode" id="editzipcode" placeholder={editzipcode} />
+            </div>
+            <div className="input-style-long">
+              <label className="label">Ville</label>
+              <input className="input--style-4" type="text" name="editcity" id="editcity" placeholder={editcity} />
+            </div>
+            <div className="input-style-long">
+              <label className="label">Référence</label>
+              <input className="input--style-4" type="text" name="editreference" id="editreference" placeholder={editreference} />
+            </div>
+            <button type="submit" className="btcreateform">Modifier</button>
+          </form>
+        </div>
       </>
 
     );
@@ -304,7 +301,7 @@ const IndexBuilding = () => {
         <div className="showbuildingright">
           <ShowBuilding id={buildingId} />
         </div>
-        <div class="editbuildingform">
+        <div className="editbuildingform">
           <EditBuilding id={buildingId} />
         </div>
         <div className="createbuildingright">
@@ -313,31 +310,31 @@ const IndexBuilding = () => {
               Créer un immeuble
         </div>
             <form onSubmit={OnSend}>
-              <div class="input-style-long">
-                <label class="label">Nom de l'immeuble<FaAsterisk className="astericolor" /></label>
-                <input class="input--style-4" type="text" name="name" id="name" />
+              <div className="input-style-long">
+                <label className="label">Nom de l'immeuble<FaAsterisk className="astericolor" /></label>
+                <input className="input--style-edit" type="text" name="name" id="name" />
               </div>
-              <div class="input-style-long">
-                <label class="label">Adresse<FaAsterisk className="astericolor" /></label>
-                <input class="input--style-4" type="text" name="adress" id="adress" />
+              <div className="input-style-long">
+                <label className="label">Adresse<FaAsterisk className="astericolor" /></label>
+                <input className="input--style-edit" type="text" name="adress" id="adress" />
               </div>
-              <div class="input-style-long">
-                <label class="label">Code postal<FaAsterisk className="astericolor" /></label>
-                <input class="input--style-4" type="text" name="zipcode" id="zipcode" />
+              <div className="input-style-long">
+                <label className="label">Code postal<FaAsterisk className="astericolor" /></label>
+                <input className="input--style-edit" type="text" name="zipcode" id="zipcode" />
               </div>
-              <div class="input-style-long">
-                <label class="label">Ville<FaAsterisk className="astericolor" /></label>
-                <input class="input--style-4" type="text" name="city" id="city" />
+              <div className="input-style-long">
+                <label className="label">Ville<FaAsterisk className="astericolor" /></label>
+                <input className="input--style-edit" type="text" name="city" id="city" />
               </div>
-              <div class="input-style-long">
-                <label class="label">Référence<FaAsterisk className="astericolor" /></label>
-                <input class="input--style-4" type="text" name="reference" id="reference" />
+              <div className="input-style-long">
+                <label className="label">Référence<FaAsterisk className="astericolor" /></label>
+                <input className="input--style-edit" type="text" name="reference" id="reference" />
               </div>
               <button type="submit" className="btcreateform">Ajouter</button>
             </form>
           </div>
-        <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
         </div>
+        <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
       </aside>
     </>
   );

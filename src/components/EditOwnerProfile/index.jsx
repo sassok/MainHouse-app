@@ -105,16 +105,16 @@ const EditOwnerProfile = () => {
           </div>
         </div>
         <div className="backgroundprofright">
-          <div class="inner-div">
-            <div class="front">
-              <div class="front__bkg-photo"></div>
-              <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" class="front__face-photo" />
-              <div class="front__text">
-                <h3 class="front__text-header">{profile.first_name} {profile.last_name}</h3>
-                <p class="front__text-para">{building.adress}</p>
-                <p class="front__text-para">{building.zipcode} {building.city}</p>
-                <p class="front__text-para">lot N°{profile.lot}</p>
-                <p class="front__text-para">Appartement N°: {profile.flat_numbe}</p>
+          <div className="inner-div">
+            <div className="front">
+              <div className="front__bkg-photo"></div>
+              <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" className="front__face-photo" />
+              <div className="front__text">
+                <h3 className="front__text-header">{profile.first_name} {profile.last_name}</h3>
+                <p className="front__text-para">{building.adress}</p>
+                <p className="front__text-para">{building.zipcode} {building.city}</p>
+                <p className="front__text-para">lot N°{profile.lot}</p>
+                <p className="front__text-para">Appartement N°: {profile.flat_numbe}</p>
               </div>
               <div className="emailagencyglob">
                 <p className="iconifos emailagency"><BiMessageRounded className="emailiconowner" /></p>

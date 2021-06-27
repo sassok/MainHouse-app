@@ -123,11 +123,11 @@ const IndexEvent = () => {
                       </div>
             <div className="input-style-long">
               <label className="label">Titre de l'événement</label>
-              <input className="input--style-4" type="texte" id="createtitle" name="createtitle" placeholder="Titre" required />
+              <input className="input--style-edit" type="texte" id="createtitle" name="createtitle" placeholder="Titre" required />
             </div>
             <div className="input-style-long">
               <label className="label">Sélectionner un bâtiment</label>
-              <select className="input--style-4" id="createbuildingid" name="createbuildingid">
+              <select className="input--style-edit" id="createbuildingid" name="createbuildingid">
                 {building.map(building => (
                   <option className="champform" key={building.id} value={building.id}>{building.name}</option>
                 ))}
@@ -135,11 +135,11 @@ const IndexEvent = () => {
             </div>
             <div className="input-style-long">
               <label className="label">Date</label>
-              <input className="input--style-4" type="datetime-local" id="createdatetime" name="createdatetime" />
+              <input className="input--style-edit" type="datetime-local" id="createdatetime" name="createdatetime" />
             </div>
             <div className="input-style-long">
               <label className="label">Durée de l'événement</label>
-              <select className="input--style-4" id="createduration" name="createduration">
+              <select className="input--style-edit" id="createduration" name="createduration">
                 <option className="champform" value="5">5 minutes</option>
                 <option className="champform" value="10">10 minutes</option>
                 <option className="champform" value="15">15 minutes</option>
@@ -159,7 +159,7 @@ const IndexEvent = () => {
             </div>
             <div className="input-style-long">
               <label className="label">Description</label>
-              <textarea className="input--style-4" id="createdescription" name="createdescription" />
+              <textarea className="input--style-edit" id="createdescription" name="createdescription" />
               <p><button type="submit" className="boutonform" onClick={() => setDisplayNone()}>Créer</button></p>
             </div>
             <div className="input-style-long">
@@ -219,15 +219,15 @@ const IndexEvent = () => {
                     </div>
             <div className="input-style-long">
               <label className="label">Titre de l'événement</label>
-              <input className="input--style-4" type="texte" id="edittitle" name="edittitle" placeholder={edittitle} />
+              <input className="input--style-edit" type="texte" id="edittitle" name="edittitle" placeholder={edittitle} />
             </div>
             <div className="input-style-long">
               <label className="label">Date</label>
-              <input className="input--style-4" type="datetime-local" id="editdatetime" name="editdatetime" />
+              <input className="input--style-edit" type="datetime-local" id="editdatetime" name="editdatetime" />
             </div>
             <div className="input-style-long">
               <label className="label">Durée de l'événement</label>
-              <select className="input--style-4" id="editduration" name="editduration">
+              <select className="input--style-edit" id="editduration" name="editduration">
                 <option className="champform" value="5">5 minutes</option>
                 <option className="champform" value="10">10 minutes</option>
                 <option className="champform" value="15">15 minutes</option>
@@ -247,7 +247,7 @@ const IndexEvent = () => {
             </div>
             <div className="input-style-long">
               <label className="label">Description</label>
-              <textarea className="input--style-4" id="editdescription" name="editdescription" placeholder={editdescription} />
+              <textarea className="input--style-edit" id="editdescription" name="editdescription" placeholder={editdescription} />
               <p><button type="submit" className="boutonform" onClick={() => setDisplayNone()}>Modifier</button></p>
             </div>
             <div className="input-style-long">
