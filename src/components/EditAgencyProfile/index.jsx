@@ -129,31 +129,31 @@ const EditAgencyProfile = () => {
           <form onSubmit={OnSend}>
             <div className="input-style-long">
               <label className="label">Nom de l'agence</label>
-              <input className="input--style-4" type="text" name="name" id="name" placeholder={profile.name} />
+              <input className="input--style-edit" type="text" name="name" id="name" placeholder={profile.name} />
             </div>
             <div className="input-style-long">
               <label className="label">N° de Siret</label>
-              <input className="input--style-4" type="text" name="siren" id="siren" placeholder={profile.siren} />
+              <input className="input--style-edit" type="text" name="siren" id="siren" placeholder={profile.siren} />
             </div>
             <div className="input-style-long">
               <label className="label">Adresse</label>
-              <input className="input--style-4" type="text" name="adress" id="adress" placeholder={profile.adress} />
+              <input className="input--style-edit" type="text" name="adress" id="adress" placeholder={profile.adress} />
             </div>
             <div className="input-style-long">
               <label className="label">Code postal</label>
-              <input className="input--style-4" type="text" name="zipcode" id="zipcode" placeholder={profile.zipcode} />
+              <input className="input--style-edit" type="text" name="zipcode" id="zipcode" placeholder={profile.zipcode} />
             </div>
             <div className="input-style-long">
               <label className="label">Ville</label>
-              <input className="input--style-4" type="text" name="city" id="city" placeholder={profile.city} />
+              <input className="input--style-edit" type="text" name="city" id="city" placeholder={profile.city} />
             </div>
             <div className="input-style-long">
               <label className="label">Email</label>
-              <input className="input--style-4" type="text" name="email" id="email" placeholder={profile.email} />
+              <input className="input--style-edit" type="text" name="email" id="email" placeholder={profile.email} />
             </div>
             <div className="input-style-long">
               <label className="label">Téléphone</label>
-              <input className="input--style-4" type="text" name="phone_number" id="phone_number" placeholder={profile.phone_number} />
+              <input className="input--style-edit" type="text" name="phone_number" id="phone_number" placeholder={profile.phone_number} />
             </div>
             <button type="submit" className="btcreateform">Modifier</button>
           </form>

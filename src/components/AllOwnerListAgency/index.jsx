@@ -159,29 +159,29 @@ const AllOwnerListAgency = () => {
               <div className="titlebuildform">
                 Ajouter un propriétaire
                 </div>
-              <div class="input-style-long">
-                <label class="label">Prénom</label>
-                <input className="input--style-4" type="first_name" id="ffirst_name" name="first_name" />
+              <div className="input-style-long">
+                <label className="label">Prénom</label>
+                <input className="input--style-edit" type="first_name" id="ffirst_name" name="first_name" />
               </div>
-              <div class="input-style-long">
-                <label class="label">Nom</label>
-                <input className="input--style-4" type="last_name" id="flast_name" name="last_name" />
+              <div className="input-style-long">
+                <label className="label">Nom</label>
+                <input className="input--style-edit" type="last_name" id="flast_name" name="last_name" />
               </div>
-              <div class="input-style-long">
-                <label class="label">Email</label>
-                <input className="input--style-4" type="mail" id="fmail" name="mail" required />
+              <div className="input-style-long">
+                <label className="label">Email</label>
+                <input className="input--style-edit" type="mail" id="fmail" name="mail" required />
               </div>
-              <div class="input-style-long">
-                <label class="label">Telephone</label>
-                <input className="input--style-4" type="phone_number" id="fphone_number" name="phone_number" />
+              <div className="input-style-long">
+                <label className="label">Telephone</label>
+                <input className="input--style-edit" type="phone_number" id="fphone_number" name="phone_number" />
               </div>
-              <div class="input-style-long">
-                <label class="label">Numéro d'appartement</label>
-                <input className="input--style-4" type="flat_number" id="fflat_number" name="flat_number" />
+              <div className="input-style-long">
+                <label className="label">Numéro d'appartement</label>
+                <input className="input--style-edit" type="flat_number" id="fflat_number" name="flat_number" />
               </div>
               <div className="input-style-long">
                 <label className="label">Sélectionner un bâtiment</label>
-                <select className="input--style-4" id="fbuildingId" name="fbuildingId">
+                <select className="input--style-edit" id="fbuildingId" name="fbuildingId">
                   {buildinglist.map(buildinglist => (
                     <option className="champform" key={buildinglist.id} value={buildinglist.id}>{buildinglist.name}</option>
                   ))}
@@ -244,7 +244,7 @@ const AllOwnerListAgency = () => {
         <div className="infoshead">
           <div className="ajustprofile">
             <div className="ownerifoshead">
-              <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" class="owner-image-show" />
+              <img src="https://st4.depositphotos.com/21557188/23287/v/600/depositphotos_232872160-stock-illustration-simple-person-icon-linear-symbol.jpg" className="owner-image-show" />
             </div>
             <div className="ownerifoshead">
               <p className="nameownercard">{showowner.first_name} {showowner.last_name}</p>
