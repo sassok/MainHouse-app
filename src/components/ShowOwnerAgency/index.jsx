@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 import { BiPencil, BiMobileAlt, BiMessageRounded } from "react-icons/bi";
-import {IoTrashBinOutline} from 'react-icons/io5'
+import { IoTrashBinOutline } from 'react-icons/io5'
 import closeButton from '../../assets/images/iconeCloseButton.png';
 
 const ShowOwnerAgency = (props) => {
@@ -18,7 +18,6 @@ const ShowOwnerAgency = (props) => {
       }).then((response) => response.json())
         .then((response) => {
           setOwner(response);
-          console.log(response)
         }).catch(function () {
           console.log("error");
         });
@@ -36,7 +35,6 @@ const ShowOwnerAgency = (props) => {
       }).then((response) => response.json())
         .then((response) => {
           setBuilding(response);
-          console.log(response)
         }).catch(function () {
           console.log("error");
         });
@@ -44,7 +42,7 @@ const ShowOwnerAgency = (props) => {
     fetchShowBuilding()
   }, [owner]);
 
- const setDisplayNone = () => {
+  const setDisplayNone = () => {
     document.getElementsByClassName('aside-right')[0].style.display = "none";
   }
   return (
@@ -83,7 +81,6 @@ const ShowOwnerAgency = (props) => {
       </div>
       <img className="iconeCloseButton" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()}></img>
     </div>
-
   );
 }
 export default ShowOwnerAgency;

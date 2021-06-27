@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-
 import './style.css';
 import Cookies from 'js-cookie';
 import { IoMdSearch } from "react-icons/io";
@@ -52,7 +51,6 @@ const AllOwnerListAgency = () => {
       .then((response) => {
         setSearchResult(response.owners);
         setOwnerList(response.owners);
-        console.log(response)
       }).catch(function () {
         console.log("error");
       });
@@ -77,7 +75,6 @@ const AllOwnerListAgency = () => {
   const CreateOwner = () => {
     const [buildinglist, setBuildingList] = useState([]);
     const agencyId = useSelector(state => state.agency.id);
-    const Bienvenue = "Bienvenue"
 
     const setDisplayNone = () => {
       document.getElementsByClassName('aside-right')[0].style.display = "none";
@@ -100,7 +97,6 @@ const AllOwnerListAgency = () => {
       };
       fetchBuildingList()
     }, []);
-    console.log(buildinglist)
     const OnSend = (e) => {
       e.preventDefault();
 
@@ -139,7 +135,7 @@ const AllOwnerListAgency = () => {
       var data = {
         to_email: mail,
         to_name: first_name,
-        message: `Salut le boss bienvenue chez Mainhouse, voici ton mot de passe: ${createpassword}`
+        message: `Bienvenue chez Mainhouse, voici votre mot de passe: ${createpassword}`
       };
 
       emailjs.send('service_bqbhd5r', 'template_ws5mx09', data, 'user_lgjHrR8tpZ6KOnNqV1v1a').then(

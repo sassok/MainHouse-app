@@ -22,7 +22,6 @@ const EditAgencyProfile = () => {
         },
       }).then((response) => response.json())
         .then((response) => {
-          console.log(response)
           setProfile(response);
         }).catch(function () {
           console.log("error");
@@ -30,7 +29,6 @@ const EditAgencyProfile = () => {
 
     };
     fetchProfile()
-    console.log(profile.name)
   }, []);
 
   const OnSend = (e) => {
@@ -40,7 +38,7 @@ const EditAgencyProfile = () => {
     var adress = profile.adress;
     var zipcode = profile.zipcode;
     var city = profile.city;
-    var email = profile.email;
+    const email = profile.email;
     var phone_number = profile.phone_number;
     if (document.querySelector('#name').value !== "") {
       name = document.querySelector('#name').value;
@@ -57,9 +55,6 @@ const EditAgencyProfile = () => {
     if (document.querySelector('#city').value !== "") {
       city = document.querySelector('#city').value;
     }
-    if (document.querySelector('#email').value !== "") {
-      email = document.querySelector('#email').value;
-    }
     if (document.querySelector('#phone_number').value !== "") {
       phone_number = document.querySelector('#phone_number').value;
     }
@@ -75,11 +70,11 @@ const EditAgencyProfile = () => {
     }).then((response) => response.json())
       .then((response) => {
         setProfile(response);
-        console.log(response)
-        setProfile(response);
       }).catch(function () {
         console.log("error");
       });
+
+
   }
 
   const AgencyProfileRight = () => {
@@ -146,10 +141,6 @@ const EditAgencyProfile = () => {
             <div className="input-style-long">
               <label className="label">Ville</label>
               <input className="input--style-edit" type="text" name="city" id="city" placeholder={profile.city} />
-            </div>
-            <div className="input-style-long">
-              <label className="label">Email</label>
-              <input className="input--style-edit" type="text" name="email" id="email" placeholder={profile.email} />
             </div>
             <div className="input-style-long">
               <label className="label">Téléphone</label>
