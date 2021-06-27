@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AllOwnerListAgency from '../../components/AllOwnerListAgency/index';
 
-const PageAllOwnerListAgency = () => {
-  
+const PageAllOwnerListAgency = () => {  
   return (  
     <AllOwnerListAgency />
   );

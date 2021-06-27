@@ -132,13 +132,13 @@ const IndexBuilding = () => {
               <img className="responsiveCloseButtonBuilding rotated" src={closeButton} alt="closebutton" onClick={() => setDisplayNone()} />
             </div>
             <div className="card-building-header-show">
-              <img className="card-building-img-show " src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
+              <img className="card-building-img-show " src="https://us.123rf.com/450wm/zhudifeng/zhudifeng1410/zhudifeng141000067/32987276-modern-business-office-building-exterior.jpg?ver=6" alt="rover" />
             </div>
             <div className="card-building-body-show">
               <div className="cardbuildname-show">
                 <p>{oneBuilding.name}</p>
               </div>
-              <span className="cardbuildref-show">Ville: {oneBuilding.city}</span>
+              <span className="cardbuildref-show">Ville: {oneBuilding.city}, {oneBuilding.zipcode}</span>
               <span className="cardbuildref-show">Adresse: {oneBuilding.adress}</span>
               <span className="cardbuildref-show mb-5">Reference: {oneBuilding.reference}</span>
               <div>

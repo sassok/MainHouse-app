@@ -57,7 +57,6 @@ const IndexEvent = () => {
     }).then((response) => response.json())
       .then((response) => {
         setEvent(response.events);
-        console.log(response)
       }).catch(function () {
         console.log("error");
       });
@@ -109,7 +108,6 @@ const IndexEvent = () => {
       }).then((response) => response.json())
         .then((response) => {
           setCreate(response)
-          console.log(response)
         }).catch(function () {
           console.log("error");
         });

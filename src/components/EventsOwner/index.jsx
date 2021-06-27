@@ -34,7 +34,6 @@ const EventsOwner = () => {
               console.log("error");
         });
       };       
-
       fetchEvent()
       }, []);
 
@@ -55,9 +54,7 @@ const EventsOwner = () => {
                   console.log("error");
             });
           };       
-    
           fetchShowEvent()
-          
           }, [props]);
     
         return (
@@ -80,14 +77,7 @@ const EventsOwner = () => {
             </div>
           </div>
         </div>
-
       </div>
-
-
-
-    
-
- 
         );
       }
 
@@ -111,8 +101,7 @@ const EventsOwner = () => {
                 hour: "2-digit",
                 minute: "2-digit"
                 }).format(new Date(events.datetime))}</p>
-                <p className="event-list-title">{events.duration} minutes</p>
-              <p className="event-list-description">{events.description}</p>    
+                <p className="event-list-title">{events.duration} minutes</p>   
             </div>
           ))}
         </div>

@@ -30,31 +30,26 @@ const EditOwnerProfile = () => {
         },
       }).then((response) => response.json())
         .then((response) => {
-          console.log(response)
           setProfile(response);
         }).catch(function () {
           console.log("error");
         });
 
     };
-    fetchProfile()
-    console.log(profile.name)
+    fetchProfile();
   }, []);
 
   const OnSend = (e) => {
     e.preventDefault();
     var first_name = profile.first_name;
     var last_name = profile.last_name;
-    var email = profile.email;
+    const email = profile.email;
     var phone_number = profile.phone_number;
     if (document.querySelector('#first_name').value !== "") {
         first_name = document.querySelector('#first_name').value;
     }
     if (document.querySelector('#last_name').value !== "") {
         last_name = document.querySelector('#last_name').value;
-    }
-    if (document.querySelector('#email').value !== "") {
-      email = document.querySelector('#email').value;
     }
     if (document.querySelector('#phone_number').value !== "") {
       phone_number = document.querySelector('#phone_number').value;
@@ -86,7 +81,6 @@ const EditOwnerProfile = () => {
       }).then((response) => response.json())
         .then((response) => {
           setBuilding(response);
-          console.log(response)
         }).catch(function () {
           console.log("error");
         });
@@ -150,10 +144,6 @@ const EditOwnerProfile = () => {
           <div className="input-style-long">
             <label className="label">Prénom</label>
             <input className="input--style-edit" type="text" name="last_name" id="last_name" placeholder={profile.last_name} />
-          </div>
-          <div className="input-style-long">
-            <label className="label">Email</label>
-            <input className="input--style-edit" type="text" name="email" id="email" placeholder={profile.email} />
           </div>
           <div className="input-style-long">
             <label className="label">Téléphone</label>
