@@ -1,0 +1,74 @@
+
+#headerSidebar {
+  position: fixed;
+  width: 220px;
+  z-index: 100;
+}
+#headerSidebar .pro-sidebar {
+  height: 100vh;
+}
+#headerSidebar .closemenu {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 0;
+  z-index: 9999;
+  line-height: 20px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 22px;
+  top: 55px;
+  cursor: pointer;
+}
+#headerSidebar .pro-sidebar {
+  width: 100%;
+  min-width: 100%;
+}
+#headerSidebar .pro-sidebar.collapsed {
+  width: 80px;
+  min-width: 80px;
+}
+#headerSidebar .pro-sidebar-inner {
+  background-color: #2E2E33;
+  box-shadow: 0.5px 0.866px 2px 0px rgba(0, 0, 0, 0.15);
+}
+#headerSidebar .pro-sidebar-inner .pro-sidebar-layout {
+  overflow-y: hidden;
+}
+#headerSidebar .pro-sidebar-inner .pro-sidebar-layout .logotext p {
+  font-size: 20px;
+  padding: 0 20px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+#headerSidebar .pro-sidebar-inner .pro-sidebar-layout ul {
+  padding: 0 5px;
+}
+#headerSidebar .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item {
+  color: rgb(255, 255, 255);
+  margin: 10px 0px;
+  font-weight: bold;
+}
+#headerSidebar .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item .pro-icon-wrapper {
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 3px;
+}
+#headerSidebar .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item .pro-icon-wrapper .pro-item-content {
+  color: #000;
+}
+#headerSidebar .pro-sidebar-inner .pro-sidebar-layout .active {
+  background-image: linear-gradient(0deg, #3C64BA 0%, #4b6cb3 100%);
+}
+#headerSidebar .logo {
+  padding: 20px;
+}
+
+
+@media only screen and (max-width: 1025px) {
+  #headerSidebar{
+    display:none;
+  }
+  .hamburger{
+    display:block;
+  }
+}

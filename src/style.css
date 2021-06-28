@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 61px 1fr;
+  grid-template-areas:
+  "sidenav header header"
+  "sidenav main aside-right";
+  height: 100vh;
+}
+
+
+aside {
+  display: block;
+}
+.sidenav {
+  grid-area: sidenav;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.aside-right {
+  grid-area: aside-right;
+  display: none;
+  width: 500px;
+  background-color: white;
+}
+
+.eventlistcardsBuilding {
+    overflow:auto;
+}
+
+.main {
+  grid-area: main;
+  display: block;
+  border-right: 1px solid #E1E3E6;
+}
+
+.respoLogo{
+  display: none;
+  position: fixed;
+  background-color: white;;
+}
+  
+  @media only screen and (max-width: 300px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: 61px 1fr;
+      grid-template-areas:
+      "sidenav header header"
+      "aside-right aside-right aside-right"
+      "main main main";
+      height: 100vh;
+    }
+    .aside-right {
+      grid-area: aside-right;
+      display: none;
+      width: 100%;
+      position: absolute;
+      margin-top: 90px;
+      background-color: white;
+    }
+    .respoLogo{
+      width: 200px;
+      margin-left: 0px;
+      display: block;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: 61px 1fr;
+      grid-template-areas:
+      "sidenav header header"
+      "aside-right aside-right aside-right"
+      "main main main";
+      height: 100vh;
+    }
+    .aside-right {
+      grid-area: aside-right;
+      display: none;
+      width: 100%;
+      position: absolute;
+      margin-top: 90px;
+      background-color: white;
+    }
+    .respoLogo{
+      width: 200px;
+      margin-left: 0px;
+      display: block;
+    }
+  }
+  
+  @media only screen and (max-width: 1025px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+      "sidenav main";
+      height: 100vh;
+    }
+
+    .main {
+      margin-top: 110px;
+    }
+    .aside-right {
+      grid-area: aside-right;
+      display: none;
+      width: 100%;
+      position: absolute;
+      margin-top: 90px;
+      background-color: white;
+    }
+    .respoLogo{
+      width: 200px;
+      margin-left: 90px;
+      margin-top: -2px;
+      display: block;
+      background-color: white;
+    }
+
+  }

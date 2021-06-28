@@ -1,0 +1,308 @@
+.positionicaddeve {
+  width: 100%;
+  text-align: right;
+  margin-top: 10px;
+}
+.iconaddevent {
+  margin-right: 20px;
+ font-size: 20px;
+ color: #2ECC71;
+ cursor: pointer;
+}
+
+.iconaddevent:hover {
+  font-size: 30px;
+}
+.closeaddeventform {
+  font-size: 20px;
+  cursor: pointer;
+  color: red;
+}
+.closeaddeventform:hover {
+  font-size: 30px;
+}
+  .cardscontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: #10182f;
+  }
+  .containerbuilding {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .card-building {
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 25px 25px 0px 0px;
+    overflow: hidden;
+    width: 250px;
+    border-bottom: 1px solid;
+    border-color: #E1E3E6;
+    box-shadow:  2px 2px 2px #c5c5c5;
+  }
+
+  .card-building:hover {
+    cursor: pointer;
+    border-bottom: 3px solid #3C64B1;
+  }
+  .card-building-header .card-building-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-building-body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-height: 60px;
+  }
+  
+.cardbuildcity {
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+ 
+.cardbuildname {
+    text-align: center;
+    font-size: 20px;
+}
+  
+  .card-building-body  {
+    font-size: 13px;
+    margin: 0 0 40px;
+  }
+
+  .cardbuildref {
+      padding-top: 20px;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+.DisplayBuildingInfos {
+  background-color: red;
+  position: absolute;
+}
+
+.containerShowBuilding {
+  background-color: rgb(255, 255, 255);
+  border: solid 1px black;
+  border-radius: 10px;
+  height: 90vh;
+  width: 30vw;
+  border-radius: 5px;
+  float: right;
+  position: fixed;
+  display: block;
+  right: 0; 
+  top: 0;
+  margin-top: 70px;
+  margin-right: 70px;
+  
+}
+.showbuildingright {
+  display: none;
+}
+  
+.createbuildingright {
+  display: none;
+}
+
+.showbuildingcard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #10182f;
+  position: fixed;
+  overflow: scroll;
+  max-height: 100vh;
+}
+.containerbuilding-show {
+  
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+.card-building-show {
+  background-color: #fff;
+  overflow: hidden;
+  width: 100vh;
+   
+}
+.card-building-header-show .card-building-img-show {
+  width: 500px;
+  height: 200px;
+  object-fit: cover;
+}
+.card-building-body-show {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 60px;
+overflow: auto;
+}
+
+.cardbuildcity-show {
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+
+.cardbuildname-show {
+  font-size: 20px;
+}
+
+.card-building-body-show  {
+  font-size: 13px;
+  margin: 0 0 40px;
+}
+
+.cardbuildref-show {
+    padding-top: 20px;
+  font-size: 12px;
+  padding-bottom: 2px;
+}
+
+.iconeCloseButton{
+height: 35px;
+width: 35px;
+margin-left: -65px;
+margin-bottom: 9px;
+position: fixed;
+bottom:0;
+}
+
+.iconeCloseButton:hover {
+height: 40px;
+width: 40px;
+margin-left: -65px;
+margin-top: -2px;
+margin-bottom: 6px;
+transition: 0.2s;
+cursor: pointer;
+}
+
+.ContainerOwnerShowBuilding {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.ContainerEventShowBuilding {
+  vertical-align: middle;
+  float: none;
+  
+}
+
+.mb-5 {
+margin-bottom: 20px;
+}
+
+.cardbuildref-show-owner {
+  font-size: 12px;
+}
+
+.icondeletebuilding {
+  font-size: 30px;
+  color: rgb(19, 19, 19);
+  cursor: pointer;
+}
+
+.iconeditbuilding {
+  font-size: 30px;
+  color: rgb(160, 160, 160);
+  cursor: pointer;
+}
+
+.createbuidform {
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    text-align: center;
+}
+
+.titlebuildform {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.label {
+    font-size: 16px;
+    color: #555;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.editbuildingform {
+  width: 100%;
+  text-align: center;
+}
+.input--style-4 {
+    width: 50%;
+    background: #fafafa;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #666;
+    border-color: #E1E3E6 ;  
+}
+
+.input-style-long {
+    border-color: #E1E3E6 ;
+    line-height: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #666;  
+}
+
+.IconsRight {
+ position: relative;
+right: 0;
+  
+}
+
+.eventaddchp{
+  display: none;
+}
+
+.responsiveCloseButtonBuilding{
+  display:none;
+}
+
+@media all and (max-width: 900px) {
+  .eventaddchp{
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+.responsiveCloseButtonEvent{
+  display:none;
+}
+
+@media all and (max-width: 1025px) {
+  .responsiveCloseButtonBuilding{
+      width: 30px;
+      margin-right: 3px;
+      display: block;
+  }
+  .containerCloseButton {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .createbuildingright{
+    width: 100%;
+    border: solid 1px black;
+    margin-top: 10px;
+    padding-bottom: 120px;
+  }
+  }
