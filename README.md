@@ -1,4 +1,4 @@
-Welcome to Mainhouse, the SASS plateform that helps real-estate agencies and its customers to deal with their goods. 
+Welcome to Mainhouse, the SAAS plateform that helps real-estate agencies and its customers to deal with their goods. 
 
 The heroku link of the app is : https://mainhouse-develop.herokuapp.com/
 The heroku link of the API is : https://mainhouseapi.herokuapp.com/agencies  OR  https://mainhouseapi.herokuapp.com/owners
