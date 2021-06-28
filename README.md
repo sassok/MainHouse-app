@@ -1,3 +1,46 @@
+Welcome to Mainhouse, the SASS plateform that helps real-estate agencies and its customers to deal with their goods. 
+
+The heroku link of the app is : https://mainhouse-develop.herokuapp.com/
+The heroku link of the API is : https://mainhouseapi.herokuapp.com/agencies  OR  https://mainhouseapi.herokuapp.com/owners
+
+To sign in as an agency, you can click on the "connexion agence" link located on the top-right corner of your screen, and enter the following : 
+
+email : test1@test.com
+password : testtest
+
+Once connected as an agency, you will discover a template of the app, in which a number of actions are possible, such as : 
+- scroll through "your" buildings
+- get details on a building (its details, its owners, its events) and edit or delete them
+- add a building
+- scroll through "your" events (which are linked to a building)
+- get details on an event and edit or delete them
+- add an event
+- get to your own profile
+- edit it
+- scroll through "your" owners (which are linked to a building)
+- get details on an owner and delete them
+- add an owner
+
+This particular last step will allow an email to be sent to the owner created in which he will gain access to his own account with a provided (and randomly generated) password.
+If you want to skip this step, you can easily sign in as an owner if you disconnect as an agency and get back to our landing page. There, just click on the "connexion propriétaire" button, located at the top of your screen once again, and enter the following : 
+
+email : owner_test1@gmail.com
+password : testtest
+
+Here you will get access to, visually, the same app as the agencies, but with a more limited access to what the API provides, such as : 
+- scroll through "your" events (which are linked to the building in which you own appartments)
+- get details on an event 
+- add an event
+- get to your own profile
+- edit it
+
+Given the fact that we intend to sell this app, there is still much work to do in order to improve it with libraries and functionalities.
+For instance, we intend to add a live chat for every building, and every agency, an ADMIN account which will allow us to add new agencies as customers, a Tennant sign in, with access to the chat, and obviously a Dark Theme, which is still displayed in our sidebar as you probably saw.
+We do hope you will enjoy your stay in our little app. 
+
+
+TECHNICALITIES
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
